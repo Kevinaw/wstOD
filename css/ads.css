@@ -1,0 +1,37 @@
+#results-table {
+ border-collapse:collapse; 
+ width:100%;
+ min-width:100%;
+}
+.altrow {
+    background-color:#efefef;
+}
+.premium td {
+    padding:5px;
+    font-size:1.1em;
+}
+.free td {
+    background-color:#ffffff;
+}
+.highlight {
+  background-color:#FFF08D;
+}
+
+.top tr {
+    border-top:1px solid silver;
+}
+.left tr {
+    border-left:1px solid silver;
+}
+.right tr {
+    border-right:1px solid silver;
+}
+.bottom tr {
+    border-bottom:1px solid silver;
+}
+
+#ad-name { font-weight:bold; font-size:1.1em; }
+#ad-location { padding-left:10px; }
+#ad-description { }
+#ad-category { padding-left:10px; color:gray; }
+#ad-links { color:black; }

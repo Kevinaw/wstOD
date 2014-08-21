@@ -1,0 +1,77 @@
+body { font-family:Arial; font-size:8pt; }
+
+TABLE { border-collapse:collapse; }
+TEXTAREA { border:1px solid gray; }
+
+.searchbar TD { font-weight:normal; padding-left:5px; font-size:8pt; vertical-align:middle; height:20px; }
+.searchbar INPUT { border:1px solid	silver; font-size:8pt; height:16px; }
+.searchbar .button {}
+
+.banner { background-color:White; border:1px solid #dedede; cursor:pointer;  }
+.banner_highlight { background-color:White; border:1px solid red; cursor:pointer;  }
+
+.headers TABLE { font-family:Arial; font-weight:bold; font-size:8pt; border-collapse:collapse; }
+.headers TR.header { border:none; height:5px; }
+.headers A { text-decoration:none; color:#515151; }
+.headers TD.address {font-family:Arial; font-size:8pt; border:none; }
+
+.toc { font-family:Arial; font-size:8pt; }
+.toc TD.button { font-weight:bold; color:#515151; text-align:center; width:101px; }
+.toc TD.top { border-bottom:solid 1px #999999; }
+.toc TD.side { border:solid 1px #999999; border-top:none; border-bottom:none; font-weight:normal; }
+.toc TD.bottom { height:3px; border:solid 1px #999999; border-top:none; font-weight:normal; }
+.toc A { padding-left:5px; text-decoration:none; cursor:pointer; color:#515151; }
+.toc A:hover { padding-left:5px; text-decoration:none; cursor:pointer; color:#000000; }
+
+TABLE.listing { font-family:Arial; font-weight:normal; font-size:8pt; border-collapse:collapse; }
+TABLE.listing A { cursor:pointer; text-decoration:none; color:#515151; font-weight:bold; }
+TABLE.listing A.company_name { cursor:pointer; text-decoration:none; color:#111111; font-weight:bold; }
+TABLE.listing A.web_address { cursor:pointer; text-decoration:none; color:#515151; font-weight:normal; }
+TABLE.listing A.mail_to { cursor:pointer; text-decoration:none; color:#515151; font-style:italic; font-weight:normal; }
+TABLE.listing A.more_info { cursor:pointer; text-decoration:none; color:#515151; font-weight:normal; font-size:8pt; }
+TABLE.listing A:hover { cursor:pointer; color:#7096FF; }
+TABLE.listing TD.title { font-weight:bold; color:#515151; font-size:12pt; padding-bottom:5px; }
+TABLE.listing TD.subtitle { font-size:10pt; }
+TABLE.listing TD.error { font-size:8pt; color:Red; }
+TABLE.listing TR.header { background-color:silver; }
+TABLE.listing TR.header TD { padding:0 5 0 5; color:black; font-weight:bold; }
+TABLE.listing TR.subheader { background-color:#efefef; }
+TABLE.listing TR.subheader TD { padding:5 5 5 5; }
+TABLE.listing TR.row { background-color:White; }
+TABLE.listing TR.altrow { background-color:#efefef; }
+TABLE.listing SPAN.address { padding: 5 10 5 10; }
+TABLE.listing INPUT.button { font-family:Arial; font-size:8pt; border:1px solid gray; }
+
+TABLE.submissions { border:1px solid silver; font-family:Arial; font-weight:normal; font-size:8pt; border-collapse:collapse; }
+TABLE.submissions TD.header { text-align:center; font-weight:bold; color:White; background-color:#515151; }
+TABLE.submissions TD.subheader { text-align:left; font-weight:bold; background-color:#dedede; }
+TABLE.submissions TD.fieldname { font-weight:bold; font-size:8pt; padding-right:5px; padding-left:5px; }
+TABLE.submissions TD.fieldnamegray { width:1%; font-weight:bold; font-size:8pt; padding-right:5px; padding-left:5px; background-color:#dedede; vertical-align:top; }
+TABLE.submissions TD.error { font-size:8pt; color:Red; }
+TABLE.submissions TR.listing_type TD { padding:10 10 10 10; }
+TABLE.submissions TR.listing_type INPUT { border:none; }
+TABLE.submissions TD INPUT { border:1px solid gray; font-size:8pt; }
+TABLE.submissions TR.header TH { text-align:left; }
+TABLE.submissions TR.row {  }
+TABLE.submissions TR.altrow { background-color:#efefef; }
+TABLE.submissions SELECT { font-size:7pt; }
+TABLE.submissions TEXTAREA { width:100%; }
+
+INPUT.button { border:1px solid gray; background-color:C0D6FE; font-weight:bold; }
+
+TABLE.info { border:1px solid silver; font-size:10pt; }
+TABLE.info TR.header { background-color:#515151; font-weight:bold; }
+TABLE.info TR.header TD { color:White; }
+
+TABLE.info_file { border:none; }
+TABLE.info_file TR.header { font-size:12pt; font-weight:bold; }
+TABLE.info_file TD { border:none; padding:10 10 10 10; }
+
+TABLE.info_photos { font-size:8pt; }
+TABLE.info_photos TD { text-align:center; font-size:8pt; border:1px dashed silver; background-color:#EFEFEF; }
+
+TABLE.links { border:1px solid silver; font-size:8pt;}
+TABLE.links TR.link_type { background-color:#C0D6FE; font-weight:bold; }
+TABLE.links TR.title { font-style:italic; }
+TABLE.links TR.title A:hover { cursor:pointer; color:#C0D6FE; }
+TABLE.links TR.description { font-size:7pt; border-bottom:solid 1px gray; }

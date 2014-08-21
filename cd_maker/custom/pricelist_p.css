@@ -1,0 +1,189 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+.cc01               { /* Common */
+	font            : 11pt 'Arial', Helvetica, sans-serif;
+	color           : #0000ff;
+	}
+.cc02               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	text-align      : center;
+	}
+.cc03               { /* Common */
+	border          :   0.00pt solid #000000;
+	clip            : rect(0.00pt,463.50pt,0.75pt,0.00pt);
+	}
+.cc04               { /* Common */
+	border          :   0.00pt solid #000000;
+	}
+.cc05               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	}
+.cc06               { /* Common */
+	font            : bold 12pt 'Arial', Helvetica, sans-serif;
+	color           : #ff0000;
+	text-align      : center;
+	}
+span#e20            { /* pricelist001004.jpg */
+	background      : transparent url(pricelist001004.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 210.75pt;
+	top             :   0.00pt;
+	width           : 177.75pt;
+	height          :  57.75pt;
+	}
+div#e19             { /* There are two ways, the ... */
+	position        : absolute;
+	left            : 335.25pt;
+	top             :  68.25pt;
+	width           : 225.75pt;
+	height          : 372.00pt;
+	}
+div#e18             { /* \ \How do I find a compa... */
+	position        : absolute;
+	left            : 108.00pt;
+	top             : 108.00pt;
+	width           : 220.50pt;
+	height          : 257.25pt;
+	}
+img#e17             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             :  73.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e16             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             : 122.25pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e15             { /* Contact */
+	position        : absolute;
+	left            :  19.50pt;
+	top             :  86.25pt;
+	width           :  72.75pt;
+	height          :  16.50pt;
+	}
+span#e14            { /* pricelist001003.gif */
+	background      : transparent url(pricelist001003.gif) no-repeat top left;
+	position        : absolute;
+	left            : 104.25pt;
+	top             :  51.75pt;
+	width           : 463.50pt;
+	height          :   0.75pt;
+	}
+span#e13            { /* pricelist001002.gif */
+	background      : transparent url(pricelist001002.gif) no-repeat top left;
+	position        : absolute;
+	left            : 327.75pt;
+	top             :  54.00pt;
+	width           :   1.50pt;
+	height          : 393.75pt;
+	}
+img#e12             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   8.25pt;
+	top             : 174.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e11             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 229.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e10             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 282.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e9              { /* Logo\ \Placement */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 182.25pt;
+	width           : 105.75pt;
+	height          :  30.75pt;
+	}
+div#e8              { /* Banner Ads */
+	position        : absolute;
+	left            :  37.50pt;
+	top             : 242.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e7              { /* Basic Web */
+	position        : absolute;
+	left            :  35.25pt;
+	top             : 294.00pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e6              { /* Free & \ \Premium\ \List... */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 120.00pt;
+	width           :  63.75pt;
+	height          :  45.00pt;
+	}
+img#e5              { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 337.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e4              { /* Mini Web */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 347.25pt;
+	width           :  65.25pt;
+	height          :  30.75pt;
+	}
+div#e3              { /* How to use the Directory */
+	position        : absolute;
+	left            : 134.25pt;
+	top             :  64.50pt;
+	width           : 163.50pt;
+	height          :  30.75pt;
+	}
+img#e2              { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 388.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e1              { /* Sales\ \Agents\ \Wanted */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 386.25pt;
+	width           : 105.75pt;
+	height          :  45.00pt;
+	}
+div#page            { /* Page Holder */
+	background-color: #ffffff;
+	background-image: url(back_bus21.gif);
+	position        : relative;
+	width           : 577.50pt;
+	height          : 450.00pt;
+	text-align      : left;
+	margin-left     : auto;
+	margin-right    : auto;
+	}
+body                { /* Page Body */
+	background-color: #ffffff;
+	text-align      : center;
+	}
+
+
+
+/*--- EndOfFile ---*/

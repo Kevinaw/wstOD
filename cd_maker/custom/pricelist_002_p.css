@@ -1,0 +1,358 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+.cc07               { /* Common */
+	font            : bold 13pt 'Arial', Helvetica, sans-serif;
+	color           : #008000;
+	}
+.cc08               { /* Common */
+	font            : bold 13pt 'Arial', Helvetica, sans-serif;
+	color           : #008000;
+	text-align      : center;
+	}
+.cc09               { /* Common */
+	font            : bold 13pt 'Arial', Helvetica, sans-serif;
+	color           : #0000ff;
+	}
+.cc10               { /* Common */
+	font            : bold 13pt 'Arial', Helvetica, sans-serif;
+	color           : #ff0000;
+	}
+.cc11               { /* Common */
+	font            : bold 13pt 'Arial', Helvetica, sans-serif;
+	color           : #000080;
+	}
+.cc12               { /* Common */
+	border          :   0.00pt solid #000000;
+	clip            : rect(0.00pt,461.25pt,0.75pt,0.00pt);
+	}
+.cc13               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	text-align      : center;
+	}
+.cc14               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	}
+span#e42            { /* pricelist002009.jpg */
+	background      : transparent url(pricelist002009.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 213.75pt;
+	top             :   0.00pt;
+	width           : 177.75pt;
+	height          :  54.00pt;
+	}
+div#e41             { /* Phone:  */
+	position        : absolute;
+	left            : 112.50pt;
+	top             :  56.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e40             { /* Toll Free: */
+	position        : absolute;
+	left            : 269.25pt;
+	top             :  56.25pt;
+	width           : 105.75pt;
+	height          :  18.00pt;
+	}
+div#e39             { /* Fax: */
+	position        : absolute;
+	left            : 432.75pt;
+	top             :  55.50pt;
+	width           :  39.00pt;
+	height          :  18.00pt;
+	}
+div#e38             { /* e-mails: */
+	position        : absolute;
+	left            : 256.50pt;
+	top             :  71.25pt;
+	width           : 105.75pt;
+	height          :  17.25pt;
+	}
+div#e37             { /* 1-780-496-9722 */
+	position        : absolute;
+	left            : 158.25pt;
+	top             :  57.00pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e36             { /* 1-888-496-9722 */
+	position        : absolute;
+	left            : 329.25pt;
+	top             :  56.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e35             { /* 1-780-628-5504 */
+	position        : absolute;
+	left            : 463.50pt;
+	top             :  56.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e34             { /* service@oildirectory.com */
+	position        : absolute;
+	left            : 118.50pt;
+	top             : 190.50pt;
+	width           : 197.25pt;
+	height          :  17.25pt;
+	}
+div#e33             { /* brad.m@oildirectory.com */
+	position        : absolute;
+	left            : 327.00pt;
+	top             : 192.00pt;
+	width           : 221.25pt;
+	height          :  17.25pt;
+	}
+div#e32             { /* sales3@oildirectory.com */
+	position        : absolute;
+	left            : 118.50pt;
+	top             : 285.00pt;
+	width           : 189.75pt;
+	height          :  32.25pt;
+	}
+div#e31             { /* web@oildirectory.com    ... */
+	position        : absolute;
+	left            : 119.25pt;
+	top             : 421.50pt;
+	width           : 145.50pt;
+	height          :  28.50pt;
+	}
+div#e30             { /* Jarrett A. (Jerry) Huebn... */
+	position        : absolute;
+	left            : 118.50pt;
+	top             : 162.00pt;
+	width           : 192.75pt;
+	height          :  32.25pt;
+	}
+div#e29             { /* Brad Minshull\ \Director... */
+	position        : absolute;
+	left            : 325.50pt;
+	top             : 162.75pt;
+	width           : 180.75pt;
+	height          :  32.25pt;
+	}
+div#e28             { /* John C. (JayCee) Smith  */
+	position        : absolute;
+	left            : 117.75pt;
+	top             : 270.75pt;
+	width           : 143.25pt;
+	height          :  32.25pt;
+	}
+div#e27             { /* John E. Ayotte\ \Basic W... */
+	position        : absolute;
+	left            : 120.75pt;
+	top             : 373.50pt;
+	width           : 159.75pt;
+	height          :  47.25pt;
+	}
+span#e26            { /* pricelist002008.gif */
+	background      : transparent url(pricelist002008.gif) no-repeat top left;
+	position        : absolute;
+	left            : 104.25pt;
+	top             :  47.25pt;
+	width           : 461.25pt;
+	height          :   0.75pt;
+	}
+img#e25             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             :  73.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e24             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             : 122.25pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e23             { /* Home */
+	position        : absolute;
+	left            :  19.50pt;
+	top             :  86.25pt;
+	width           :  72.75pt;
+	height          :  16.50pt;
+	}
+img#e22             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   8.25pt;
+	top             : 174.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e21             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 229.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e20             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 282.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e19             { /* Logo\ \Placement */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 182.25pt;
+	width           : 105.75pt;
+	height          :  30.75pt;
+	}
+div#e18             { /* Banner Ads */
+	position        : absolute;
+	left            :  37.50pt;
+	top             : 242.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e17             { /* Basic Web\ \Design */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 286.50pt;
+	width           : 105.75pt;
+	height          :  30.75pt;
+	}
+div#e16             { /* Free & \ \Premium\ \List... */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 120.00pt;
+	width           :  63.75pt;
+	height          :  59.25pt;
+	}
+img#e15             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 337.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e14             { /* Mini Web */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 349.50pt;
+	width           :  65.25pt;
+	height          :  30.75pt;
+	}
+span#e13            { /* pricelist002007.jpg */
+	background      : transparent url(pricelist002007.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 119.25pt;
+	top             : 309.00pt;
+	width           :  45.75pt;
+	height          :  60.75pt;
+	}
+span#e12            { /* pricelist002006.jpg */
+	background      : transparent url(pricelist002006.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 119.25pt;
+	top             : 216.75pt;
+	width           :  48.75pt;
+	height          :  51.00pt;
+	}
+span#e11            { /* pricelist002005.jpg */
+	background      : transparent url(pricelist002005.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 119.25pt;
+	top             : 102.75pt;
+	width           :  44.25pt;
+	height          :  58.50pt;
+	}
+span#e10            { /* pricelist002004.jpg */
+	background      : transparent url(pricelist002004.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 328.50pt;
+	top             : 103.50pt;
+	width           :  44.25pt;
+	height          :  58.50pt;
+	}
+img#e9              { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 388.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e8              { /* Sales\ \Agents\ \Wanted */
+	position        : absolute;
+	left            :  37.50pt;
+	top             : 386.25pt;
+	width           : 105.75pt;
+	height          :  45.00pt;
+	}
+div#e7              { /* sales2@oildirectory.com */
+	position        : absolute;
+	left            : 329.25pt;
+	top             : 285.00pt;
+	width           : 220.50pt;
+	height          :  24.75pt;
+	}
+div#e6              { /* Charmaine Savard */
+	position        : absolute;
+	left            : 328.50pt;
+	top             : 269.25pt;
+	width           : 123.00pt;
+	height          :  45.75pt;
+	}
+span#e5             { /* pricelist002003.jpg */
+	background      : transparent url(pricelist002003.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 333.75pt;
+	top             : 304.50pt;
+	width           :  63.75pt;
+	height          :  48.00pt;
+	}
+div#e4              { /* Ward Dokken */
+	position        : absolute;
+	left            : 335.25pt;
+	top             : 357.75pt;
+	width           : 105.75pt;
+	height          :  19.50pt;
+	}
+div#e3              { /* sales4@oildirectory.com */
+	position        : absolute;
+	left            : 335.25pt;
+	top             : 373.50pt;
+	width           : 201.00pt;
+	height          :  19.50pt;
+	}
+span#e2             { /* pricelist002002.jpg */
+	background      : transparent url(pricelist002002.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 331.50pt;
+	top             : 210.00pt;
+	width           :  46.50pt;
+	height          :  55.50pt;
+	}
+div#e1              { /* Sorry \\Camera \\Shy\ */
+	background      : transparent url(pricelist002001.gif) no-repeat top left;
+	position        : absolute;
+	left            : 385.50pt;
+	top             : 214.50pt;
+	width           :  52.50pt;
+	height          :  45.75pt;
+	}
+div#page            { /* Page Holder */
+	background-color: #ffffff;
+	background-image: url(back_bus21.gif);
+	position        : relative;
+	width           : 577.50pt;
+	height          : 450.00pt;
+	text-align      : left;
+	margin-left     : auto;
+	margin-right    : auto;
+	}
+body                { /* Page Body */
+	background-color: #ffffff;
+	text-align      : center;
+	}
+
+
+
+/*--- EndOfFile ---*/

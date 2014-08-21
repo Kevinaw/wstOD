@@ -1,0 +1,211 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+.cc22               { /* Common */
+	border          :   0.00pt solid #000000;
+	clip            : rect(0.00pt,461.25pt,0.75pt,0.00pt);
+	}
+.cc23               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	text-align      : center;
+	}
+.cc24               { /* Common */
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	color           : #000000;
+	}
+.cc25               { /* Common */
+	font            : 18pt 'Arial', Helvetica, sans-serif;
+	color           : #0000ff;
+	text-align      : center;
+	}
+.cc26               { /* Common */
+	font            : bold 12pt 'Arial', Helvetica, sans-serif;
+	color           : #ff0000;
+	text-align      : center;
+	}
+.cc27               { /* Common */
+	font            : bold 12pt 'Arial', Helvetica, sans-serif;
+	color           : #0000ff;
+	}
+.cc28               { /* Common */
+	font            : bold 12pt 'Arial', Helvetica, sans-serif;
+	color           : #0000ff;
+	text-align      : center;
+	}
+span#e22            { /* pricelist003005.jpg */
+	background      : transparent url(pricelist003005.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 213.75pt;
+	top             :   0.00pt;
+	width           : 177.75pt;
+	height          :  58.50pt;
+	}
+span#e21            { /* pricelist004003.gif */
+	background      : transparent url(pricelist004003.gif) no-repeat top left;
+	position        : absolute;
+	left            : 103.50pt;
+	top             :  50.25pt;
+	width           : 461.25pt;
+	height          :   0.75pt;
+	}
+img#e20             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             :  73.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e19             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   7.50pt;
+	top             : 122.25pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e18             { /* Home */
+	position        : absolute;
+	left            :  19.50pt;
+	top             :  86.25pt;
+	width           :  72.75pt;
+	height          :  16.50pt;
+	}
+img#e17             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   8.25pt;
+	top             : 174.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e16             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 229.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+img#e15             { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 282.00pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e14             { /* Contact */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 129.00pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e13             { /* Banner Ads */
+	position        : absolute;
+	left            :  37.50pt;
+	top             : 242.25pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e12             { /* Basic Web\ \Design */
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 289.50pt;
+	width           : 105.75pt;
+	height          :  30.75pt;
+	}
+span#e11            { /* pricelist004002.jpg */
+	background      : transparent url(pricelist004002.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 116.25pt;
+	top             : 333.75pt;
+	width           :  29.25pt;
+	height          :  27.75pt;
+	}
+span#e10            { /* pricelist004001.gif */
+	background      : transparent url(pricelist004001.gif) no-repeat top left;
+	position        : absolute;
+	left            : 153.00pt;
+	top             : 321.00pt;
+	width           : 371.25pt;
+	height          :  63.00pt;
+	}
+div#e9              { /* We can place your logo b... */
+	position        : absolute;
+	left            : 192.75pt;
+	top             :  80.25pt;
+	width           : 218.25pt;
+	height          :  45.00pt;
+	}
+div#e8              { /* Logo placement example b... */
+	position        : absolute;
+	left            : 217.50pt;
+	top             : 276.75pt;
+	width           : 204.75pt;
+	height          :  30.75pt;
+	}
+div#e7              { /* $79.95 per year */
+	position        : absolute;
+	left            : 270.75pt;
+	top             : 217.50pt;
+	width           : 105.75pt;
+	height          :  32.25pt;
+	}
+div#e6              { /* Free & \ \Premium\ \List... */
+	position        : absolute;
+	left            :  35.25pt;
+	top             : 172.50pt;
+	width           :  63.75pt;
+	height          :  45.00pt;
+	}
+img#e5              { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.75pt;
+	top             : 337.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e4              { /* Mini Web */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 347.25pt;
+	width           :  65.25pt;
+	height          :  30.75pt;
+	}
+div#e3              { /* You can have your logo o... */
+	position        : absolute;
+	left            : 117.75pt;
+	top             : 179.25pt;
+	width           : 432.75pt;
+	height          :  28.50pt;
+	}
+img#e2              { /* pricelist001001.jpg */
+	position        : absolute;
+	left            :   9.00pt;
+	top             : 388.50pt;
+	width           :  20.25pt;
+	height          :  34.50pt;
+	}
+div#e1              { /* Sales\ \Agents\ \Wanted */
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 386.25pt;
+	width           : 105.75pt;
+	height          :  45.00pt;
+	}
+div#page            { /* Page Holder */
+	background-color: #ffffff;
+	background-image: url(back_bus21.gif);
+	position        : relative;
+	width           : 577.50pt;
+	height          : 450.00pt;
+	text-align      : left;
+	margin-left     : auto;
+	margin-right    : auto;
+	}
+body                { /* Page Body */
+	background-color: #ffffff;
+	text-align      : center;
+	}
+
+
+
+/*--- EndOfFile ---*/

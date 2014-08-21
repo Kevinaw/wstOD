@@ -1,0 +1,1 @@
+[11-May-2010 18:33:15] PHP Warning:  str_repeat() [<a href='function.str-repeat'>function.str-repeat</a>]: Second argument has to be greater than or equal to 0 in /home/ch1647/public_html/admin/functions/invoice/edit.php on line 80

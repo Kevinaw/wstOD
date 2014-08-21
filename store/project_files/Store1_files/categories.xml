@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <categoriesamount>2</categoriesamount>
+  <productsamount>8</productsamount>
+  <category>
+    <name>OIldirectory.com Premium Listings</name>
+    <content>
+      <![CDATA[]]>
+    </content>
+    <image>
+      <full>Store1_files\images\catimage0.png</full>
+      <isset>0</isset>
+    </image>
+    <metakeywords>OIldirectory.com Premium Listings</metakeywords>
+    <metadescription>OIldirectory.com Premium Listings</metadescription>
+    <labelisset>1</labelisset>
+    <categoryupload>1</categoryupload>
+    <categoryuploadlast>1</categoryuploadlast>
+    <categoryuploadforced>0</categoryuploadforced>
+    <categoryselected>0</categoryselected>
+    <categoryhighlighted>1</categoryhighlighted>
+    <collapse>cch_expand</collapse>
+    <id>0</id>
+    <productsincategory>7</productsincategory>
+    <parentid>-1</parentid>
+    <sharedoptions/>
+  </category>
+  <category>
+    <name>Oildirectory Products</name>
+    <content>
+      <![CDATA[]]>
+    </content>
+    <image>
+      <full>Store1_files\images\catimage1.png</full>
+      <isset>0</isset>
+    </image>
+    <metakeywords>Oildirectory Products</metakeywords>
+    <metadescription>Oildirectory Products</metadescription>
+    <labelisset>1</labelisset>
+    <categoryupload>1</categoryupload>
+    <categoryuploadlast>1</categoryuploadlast>
+    <categoryuploadforced>0</categoryuploadforced>
+    <categoryselected>0</categoryselected>
+    <categoryhighlighted>0</categoryhighlighted>
+    <collapse>cch_expand</collapse>
+    <id>1</id>
+    <productsincategory>1</productsincategory>
+    <parentid>-1</parentid>
+    <sharedoptions/>
+  </category>
+</root>

@@ -1,0 +1,39 @@
+body {
+    margin:10px;
+    text-align:center;
+    margin:0 auto;
+}
+
+#content {
+    width:600px;
+    text-align:left;
+}
+
+h1 {
+    font-size:1.3em;
+    font-weight:bold;
+}
+h2 {
+    font-size:1.1em;
+    font-weight:bold;
+}
+
+ol {
+    font-size:0.95em;
+}
+
+.submission_form {
+}
+
+form input {
+}
+form textarea {
+
+}
+form select {
+    min-width:200px;
+}
+#error { color:red; }
+
+fieldset { }
+legend { font-weight:bold; }

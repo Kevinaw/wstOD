@@ -1,0 +1,49 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between all ColorBox themes
+*/
+#colorbox_scc, #cbox_sccOverlay, #cbox_sccWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cbox_sccOverlay{position:fixed; width:100%; height:100%;}
+#cbox_sccMiddleLeft, #cbox_sccBottomLeft{clear:left;}
+#cbox_sccContent{position:relative; overflow:visible;}
+#cbox_sccLoadedContent{overflow:auto; width:0; height:0;}
+#cbox_sccLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cbox_sccTitle{margin:0;}
+#cbox_sccLoadingOverlay, #cbox_sccLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cbox_sccPrevious, #cbox_sccNext, #cbox_sccClose, #cbox_sccSlideshow{cursor:pointer;}
+
+/* 
+	ColorBox example user style
+	The following rules are ordered and tabbed in a way that represents the order/nesting of the generated HTML, 
+	in hope that this will make the relationship easier to understand. Thanks, jack@colorpowered.com
+*/
+#cbox_sccOverlay{background:#000;}
+
+#colorbox_scc{}
+	#cbox_sccTopLeft{width:14px; height:14px; background:url(../images/colorbox_images/controls.png) top left no-repeat;}
+	#cbox_sccTopCenter{height:14px; background:url(../images/colorbox_images/borderHorizontal.png) top left repeat-x;}
+	#cbox_sccTopRight{width:14px; height:14px; background:url(../images/colorbox_images/controls.png) top right no-repeat;}
+	#cbox_sccBottomLeft{width:14px; height:43px; background:url(../images/colorbox_images/controls.png) bottom left no-repeat;}
+	#cbox_sccBottomCenter{height:43px; background:url(../images/colorbox_images/borderHorizontal.png) bottom left repeat-x;}
+	#cbox_sccBottomRight{width:14px; height:43px; background:url(../images/colorbox_images/controls.png) bottom right no-repeat;}
+	#cbox_sccMiddleLeft{width:14px; background:url(../images/colorbox_images/borderVertical.png) top left repeat-y;}
+	#cbox_sccMiddleRight{width:14px; background:url(../images/colorbox_images/borderVertical.png) top right repeat-y;}
+	#cbox_sccContent{background:#fff;}
+		#cbox_sccLoadedContent{margin-bottom:5px;}
+		#cbox_sccLoadingOverlay{background:url(../images/colorbox_images/loading_background.png) center center no-repeat;}
+                #cbox_sccLoadingGraphic{background:url(../images/colorbox_images/loading.gif) center center no-repeat;}
+                #cbox_sccTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#949494; font-size:15px;}
+                #cbox_sccCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#949494; font-size:15px;}
+                
+                #cbox_sccPrevious, #cbox_sccNext, #cbox_sccClose, #cbox_sccSlideshow{position:absolute; bottom:-29px; background:url(../images/colorbox_images/controls.png) 0px 0px no-repeat; width:23px; height:23px; text-indent:-9999px;}
+                #cbox_sccPrevious{left:0px; background-position: -14px -23px;}
+                #cbox_sccPrevious.hover{background-position:-14px 0px;}
+                #cbox_sccNext{left:27px; background-position:-37px -23px;}
+                #cbox_sccNext.hover{background-position:-37px 0px;}
+		#cbox_sccClose{right:0; background-position:-60px -23px;}
+		#cbox_sccClose.hover{background-position:-60px 0px;}
+
+                .cbox_sccSlideshow_on #cbox_sccSlideshow{background-position:-83px -0px; right:27px;}
+                .cbox_sccSlideshow_on #cbox_sccSlideshow.hover{background-position:-106px -0px;}
+                .cbox_sccSlideshow_off #cbox_sccSlideshow{background-position:-106px -23px; right:27px;}
+                .cbox_sccSlideshow_off #cbox_sccSlideshow.hover{background-position:-83px -0px;}

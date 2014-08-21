@@ -1,0 +1,21 @@
+html,body { width:100%; }
+html,body,table,tr,td,th,div { font-family:arial; font-size:10pt; }
+#header { width:100%; }
+
+#billing { border-collapse:collapse; width:100%;  }
+#billing TH { border:1px solid gray; background-color:#dedede; }
+#billing TD { border:1px solid gray; }
+
+#date { font-weight:bold; }
+
+#items { border-collapse:collapse; width:100%; margin:10 0 10 0;  }
+#items TH { border:1px solid gray; background-color:#dedede; text-align:left; }
+#items TD { border:1px solid gray; }
+#items INPUT {  }
+
+.noborder TD { border:none; }
+.bold { font-weight:bold; }
+
+.print { display:none; }
+
+

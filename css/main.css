@@ -1,0 +1,125 @@
+html,body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+html,body,div,table,tr,td,form,ul,li,th,input {
+    font-family:arial,serif;
+    font-size:0.95em;
+}
+
+#framecontent{
+position:absolute;
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 135px; /*Height of frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background:#fff;
+}
+
+#banner-div {
+    position:absolute;
+    top:5px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#ajax-banner {
+    width:482px;
+    height:60px;
+    margin:0 auto;
+}
+
+#maincontent{
+position: fixed; 
+top: 135px; /*Set top value to HeightOfFrameDiv*/
+left: 0;
+right: 0;
+bottom: 0;
+overflow: hidden; 
+background: #fff;
+}
+
+.innertube{
+margin: 0px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+height:100%;
+}
+
+* html body{ /*IE6 hack*/
+padding: 135px 0 0 0; /*Set value to (HeightOfFrameDiv 0 0 0)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+#content { 
+  width:100%; 
+  min-height:100%; 
+  height:100%; 
+  overflow:auto; 
+}
+
+
+#logo {height:88px; z-index:100; position:absolute; top:5px; left:5px; }
+#search-bar { float:right; padding-right:5px; padding-top:5px; position:absolute; z-index:100; right:0;}
+
+
+
+#navbar-container{
+  background:#fff;
+  position:absolute;
+  top:100px;
+  left:0px;
+  width:100%;
+}
+
+#tab-container {
+  float:right;
+  width:100%;
+  background:#000 url("../images/bg.gif") repeat-x bottom;
+  font-size:9pt;
+  line-height:normal;
+  height:32px;
+  }
+#tab-container ul {
+  margin:0;
+  padding:10px 10px 0;
+  list-style:none;
+  }
+#tab-container li {
+  float:left;
+  background:url("../images/left2_red.gif") no-repeat left top;
+  margin:0;
+  padding:0 0 0 9px;
+  }
+#tab-container a {
+  float:left;
+  display:block;
+  background:url("../images/right2_red.gif") no-repeat right top;
+  padding:5px 15px 4px 6px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+  }
+/* Commented Backslash Hack
+   hides rule from IE5-Mac \*/
+#tab-container a {float:none;}
+/* End IE5-Mac hack */
+#tab-container a:hover {
+  color:#fff;
+  }
+#tab-container #current {
+  background-image:url("../images/left2_on.gif");
+  }
+#tab-container #current a {
+  background-image:url("../images/right2_on.gif");
+  color:#333;
+  padding-bottom:5px;
+  }
+

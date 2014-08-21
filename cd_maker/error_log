@@ -1,0 +1,15 @@
+[22-Dec-2009 07:58:51] PHP Warning:  include(views/get_listings_table.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/ch1647/public_html/site/search/views/results.php on line 131
+[22-Dec-2009 07:58:51] PHP Warning:  include(views/get_listings_table.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/ch1647/public_html/site/search/views/results.php on line 131
+[22-Dec-2009 07:58:51] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'views/get_listings_table.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ch1647/public_html/site/search/views/results.php on line 131
+[22-Dec-2009 07:59:22] PHP Fatal error:  Call to undefined function highlight() in /home/ch1647/public_html/site/search/views/get_listings_table.php on line 9
+[22-Dec-2009 07:59:24] PHP Fatal error:  Call to undefined function highlight() in /home/ch1647/public_html/site/search/views/get_listings_table.php on line 9
+[22-Dec-2009 07:59:25] PHP Fatal error:  Call to undefined function highlight() in /home/ch1647/public_html/site/search/views/get_listings_table.php on line 9
+[22-Dec-2009 08:01:10] PHP Fatal error:  Call to undefined function highlight() in /home/ch1647/public_html/cd/get_listings_table.php on line 9
+[22-Dec-2009 08:01:12] PHP Fatal error:  Call to undefined function highlight() in /home/ch1647/public_html/cd/get_listings_table.php on line 9
+[22-Dec-2009 08:02:03] PHP Parse error:  syntax error, unexpected ',' in /home/ch1647/public_html/cd/get_listings_table.php on line 9
+[22-Dec-2009 08:02:04] PHP Parse error:  syntax error, unexpected ',' in /home/ch1647/public_html/cd/get_listings_table.php on line 9
+[22-Dec-2009 08:05:10] PHP Warning:  join() [<a href='function.join'>function.join</a>]: Invalid arguments passed in /home/ch1647/public_html/cd/listing.php on line 13
+[22-Dec-2009 08:07:53] PHP Warning:  include(no_records.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/ch1647/public_html/cd/listing.php on line 24
+[22-Dec-2009 08:07:53] PHP Warning:  include(no_records.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/ch1647/public_html/cd/listing.php on line 24
+[22-Dec-2009 08:07:53] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'no_records.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ch1647/public_html/cd/listing.php on line 24
+[22-Dec-2009 08:12:50] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/ch1647/public_html/cd/header.php on line 22

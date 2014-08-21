@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Oildirectory.com Electronic Phone Book - September 2005</title>
+		<LINK REL="stylesheet" HREF="grid.css" type="text/css">
+	</head>
+	<body>
+		<table width="100%" class="intro">
+			<tr>
+				<td align="center" colspan="3">
+					<h2>Welcome to Oildirectory.com Electronic Phone Book</h2>
+				</td>
+			</tr>
+			<tr>
+				<td width="25%"></td>
+				<td>
+					<ul>
+						<li>
+							<a href='how_to_use.htm'>How to use this Directory?</a>
+						<li>
+							<a href='redistribute.htm'>Can I redistribute this Directory?</a>
+						<li>
+							<a href='purchase.htm'><b>I want to be noticed, how do I upgrade my directory listing?</b></a></li>
+					</ul>
+				</td>
+				<td width="25%"></td>
+			</tr>
+			<tr>
+				<td width="25%"></td>
+				<td align="center"><h3><a href='contents2.htm' target=_top>Go to the Directory</a></h3>
+				</td>
+				<td width="25%"></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="3"><div id='expired' name='expired'>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<script language='javascript'>
+	var today=new Date()
+	var expires=new Date()
+	expires.setFullYear(2005,9,1)
+	if(today>expires){
+		expired.innerHTML="An updated listing is available for download.  Just click <a href='http://www.oildirectory.com/cd/cd.exe'>here</a> to install it."
+	}
+		</script>
+	</body>
+</html>

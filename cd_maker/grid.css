@@ -1,0 +1,29 @@
+.headers TABLE { font-family:Arial; font-weight:bold; font-size:8pt; border-collapse:collapse; }
+.headers TR.header { border:none; height:5px; }
+.headers TD { font-family:Arial; font-size:8pt; }
+.headers TD.tab { width:101px; height:20px; }
+.headers A { text-decoration:none; color:#515151; }
+
+TABLE.header { border:1px solid black; width:100%; color:Black; font-family:Arial; font-size:8pt; }
+TABLE.header TD { padding:10px 10px 10px 10px; }
+
+TABLE.intro { font-family:Arial; font-size:10pt; }
+TABLE.intro TH { font-weight:bold; text-align:left; padding-top:24px; }
+
+TABLE.cdlist { font-family:Arial; font-size:8pt; color:Black; border-collapse:collapse; width:100%; border:solid 1px white; }
+TABLE.cdlist TR.header { page-break-before:always; background-color:rgb(225,225,225); color:Black; border:1px solid gray; font-weight:bold; }
+TABLE.cdlist TR.header A { color:Black; }
+TABLE.cdlist TR.paid_row1 { border:none; color:Red; font-weight:bold; }
+TABLE.cdlist TR.paid_row2 {  border-bottom:solid 1px black; color:red; }
+TABLE.cdlist TR.unpaid_row { border-bottom:solid 1px black; }
+TABLE.cdlist TD.underline { border-bottom:solid 1px black; }
+
+TABLE.toc { font-family:Arial; font-size:8pt; color:Black; border-collapse:collapse; }
+
+H4 { font-family:Arial; font-size:10pt; font-weight:bold; margin-top:2px; margin-bottom:2px; }
+H3 { font-family:Arial; }
+H2 { font-family:Arial; }
+A { text-decoration:none; color:Blue; cursor:pointer; font-family:Arial; }
+A:name { color:Black; }
+A:link { color:Blue; }
+A:hover { font-weight:bold; }

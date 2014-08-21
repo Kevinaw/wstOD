@@ -1,0 +1,103 @@
+<?php
+//------------------------------------------------------------------------------
+//*** Netherlands / "Vlaams" (Flemish) (nl)
+//------------------------------------------------------------------------------
+function setLanguage(){ 
+    $lang['='] = "=";  // "equal"; 
+    $lang['>'] = ">";  // "bigger"; 
+    $lang['<'] = "<";  // "smaller";
+    $lang['add'] = "Toevoegen"; 
+    $lang['add_new'] = "+ nieuw"; 
+    $lang['add_new_record'] = "Voeg nieuwe record toe";
+    $lang['adding_operation_completed'] = "Toevoegen is geslaagd!";
+    $lang['adding_operation_uncompleted'] = "Toevoegen is niet voltooid!";
+    $lang['and'] = "en"; 
+    $lang['any'] = "eender"; 
+    $lang['ascending'] = "Oplopend";  
+    $lang['back'] = "Terug";
+    $lang['cancel'] = "Annuleer"; 
+    $lang['cancel_creating_new_record'] = "Aanmaak nieuwe record annuleren: bent U zeker?"; 
+    $lang['check_all'] = "Markeer alles"; 
+    $lang['create'] = "Maak nieuw"; 
+    $lang['create_new_record'] = "Maak nieuwe record"; 
+    $lang['current'] = "huidige";
+    $lang['delete'] = "Verwijder"; 
+    $lang['delete_record'] = "Verwijder record"; 
+    $lang['delete_selected'] = "Delete selected"; 
+    $lang['delete_selected_records'] = "Geselecteerde records verwijderen: bent U zeker?"; 
+    $lang['delete_this_record'] = "Deze record verwijderen: bent U zeker?"; 
+    $lang['deleting_operation_completed'] = "Verwijderen is geslaagd!"; 
+    $lang['deleting_operation_uncompleted'] = "Verwijderen is niet voltooid!";
+    $lang['descending'] = "Aflopend"; 
+    $lang['details'] = "Details";
+    $lang['details_selected'] = "View selected";
+    $lang['edit'] = "Wijzig";
+    $lang['edit_selected'] = "Edit selected";
+    $lang['edit_record'] = "Wijzig record";
+    $lang['edit_selected_records'] = "Are you sure you want to edit the selected records?";   
+    $lang['errors'] = "Errors";
+    $lang['export_to_excel'] = "Exporteer naar Excel"; 
+    $lang['export_to_xml'] = "Exporteer naar XML";
+    $lang['export_message'] = "<label class=\"class_label\">The file _FILE_ is ready. After you finish downloading,</label> <a class=\"class_error_message\" href=\"javascript: window.close();\">close this window</a>.";
+    $lang['field'] = "Veld"; 
+    $lang['field_value'] = "Waarde";
+    $lang['file_find_error'] = "Cannot find file: <b>_FILE_</b>. <br>Check if this file exists and you use a correct path!";
+    $lang['file_opening_error'] = "Kan bestand niet openen. Kijk toegangsrechten na."; 
+    $lang['file_writing_error'] = "Kan niet naar bestand schrijven. Kijk schrijfrechten na!"; 
+    $lang['file_invalid file_size'] = "Ongeldige bestandsomvang!"; 
+    $lang['file_uploading_error'] = "Fout bij uploaden bestand: probeer opnieuw!";
+    $lang['file_deleting_error'] = "There was an error while deleting!";
+    $lang['first'] = "eerste";
+    $lang['handle_selected_records'] = "Are you sure you want to handle the selected records?";
+    $lang['hide_search'] = "Verberg zoeken"; 
+    $lang['last'] = "laatste"; 
+    $lang['like'] = "zoals";
+    $lang['like%'] = "like%";  // "begins with"; 
+    $lang['%like'] = "%like";  // "ends with";
+    $lang['loading_data'] = "loading data...";
+    $lang['max'] = "max"; 
+    $lang['next'] = "volgende"; 
+    $lang['no'] = "Nee"; 
+    $lang['no_data_found'] = "Geen gegevens gevonden"; 
+    $lang['no_data_found_error'] = "Geen gegevens gevonden! Kijk de syntax van uw code goed na!<br>Er kunnen problemen zijn met hoofdlettergevoeligheid of met onverwachte symbolen."; 
+    $lang['no_image'] = "Geen afbeelding"; 
+    $lang['not_like'] = "niet zoals"; 
+    $lang['of'] = "van"; 
+    $lang['or'] = "of"; 
+    $lang['pages'] = "Pagina's"; 
+    $lang['page_size'] = "Paginalengte"; 
+    $lang['previous'] = "vorige"; 
+    $lang['printable_view'] = "Afdrukvoorbeeld"; 
+    $lang['print_now'] = "Nu afdrukken"; 
+    $lang['print_now_title'] = "Klik hier om deze pagina af te drukken"; 
+    $lang['record_n'] = "Record #"; 
+    $lang['remove'] = "Verwijder";
+    $lang['reset'] = "Reset";
+    $lang['results'] = "Resultaten";
+    $lang['required_fields_msg'] = "Velden gemarkeerd met <font color='#cd0000'>*</font> zijn vereist"; 
+    $lang['search'] = "Zoek"; 
+    $lang['search_d'] = "Zoek"; // (description) 
+    $lang['search_type'] = "Zoeken met"; 
+    $lang['select'] = "Selecteer"; 
+    $lang['set_date'] = "Stel datum in"; 
+    $lang['total'] = "Totaal";
+    $lang['turn_on_debug_mode'] = "For more information, turn on debug mode.";
+    $lang['uncheck_all'] = "Niets gemarkeerd"; 
+    $lang['unhide_search'] = "Toon zoeken";
+    $lang['unique_field_error'] = "The field _FIELD_ allows only unique values - please reenter!";
+    $lang['update'] = "Bijwerken"; 
+    $lang['update_record'] = "Record bijwerken"; 
+    $lang['updating_operation_completed'] = "Bijwerken is geslaagd!"; 
+    $lang['updating_operation_uncompleted'] = "Bijwerken is niet voltooid!"; 
+    $lang['upload'] = "Upload"; 
+    $lang['view'] = "Details"; 
+    $lang['view_details'] = "Bekijk details";
+    $lang['warnings'] = "Warnings";
+    $lang['with_selected'] = "Met geselecteerde"; 
+    $lang['wrong_field_name'] = "Verkeerde veldnaam";
+    $lang['wrong_parameter_error'] = "Wrong parameter in <b>_FIELD_</b>: _VALUE_";
+    $lang['yes'] = "Ja"; 
+        
+    return $lang; 
+}
+?>

@@ -1,0 +1,27 @@
+<!--[if IE]>
+.class_textarea {BORDER: #b2b09b 1px solid; FONT: NORMAL 12px Tahoma;width:210px;scrollbar-face-color:#e4ecf7;scrollbar-darkshadow-color:#d0d7e5; scrollbar-3dlight-color:#d0d7e5;padding-left:3px;}</style>
+<![endif]-->
+
+.class_fieldset { margin: 0px;width:90%; BORDER: #dddddd 1px solid;}
+.class_filter_table {BORDER: #d0d0d0 0px solid; FONT: NORMAL 12px Tahoma;}
+.class_legend {FONT: NORMAL 12px Tahoma;}
+.class_paging_table {BORDER: #d0d0d0 0px solid; FONT: NORMAL 12px Tahoma;}
+.class_table {BORDER-COLLAPSE: collapse; BORDER: #d0d0d0 1px solid; FONT: NORMAL 12px Tahoma;}
+.class_th { BORDER-BOTTOM: #ffcc33 2px solid; BORDER-RIGHT: #d2d0bb 2px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; FONT: bold 13px Tahoma; COLOR: #333333; PADDING-TOP: 2px; }
+.class_th_normal { BORDER-BOTTOM: #d2d0bb 2px solid; BORDER-RIGHT: #d2d0bb 2px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; FONT: bold 13px Tahoma; COLOR: #333333; PADDING-TOP: 2px; BACKGROUND-COLOR: #e2e0cb}
+.class_th_selected { BORDER-BOTTOM: #cd0000 2px solid; BORDER-RIGHT: #d2d0bb 2px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; FONT: bold 13px Tahoma; COLOR: #333333; PADDING-TOP: 2px; BACKGROUND-COLOR: #e2e0cb}
+.class_td_main { BORDER-TOP: #f1efe2 1px solid; BORDER-RIGHT: #fefefe 1px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; FONT: Tahoma; }
+.class_td_selected { BORDER: #f1efe2 1px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; FONT: Tahoma; PADDING-TOP: 2px; }
+.class_td      { BORDER: #f1efe2 1px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; FONT: Tahoma;  }
+.class_button {BORDER-RIGHT: #b2b09b 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ffffff 2px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; FONT: bold 12px Tahoma; BORDER-LEFT: #ffffff 1px solid; COLOR: #333333; PADDING-TOP: 2px; BORDER-BOTTOM: #b2b09b 1px solid; BACKGROUND-COLOR: #e2e0cb}
+.class_select {BORDER: #b2b09b 1px solid; FONT: NORMAL 12px Tahoma;background-color: #fcfaf6;}
+.class_label {FONT-SIZE: 12px; FONT-FAMILY: Tahoma; }
+.class_textbox {BORDER: #b2b09b 1px solid; FONT: NORMAL 12px Tahoma;width:210px;padding-left:3px;}
+.class_checkbox {BORDER:0px; FONT: NORMAL 12px Tahoma;width:20px;}
+.class_radiobutton {BORDER:0px; FONT: NORMAL 12px Tahoma;width:20px;}
+.caption {FONT: NORMAL 14px Tahoma; font-weight: bold; text-align:center; Padding-bottom: 0;}
+.class_error_message {FONT: NORMAL 12px Tahoma; COLOR: #ff8822; }
+.class_ok_message {FONT: NORMAL 12px Tahoma; COLOR: #449944; }
+
+a.class_a { background: transparent; color: #72705b; text-decoration: none; FONT-SIZE: 12px; FONT-FAMILY: Tahoma;}a.class_a:hover { background: transparent; color: #f0c030; text-decoration: none; FONT-SIZE: 12px; FONT-FAMILY: Tahoma; }
+a.class_a2 { background: transparent; color: #72705b; text-decoration: none; FONT-SIZE: 12px; FONT-FAMILY: Tahoma; }a.class_a2:hover { background: transparent; color: #ffcc33; text-decoration: none; FONT-SIZE: 12px; FONT-FAMILY: Tahoma;}a.class_a2:visited { background: transparent; color: #72705b; text-decoration: none; FONT-SIZE: 12px; FONT-FAMILY: Tahoma;}

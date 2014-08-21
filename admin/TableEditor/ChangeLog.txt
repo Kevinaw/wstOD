@@ -1,0 +1,116 @@
+16th June 2005 (1.0.6)
+==============
+
+ o Fixed bug when not displaying primary key field.
+ o Fixed javascript bug in FireFox when selecting records.
+ o Added CSV download option. Can download either the selected records, the current
+   page or the entire table. Works well with searching too (ie. you can download the
+   current page even if it's a search result). There's a callback available to
+   override which escapes a single field of CSV data. The built in escape function
+   replaces carriage returns and line feeds with \r and \n respectively. It also
+   escapes commas with a backslash.
+ o Added advanced search capabilities
+
+
+26th April 2005 (1.0.5)
+===============
+
+ o Added support for join tables. Using these you can join the main table onto other
+   tables to retrieve columns from the "other" tables. When using join tables add
+   copy and delete functionality is automatically disabled, however edits can still
+   take place.
+ o Added two new methods, onlyDisplay() and onlyEdit(). As the names suggest these
+   methods set all fields to be hidden except those specified. Useful if you join
+   onto tables and end up having to hide lots of columns.
+ o Backported to PHP4. Be careful with references when using data validation callbacks.
+
+
+19th April 2005 (1.0.4)
+===============
+
+ o Added support for a "bitmask" type. Descriptive values need to be set using the
+   setValuesFrom*() methods. On the add/edit pages, this type is shown as a multiple
+   select. The corresponding type in MySQL is a SET, however you could just as easily
+   use an int.
+ o Added a "Set blank password" checkbox to the "password" pseudo input, to allow
+   setting of a blank password.
+ o Changed field specific errors on add/editcopy page to be next to their respective
+   fields. There's now a new method called setContextualError() to allow setting of
+   these errors from data validation callbacks.
+
+
+17th April 2005 (1.0.3)
+===============
+
+ o Fixed a bug which made multiple display filters on a column not work correctly.
+ o Search now highlights found terms. Does this by applying a display filter to each
+   searchable colum, which is applied *after* any user defined display filters.
+
+
+15th April 2005 (1.0.2)
+===============
+
+ o No longer classed as beta, (well, by me at least... ).
+ o When using the view button, fields with preset values are now shown
+   as they are on the main table page.
+ o Fixed a bug which meant edit was disabled when view was, and couldn't be
+   disabled by itself.
+ o Fixed redirection bug with urls.
+ o Fixed leading zeros being removed when inserting purely numeric values into
+   a text based field type.
+ o Added row copying functionality.
+ o Added data filters via addDataFilter() method to facilitate the
+   showing/viewing/editing/deleting of only certain rows
+ o Table structure is now no longer determined on each and every page refresh, but
+   is cached in the session.
+ o New method: setSearchableFields(). To be used instead of setConfig('searchableFields').
+   Supply one or more field names which are allowed to be searched.
+ o Added support for required fields when adding/editing/copying. If a required field is
+   not filled in, an error is displayed.
+ o Added support for pseudo input types:
+    o password  This shows two password inputs on the add/edit page. If when
+                submitted the two do not match, an error is displayed. However,
+                if the two are left blank/empty, the field is not updated. This
+                is to allow updates to rows without changing the password field.
+                You can alter this behaviour by stipulating the field to be
+                required.
+    o email     This shows a regular text input, however it automatically checks
+                whatever contents are supplied and ensures it matches the form of
+                an email address. If however the field is empty, no error is
+                raised. You can alter this behaviour by stipulating the field to
+                be required.
+ o Added support for data validation callbacks. These are run after functions, defaults,
+   required field checks and pseudo field validation checks. Using these you can add your
+   own validation checks before data is added/updated in the database. These callbacks
+   may also modify the data (eg. md5()ing a password). Now these are added, functions
+   default to off since along with default values functions are pretty much redundant.
+ o Added handling for magic_quotes_gpc
+
+
+14th April 2005 (1.0.1-beta)
+===============
+
+ o Changed aesthetics for shameful self promotion
+ o noDisplay() method now only hides a field from display, not editing. Use
+   noEdit() in combination to hide a field from editing too.
+ o Renamed defaultOrderby() to setDefaultOrderby()
+ o Fixed a number of E_NOTICE errors
+ o Added setDefaultValues(), which sets default values when adding rows. Can
+   be used with fields that aren't editable.
+ o Added add/edit/delete callback function support via addAdditionCallback(),
+   addEditCallback() and addDeleteCallback() methods. The callbacks are run when
+   each appropriate action is taken.
+ o Added ability to search fields which have their values preset with the
+   setValuesFrom* methods.
+ o Changed to using a single checkbox per row, and a single set of add/edit/delete
+   buttons. Can now delete multiple rows at once.
+ o Added View button, for viewing a row in full on it's own page.
+ o Added support for external header and footer files. Changing the header will lose
+   all CSS so you'll have to define your own.
+ o You can now disable any/all of the view/add/edit/delete buttons.
+
+
+11th April 2005 (1.0.0-beta)
+===============
+
+ o Initial release

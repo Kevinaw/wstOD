@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule .* /oildir_new/index.php [L] 
+
+AuthName "Restricted Area"
+AuthUserFile "/home/ch1647/.htpasswds/public_html/passwd"
+Order deny,allow
+Deny from all
+SetEnvIf Request_URI "payment_processing/paypal_handler.php$" allow
+Allow from env=allow
+Satisfy any

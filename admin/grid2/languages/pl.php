@@ -1,0 +1,103 @@
+<?php
+//------------------------------------------------------------------------------
+//*** Polish (pl) 
+//------------------------------------------------------------------------------
+function setLanguage(){ 
+    $lang['='] = "=";  // "equal"; 
+    $lang['>'] = ">";  // "bigger"; 
+    $lang['<'] = "<";  // "smaller";
+    $lang['add'] = "Dodaj"; 
+    $lang['add_new'] = "+ Dodaj nowy"; 
+    $lang['add_new_record'] = "Dodaj nowy wpis"; 
+    $lang['adding_operation_completed'] = "Operacja dodawania zako&#324;czona pomy&#347;lnie!"; 
+    $lang['adding_operation_uncompleted'] = "Operacja dodawania nie zako&#324;czona pomy&#347;lnie!";
+    $lang['and'] = "i"; 
+    $lang['any'] = "dowolny"; 
+    $lang['ascending'] = "Rosn&#261;co"; 
+    $lang['back'] = "Powrót"; 
+    $lang['cancel'] = "Anuluj"; 
+    $lang['cancel_creating_new_record'] = "Jeste&#347; pewien ze chcesz anulowac tworzenie nowego wpisu?"; 
+    $lang['check_all'] = "Sprawd&#378; wszystko"; 
+    $lang['create'] = "Stwórz"; 
+    $lang['create_new_record'] = "Utwórz nowy wpis"; 
+    $lang['current'] = "Bie&#380;&#261;cy"; 
+    $lang['delete'] = "Usu&#324;"; 
+    $lang['delete_record'] = "Usu&#324; wpis"; 
+    $lang['delete_selected'] = "Usu&#324; zaznaczone"; 
+    $lang['delete_selected_records'] = "Jeste&#347; pewien ze chcesz usun&#261;&#263; zaznaczone wpisy?"; 
+    $lang['delete_this_record'] = "Jeste&#347; pewien &#380;e chcesz usun&#261;&#263; ten wpis?";
+    $lang['deleting_operation_completed'] = "Operacja usuwania zako&#324;czona pomy&#347;lnie!"; 
+    $lang['deleting_operation_uncompleted'] = "Operacja usuwania nie zako&#324;czona pomy&#347;lnie!";
+    $lang['descending'] = "Malej&#261;co"; 
+    $lang['details'] = "Szczegó&#322;y";
+    $lang['details_selected'] = "View selected";
+    $lang['edit'] = "Zmie&#324;";
+    $lang['edit_selected'] = "Edit selected";
+    $lang['edit_record'] = "Zmie&#324; wpis";
+    $lang['edit_selected_records'] = "Are you sure you want to edit the selected records?";   
+    $lang['errors'] = "Errors";
+    $lang['export_to_excel'] = "Eksportuj do Excel"; 
+    $lang['export_to_xml'] = "Eksportuj do XML";
+    $lang['export_message'] = "<label class=\"class_label\">The file _FILE_ is ready. After you finish downloading,</label> <a class=\"class_error_message\" href=\"javascript: window.close();\">close this window</a>.";
+    $lang['field'] = "Pole"; 
+    $lang['field_value'] = "Warto&#347;&#263; pola";
+    $lang['file_find_error'] = "Cannot find file: <b>_FILE_</b>. <br>Check if this file exists and you use a correct path!";
+    $lang['file_opening_error'] = "Cannot open a file. Check your permissions.";
+    $lang['file_writing_error'] = "Nie mo&#380;na zapisa&#263; do pliku, sprawd&#378; uprawnienia!"; 
+    $lang['file_invalid file_size'] = "Nieprawid&#322;owy rozmiar pliku"; 
+    $lang['file_uploading_error'] = "Problem przy pobieraniu, spróbuj ponownie!";
+    $lang['file_deleting_error'] = "There was an error while deleting!";
+    $lang['first'] = "pierwszy"; 
+    $lang['handle_selected_records'] = "Are you sure you want to handle the selected records?";
+    $lang['hide_search'] = "Ukryj szukanie"; 
+    $lang['last'] = "ostatni"; 
+    $lang['like'] = "podobny";
+    $lang['like%'] = "like%";  // "begins with"; 
+    $lang['%like'] = "%like";  // "ends with";
+    $lang['loading_data'] = "loading data...";
+    $lang['max'] = "max"; 
+    $lang['next'] = "nast&#281;pny"; 
+    $lang['no'] = "Nie"; 
+    $lang['no_data_found'] = "Nie znaleziono danych"; 
+    $lang['no_data_found_error'] = "Nie znaleziono &#380;adnych danych sprawd&#378; swoj kod!<br>Jest rozró&#380;niana wielko&#347;&#263; liter."; 
+    $lang['no_image'] = "No Image";
+    $lang['not_like'] = "nie podobne"; 
+    $lang['of'] = " "; 
+    $lang['or'] = "lub"; 
+    $lang['pages'] = "Strony"; 
+    $lang['page_size'] = "Rozmiar strony"; 
+    $lang['previous'] = "poprzedni"; 
+    $lang['printable_view'] = "Wersja do druku"; 
+    $lang['print_now'] = "Drukuj teraz"; 
+    $lang['print_now_title'] = "Kliknij tu aby wydrukowa&#263;"; 
+    $lang['record_n'] = "Wpis #"; 
+    $lang['remove'] = "Usu&#324;";
+    $lang['reset'] = "Reset";
+    $lang['results'] = "Wyniki"; 
+    $lang['required_fields_msg'] = "Warto&#347;ci zaznaczone <font>*</font> s&#261; wymagane"; 
+    $lang['search'] = "Szukaj"; 
+    $lang['search_d'] = "Szukaj"; // (description) 
+    $lang['search_type'] = "Typ szukania"; 
+    $lang['select'] = "zaznacz"; 
+    $lang['set_date'] = "Ustaw dat&#281;"; 
+    $lang['total'] = "Ca&#322;kowite";
+    $lang['turn_on_debug_mode'] = "For more information, turn on debug mode.";
+    $lang['uncheck_all'] = "Odznacz wszystkie"; 
+    $lang['unhide_search'] = "Odkryj szukanie";
+    $lang['unique_field_error'] = "The field _FIELD_ allows only unique values - please reenter!";
+    $lang['update'] = "Zatwierdz"; 
+    $lang['update_record'] = "Zatwierd&#378; wpis"; 
+    $lang['updating_operation_completed'] = "Operacja zako&#324;czona pomy&#347;lnie!"; 
+    $lang['updating_operation_uncompleted'] = "Operacja nie zako&#324;czona pomy&#347;lnie!";
+    $lang['upload'] = "Wy&#347;lij"; 
+    $lang['view'] = "Podgl&#261;d"; 
+    $lang['view_details'] = "Zobacz szczegó&#322;y";
+    $lang['warnings'] = "Warnings";
+    $lang['with_selected'] = "z zaznaczonymi"; 
+    $lang['wrong_field_name'] = "Niepoprawna nazwa pola";
+    $lang['wrong_parameter_error'] = "Wrong parameter in <b>_FIELD_</b>: _VALUE_";
+    $lang['yes'] = "Tak"; 
+        
+    return $lang; 
+}
+?>

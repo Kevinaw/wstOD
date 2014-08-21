@@ -1,0 +1,932 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0071)getting_started.htm?title=Getting_Started -->
+<HTML lang=en dir=ltr xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Getting Started - DataGrid Wiki</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="Getting Started" name=keywords><LINK href="/favicon.ico" 
+rel="shortcut icon"><LINK title="Creative Commons" 
+href="/getting_started.htm?title=Getting_Started&amp;action=creativecommons" 
+type=application/rdf+xml rel=meta><LINK 
+href="http://www.gnu.org/copyleft/fdl.html" rel=copyright>
+<STYLE type=text/css media=screen,projection>@import url( inc/main.css?7 );
+</STYLE>
+<LINK media=print href="inc/commonPrint.css" 
+type=text/css rel=stylesheet><!--[if lt IE 5.5000]><style type="text/css">@import "inc/IE50Fixes.css";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "inc/IE55Fixes.css";</style><![endif]--><!--[if IE 6]>
+<STYLE type=text/css>@import url( inc/IE60Fixes.css );
+</STYLE>
+<![endif]--><!--[if IE 7]><style type="text/css">@import "inc/IE70Fixes.css?1";</style><![endif]--><!--[if lt IE 7]>
+<SCRIPT src="inc/IEFixes.js" 
+type=text/javascript></SCRIPT>
+
+<META http-equiv=imagetoolbar content=no><![endif]-->
+<SCRIPT type=text/javascript>var skin = 'monobook';var stylepath = '/dgwiki/skins';</SCRIPT>
+
+<SCRIPT src="inc/wikibits.js" 
+type=text/javascript><!-- wikibits js --></SCRIPT>
+
+
+<!-- Head Scripts -->
+<META content="MSHTML 6.00.2800.1561" name=GENERATOR></HEAD>
+<BODY class="ns-0 ltr">
+<DIV id=globalWrapper>
+<DIV id=column-content>
+<DIV id=content><A id=top name=top></A>
+<H1 class=firstHeading>Getting Started</H1>
+<DIV id=bodyContent>
+<H3 id=siteSub>From DataGrid Wiki</H3>
+<DIV id=contentSub></DIV>
+<DIV id=jump-to-nav>Jump to: <A 
+href="getting_started.htm?title=Getting_Started#column-one">navigation</A>, 
+<A 
+href="getting_started.htm?title=Getting_Started#searchInput">search</A></DIV><!-- start content -->
+<P>Getting Started (for version 4.0.0 or above) </P>
+<TABLE class=toc id=toc summary=Contents>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=toctitle>
+      <H2>Contents</H2></DIV>
+      <UL>
+        <LI class=toclevel-1><A 
+        href="getting_started.htm?title=Getting_Started#Common_Notices"><SPAN 
+        class=tocnumber>1</SPAN> <SPAN class=toctext>Common Notices</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Syntax."><SPAN 
+          class=tocnumber>1.1</SPAN> <SPAN class=toctext>Syntax.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Common_notes."><SPAN 
+          class=tocnumber>1.2</SPAN> <SPAN class=toctext>Common 
+          notes.</SPAN></A> </LI></UL>
+        <LI class=toclevel-1><A 
+        href="getting_started.htm?title=Getting_Started#Getting_Started"><SPAN 
+        class=tocnumber>2</SPAN> <SPAN class=toctext>Getting Started</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_1._Creating_.26_Calling."><SPAN 
+          class=tocnumber>2.1</SPAN> <SPAN class=toctext>Step 1. Creating &amp; 
+          Calling.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_2._General_Settings."><SPAN 
+          class=tocnumber>2.2</SPAN> <SPAN class=toctext>Step 2. General 
+          Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_3._Printing_.26_Exporting_Settings."><SPAN 
+          class=tocnumber>2.3</SPAN> <SPAN class=toctext>Step 3. Printing &amp; 
+          Exporting Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_4._Sorting_.26_Paging_Settings."><SPAN 
+          class=tocnumber>2.4</SPAN> <SPAN class=toctext>Step 4. Sorting &amp; 
+          Paging Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_5._Filter_.28search.29_Settings."><SPAN 
+          class=tocnumber>2.5</SPAN> <SPAN class=toctext>Step 5. Filter (search) 
+          Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_6._View_Mode_Settings."><SPAN 
+          class=tocnumber>2.6</SPAN> <SPAN class=toctext>Step 6. View Mode 
+          Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_7._Add.2FEdit.2FDetails_Mode_Settings."><SPAN 
+          class=tocnumber>2.7</SPAN> <SPAN class=toctext>Step 7. 
+          Add/Edit/Details Mode Settings.</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Step_8._Bind_the_DataGrid."><SPAN 
+          class=tocnumber>2.8</SPAN> <SPAN class=toctext>Step 8. Bind the 
+          DataGrid.</SPAN></A> </LI></UL>
+        <LI class=toclevel-1><A 
+        href="getting_started.htm?title=Getting_Started#Not_documented_features_and_functions."><SPAN 
+        class=tocnumber>3</SPAN> <SPAN class=toctext>Not documented features and 
+        functions.</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Properties"><SPAN 
+          class=tocnumber>3.1</SPAN> <SPAN class=toctext>Properties</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Methods"><SPAN 
+          class=tocnumber>3.2</SPAN> <SPAN class=toctext>Methods</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="getting_started.htm?title=Getting_Started#Features"><SPAN 
+          class=tocnumber>3.3</SPAN> <SPAN class=toctext>Features</SPAN></A> 
+          </LI></UL></LI></UL></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </SCRIPT>
+
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Common Notices" 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=1">edit</A>]</DIV><A 
+name=Common_Notices></A>
+<H2><B>Common Notices</B></H2>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Syntax." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=2">edit</A>]</DIV><A 
+name=Syntax.></A>
+<H3><B>Syntax.</B></H3>
+<P>We use </P>
+<P><B>##</B> as comments<BR><B>//</B> as lines, that must be 
+uncommented<BR><B>///</B> as lines, that may be uncommented (optional)<BR></P>
+<P><BR></P>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Common notes." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=3">edit</A>]</DIV><A 
+name=Common_notes.></A>
+<H3><B>Common notes.</B></H3>
+<P><FONT color=darkred><B>Please, use a <I>$debug_mode = true;</I> before you 
+say "Why Nothing Works&nbsp;?!" </B><BR></FONT></P>
+<P><BR></P>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Getting Started" 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=4">edit</A>]</DIV><A 
+name=Getting_Started></A>
+<H2><B>Getting Started</B></H2>
+<P>(for version 4.0.0 or above) </P>
+<P>This article in other languages: </P><PRE> <A title="Guía de usuario" href="getting_started.htm?title=Gu%C3%ADa_de_usuario">Spanish</A>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 1. Creating &amp; Calling." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=5">edit</A>]</DIV><A 
+name=Step_1._Creating_.26_Calling.></A>
+<H3><B>Step 1. Creating &amp; Calling.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+Creating &amp; Calling: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>Be sure you write here a right relative (virtual) path to the 
+<B>datagrid.class.php</B> file and <B>pear</B> directory (relatively to the 
+current file). </P>
+<P><U><B>RELATIVE PATH ONLY</B></U> </P><PRE><FONT color=darkblue><B>
+define ("DATAGRID_DIR", "");    </B></FONT><FONT color=green>/* Ex.: "datagrid/" */</FONT><FONT color=darkblue><B>
+define ("PEAR_DIR", "pear/");   </B></FONT><FONT color=green>/* Ex.: "datagrid/pear/" */</FONT>
+<FONT color=darkblue><B>
+require_once(DATAGRID_DIR.'datagrid.class.php');
+require_once(PEAR_DIR.'PEAR.php');
+require_once(PEAR_DIR.'DB.php');
+</B></FONT>
+</PRE>
+<P>Put valid values into these variables. Be sure, you use a prefix if you need 
+it. </P><PRE><FONT color=green>
+##  *** creating variables that we need for database connection </FONT>
+<FONT color=darkblue><B>
+$DB_USER='name';       </B></FONT><FONT color=green>/* usually like this: prefix_name           */</FONT><FONT color=darkblue><B>
+$DB_PASS=' ';          </B></FONT><FONT color=green>/* must be already enscrypted (recommended) */</FONT><FONT color=darkblue><B>
+$DB_HOST='localhost';  </B></FONT><FONT color=green>/* usually localhost                        */</FONT><FONT color=darkblue><B>
+$DB_NAME='dbName';     </B></FONT><FONT color=green>/* usually like this: prefix_dbName         */</FONT>
+</PRE>
+<P>First of all, we need to be connected to our database. </P><PRE><FONT color=darkblue><B>ob_start();</B></FONT>
+<FONT color=green> 
+## *** (example of ODBC connection string)
+## *** $result_conn = $db_conn-&gt;connect(DB::parseDSN('odbc://root:12345@test_db'));
+## *** (example of Oracle connection string)
+## *** $result_conn = $db_conn-&gt;connect(DB::parseDSN('oci8://root:12345@localhost:1521/mydatabase)); 
+## *** (example of PostgreSQL connection string)
+## *** $result_conn = $db_conn-&gt;connect(DB::parseDSN('pgsql://root:12345@localhost/mydatabase)); 
+## === (Examples of connections to other db types see in "docs/pear/" folder)</FONT>
+<FONT color=darkblue><B>
+$db_conn =&amp; DB::factory('mysql'); 
+$result_conn = 
+   $db_conn-&gt;connect(DB::parseDSN('mysql://'.$DB_USER.':'.$DB_PASS.'@'.$DB_HOST.'/'.$DB_NAME));
+if(DB::isError($result_conn)){ 
+   die($result_conn-&gt;getMessage()); 
+}</B></FONT>
+</PRE>
+<P>Now you have to prepare the SELECT SQL statement. It can be any type of 
+SELECT statement your database supports (with JOIN, UNION etc.), but you must 
+put the primary key on the first place. Also be careful to write all fileds you 
+need them to be shown, because the DataGrid class works with only on fields that 
+you placed in SELECT statement. </P>
+<P><STRONG>Don't add here ORDER BY, LIMIT words or&nbsp;; at the end of the 
+statement.</STRONG> </P><PRE><FONT color=green>
+##  *** put a primary key on the first place </FONT>
+<FONT color=darkblue><B>
+$sql = "SELECT primary_key, filed_1, filed_2 ... FROM tableName ";
+</B></FONT>
+</PRE>
+<P>Creating the a new class instance and linking the DataGrid class to our 
+database. We can add an unique prefix (optional) to our datagrid if we want to 
+prevent using of double names on this page (in case, when you use some datagrids 
+or forms on same page). </P><PRE><FONT color=green>##  *** set needed options and create a new class instance </FONT><BR>
+<FONT color=green>// display SQL statements while processing</FONT> 
+<FONT color=darkblue><B>$debug_mode = false;</B></FONT>
+<FONT color=green>// display system messages on a screen</FONT>     
+<FONT color=darkblue><B>$messaging = true;</B></FONT>
+<FONT color=green>// prevent overlays - must be started with a letter</FONT>
+<FONT color=darkblue><B>$unique_prefix = "abc_";</B></FONT>
+<FONT color=darkblue><B>
+$dgrid = new DataGrid($debug_mode, $messaging, $unique_prefix, DATAGRID_DIR);
+</B></FONT>
+</PRE>
+<P>Now we need to set data source to the DataGrid. We may define default columns 
+ordering, by writing an apropriate field in <B>$default_order_field</B> (you can 
+write some fields, separated by commas) and a sorting type in 
+<B>$default_order_type</B> (they also may be written with commas).<BR>Example: 
+<BR><B>$default_order_field = "Region, CountryID";</B><BR><B>$default_order_type 
+= "ASC, DESC";</B> </P><PRE><FONT color=green>##  *** set data source with needed options</FONT><BR>
+<FONT color=green>// make default(first) ordering by this field</FONT>
+<FONT color=darkblue><B>$default_order_field = "field_name_1 [, field_name_2...]";</B></FONT>
+<FONT color=green>// default field order type</FONT>
+<FONT color=darkblue><B>$default_order_type = "ASC|DESC [, ASC|DESC...]";</B></FONT>
+<FONT color=darkblue><B>
+$dgrid-&gt;dataSource($db_conn, $sql, $default_order_field, $default_order_type);	    
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 2. General Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=6">edit</A>]</DIV><A 
+name=Step_2._General_Settings.></A>
+<H3><B>Step 2. General Settings.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+General Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>If you want to use a local language (not English) - you have to set the right 
+encoding. <STRONG>The database, tables and appropriate fields in your database 
+must be created with the same CHARACTER SET and COLLATE too.</STRONG> Also you 
+need to define in your file: <STRONG>header('Content-type: text/html; 
+charset=XXXX');</STRONG> where xxxx ISO-8859-1 or UTF-8 or whatever you 
+have.<BR>Example: CHARSET=utf8 COLLATE=utf8_unicode_ci<BR>Example: &lt;META 
+http-equiv=Content-Type content="text/html; charset=UTF-8"&gt; </P><PRE><FONT color=green>##  *** set encoding (default - utf8)</FONT>
+<FONT color=darkblue><B>
+$dg_encoding = "utf8"; 
+$dgrid-&gt;setEncoding($dg_encoding);
+</B></FONT>
+</PRE>
+<P>Set interface language for DatagGrid (en - default). All supported languages 
+are listed under commented lines. </P><PRE><FONT color=green>
+##  *** set interface language (default - English)
+##  *** (en) - English     (de) - German     (se) Swedish     (hr) - Bosnian/Croatian
+##  *** (hu) - Hungarian   (es) - Espanol    (ca) - Catala    (fr) - Francais
+##  *** (nl) - Netherlands/"Vlaams"(Flemish) (it) - Italiano  (pl) - Polish
+##  *** (ch) - Chinese     (sr) Serbian</FONT> 
+<FONT color=darkblue><B>
+$dg_language = "en";  
+$dgrid-&gt;setInterfaceLang($dg_language);
+</B></FONT>
+</PRE>
+<P>Option for some right-to-left languages (Hebrew, Arabic etc.) </P><PRE><FONT color=green>##  *** set direction: "ltr" or "rtl" (default - ltr)</FONT>
+<FONT color=darkblue><B>
+$direction = "ltr";
+$dgrid-&gt;setDirection($direction);
+</B></FONT>
+</PRE>
+<P>Set layouts for datagrid in view or edit mode and for the filtering block 
+</P><PRE><FONT color=green>##  *** set layouts: 0 - tabular(horizontal) - default, 1 - columnar(vertical)</FONT>
+<FONT color=darkblue><B>
+$layouts = array("view"=&gt;0, "edit"=&gt;1, "filter"=&gt;1); 
+$dgrid-&gt;setLayouts($layouts);
+</B></FONT>
+</PRE>
+<P>Set various modes for datagrid. <B>true</B> - allow the operation in this 
+mode("view" or "edit"), <B>false</B> - don't allow. <B>type</B> - a type of 
+command button (link, html button or image). <B>byFieldValue</B> - if you want 
+to make this field to be a link to edit mode page (instead of edit button), 
+write here a name of the field. If you want to use a standart edit command 
+button leave this parameter empty: <B>"byFieldValue"=&gt;""</B> </P><PRE><FONT color=green>##  *** set modes for operations ("type" = "link|button|image"),
+##  *** ("byFieldValue" - make the field as a link to edit mode page)</FONT>
+<FONT color=darkblue><B>
+$modes = array(
+  "add"     =&gt;array("view"=&gt;true, "edit"=&gt;false, "type"=&gt;"link"),
+  "edit"    =&gt;array("view"=&gt;true, "edit"=&gt;true, "type"=&gt;"link", &nbsp;"byFieldValue"=&gt;"FieldName"),
+  "cancel"  =&gt;array("view"=&gt;true, "edit"=&gt;true, "type"=&gt;"link"),
+  "details" =&gt;array("view"=&gt;true, "edit"=&gt;false, "type"=&gt;"link"),
+  "delete"  =&gt;array("view"=&gt;true, "edit"=&gt;true, "type"=&gt;"image")
+);
+$dgrid-&gt;setModes($modes);
+</B></FONT>
+</PRE>
+<P>Set scrolling settings and parameters for DataGrid. If you want the DataGrid 
+will be displayed with scrolling, allow this option by the next commands. </P><PRE><FONT color=green><B>
+##  *** allow scrolling on datagrid</B></FONT>
+<FONT color=darkblue><B>
+$scrolling_option = false;
+$dgrid-&gt;allowScrollingSettings($scrolling_option);  
+</B></FONT>
+<FONT color=green><B>
+##  *** set scrolling settings (optional)</B></FONT><FONT color=darkblue><B>
+$scrolling_width = "90%";
+$scrolling_height = "100%";
+$dgrid-&gt;setScrollingSettings($scrolling_width, $scrolling_height);
+</B></FONT>
+</PRE>
+<P>If you want to allow multirow operations for DataGrid, set 
+<B>$multirow_option = true;</B> </P><PRE><FONT color=green><B>##  *** allow mulirow operations</B></FONT>
+<FONT color=darkblue><B>
+$multirow_option = true;
+$dgrid-&gt;allowMultirowOperations($multirow_option);
+</B></FONT>
+</PRE>
+<P>You can work with embedded multi-row operations: delete/details or define 
+your own operation, like in example below. Number of operations, that you may 
+define - is not limited. </P><PRE><FONT color=darkblue><B>
+$multirow_operations = array(
+  "delete"  =&gt; array("view"=&gt;true),
+  "details" =&gt; array("view"=&gt;true),
+  "my_operation_name" =&gt; 
+     array("view"=&gt;true, 
+           "flag_name"=&gt;"my_flag_name", 
+           "flag_value"=&gt;"my_flag_value", 
+           "tooltip"=&gt;"Do something with selected", 
+           "image"=&gt;"image.gif")
+);
+$dgrid-&gt;setMultirowOperations($multirow_operations);  
+</B></FONT>
+</PRE>
+<P>Set CSS parameters for the datagrid. If you want to use embedded css class - 
+define $css_type as "embedded" and $css_class as you wish. If you use an 
+external file of CSS styles - you define $css_type as "file" and $css_class as 
+the full path to your file. </P>
+<P><B>For example:$css_class = "css/style.css".<BR>Embedded CSS styles: 
+"default", "blue", "gray" and "green".</B> </P><PRE><FONT color=green><B>
+##  *** set CSS class for datagrid:
+##  *** "default" or "blue" or "gray" or "green" or your css file relative path with name
+</B></FONT>
+<FONT color=darkblue><B>$css_class = "default";</B></FONT>
+<FONT color=green><B>
+## "embedded" - use embedded classes, "file" - link to external css file (relative path)
+</B></FONT><FONT color=darkblue><B>
+$css_type = "embedded"; 
+$dgrid-&gt;setCssClass($css_class, $css_type);
+</B></FONT>
+</PRE>
+<P>Set variables that you use to get access to your page or have passed from the 
+previous page/s. </P><PRE><FONT color=green><B>
+##  *** set variables that used to get access to the page
+##  *** (like: my_page.php?act=34&amp;id=56 etc.)  </B></FONT>
+<FONT color=darkblue><B>
+$http_get_vars = array("act", "id");
+$dgrid-&gt;setHttpGetVars($http_get_vars);
+</B></FONT>
+</PRE>
+<P>If you want to use some PHP DataGrid on your page, you need to define other 
+datagrids uniquie prefixes to allow each datagrid to detect others. You need to 
+define in which mode (view/edit/details) the current datagrid will recognize 
+others. </P><PRE><FONT color=green><B>
+##  *** set another datagrid/s unique prefixes (if you use few datagrids on one page)
+##  *** format (in wich mode to allow processing of another datagrids)
+##  *** array("unique_prefix"=&gt;array ("view"=&gt;true|false, "edit"=&gt;true|false, "details"=&gt;true|false), [,...]);</B></FONT>
+<FONT color=darkblue><B>
+$anotherDatagrids = array("abcd_"=&gt;array("view"=&gt;true, "edit"=&gt;true, "details"=&gt;true));
+$dgrid-&gt;setAnotherDatagrids($anotherDatagrids);  
+</B></FONT>
+</PRE>
+<P>Set datagrid title (caption). </P><PRE><FONT color=green><B>
+##  *** set DataGrid Caption</B></FONT>
+<FONT color=darkblue><B>
+$dg_caption = "My Favorite Lovely PHP DataGrid";
+$dgrid-&gt;setCaption($dg_caption);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 3. Printing &amp; Exporting Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=7">edit</A>]</DIV><A 
+name=Step_3._Printing_.26_Exporting_Settings.></A>
+<H3><B>Step 3. Printing &amp; Exporting Settings.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+Printing &amp; Exporting Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>If you want to allow users to view printer-priendly pages and print them - 
+set printing as true. </P><PRE><FONT color=green><B>
+##  *** set printing option: true(default) or false </B></FONT>
+<FONT color=darkblue><B>
+$printing_option = true;
+$dgrid-&gt;allowPrinting($printing_option); </B></FONT>
+</PRE>
+<P>If you want to allow users to export datagrid data - set exporting as true. 
+</P><PRE><FONT color=green><B>
+##  *** set exporting option: true(default) or false </B></FONT>
+<FONT color=darkblue><B>
+$exporting_option = true;
+$dgrid-&gt;allowExporting($exporting_option);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 4. Sorting &amp; Paging Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=8">edit</A>]</DIV><A 
+name=Step_4._Sorting_.26_Paging_Settings.></A>
+<H3><B>Step 4. Sorting &amp; Paging Settings.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+Sorting &amp; Paging Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>Set sorting option as true, if you want to allow sorting on columns. </P><PRE><FONT color=green><B>
+##  *** set sorting option: true(default) or false </B></FONT>
+<FONT color=darkblue><B>
+$sorting_option = true;
+$dgrid-&gt;allowSorting($sorting_option);
+</B></FONT>
+</PRE>
+<P>Set paging option as true, if you want to allow paging on datagrid. If you 
+want to add a column with rows numeration - set $rows_numeration as true. </P><PRE><FONT color=green><B>
+##  *** set paging option: true(default) or false </B></FONT>
+<FONT color=darkblue><B>
+$paging_option = true;
+$rows_numeration = false;
+$numeration_sign = "N #";
+$dgrid-&gt;allowPaging($paging_option, $rows_numeration, $numeration_sign);
+</B></FONT>
+</PRE>
+<P>Set aditional paging settings. <BR><B>$top_paging</B> or 
+<B>$bottom_paging</B> - both define paging (top and bottom) behaviour. We have 
+three parts of the paging line (left, center, right): <I>results</I>, 
+<I>pages</I> and <I>page size</I> dropdownbox. You need to set parameters for 
+each of them. If you don't want to show any of them or all of them - leave it 
+empty Ex.: <B>$bottom_paging = array()</B> or <B>$bottom_paging = 
+array("results"=&gt;true, "results_align"=&gt;"left");</B>. <BR>If you want to 
+define your own dropdown box with page sizes - you can make it in 
+<B>$pages_array array</B> - see example below or leave it empty. Also you can 
+define default page size in <B>$default_page_size</B> variable. </P><PRE><FONT color=green><B>
+##  *** set paging settings </B></FONT>
+<FONT color=darkblue><B>
+$bottom_paging = array(
+         "results"=&gt;true, "results_align"=&gt;"left", 
+         "pages"=&gt;true, "pages_align"=&gt;"center", 
+         "page_size"=&gt;true, "page_size_align"=&gt;"right");
+$top_paging = array(
+         "results"=&gt;true, "results_align"=&gt;"left",
+         "pages"=&gt;true, "pages_align"=&gt;"center",
+         "page_size"=&gt;true, "page_size_align"=&gt;"right");
+$pages_array = array("10"=&gt;"10", "25"=&gt;"25", "50"=&gt;"50", "100"=&gt;"100", "250"=&gt;"250");
+$default_page_size = 10;
+$dgrid-&gt;setPagingSettings($bottom_paging, $top_paging, $pages_array, $default_page_size);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 5. Filter (search) Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=9">edit</A>]</DIV><A 
+name=Step_5._Filter_.28search.29_Settings.></A>
+<H3><B>Step 5. Filter (search) Settings.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+Filter Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>If you want to allow a filtering mode, set $filtering_option as true. </P><PRE><FONT color=green><B>
+##  *** set filtering option: true or false(default)</B></FONT>
+<FONT color=darkblue><B>
+$filtering_option = true;
+$dgrid-&gt;allowFiltering($filtering_option);
+</B></FONT>
+</PRE>
+<P>Set aditional filtering settings. </P>
+<P><B>"Caption_1/2/3/.../n"=&gt;</B> - caption for the filtering 
+field<BR><B>"table"=&gt;"tableName_1/2/3/.../n"</B><BR><B>"field"=&gt;"fieldName_1/2/3/.../n"</B> 
+- table and field we want to 
+filter<BR><B>"source"=&gt;"self"|$fill_from_array</B> - take values for 
+filtering field (dropdown list) from the specific array or not<BR>Example: </P><PRE><FONT color=darkblue><B>
+$fill_from_array = array("0"=&gt;"No", "1"=&gt;"Yes");
+</B></FONT>
+</PRE>
+<P><B>"operator"=&gt;false|true</B> - draw comparison operators dropdown list or 
+not<BR><B>"order"=&gt;"ASC|DESC"</B> - dropdown list values order 
+(optional)<BR><B>"type"=&gt;"textbox|dropdownlist"</B> - view type of filtering 
+filed (textbox - default)<BR><B>"case_sensitive"=&gt;false|true</B> - whether 
+filtering is case 
+sensitive<BR><B>"comparison_type"=&gt;"string|numeric|binary"</B> - filtering 
+comparison type<BR></P><PRE><FONT color=green><B>
+##  *** set aditional filtering settings
+</B></FONT>
+<FONT color=darkblue><B>
+$filtering_fields = array(
+      "Caption_1"=&gt;array(
+             "table"=&gt;"tableName_1", 
+             "field"=&gt;"fieldName_1", 
+             "source"=&gt;"self"|$fill_from_array, 
+             "operator"=&gt;false|true, 
+             "default_operator"=&gt;"=|&lt;|&gt;|like|%like|like%|not like", 
+             "order"=&gt;"ASC|DESC" (optional), 
+             "type"=&gt;"textbox|dropdownlist", 
+             "case_sensitive"=&gt;false|true, 
+             "comparison_type"=&gt;"string|numeric|binary"),
+      "Caption_2"=&gt;array(
+             "table"=&gt;"tableName_2", 
+             "field"=&gt;"fieldName_2", 
+             "source"=&gt;"self"|$fill_from_array, 
+             "operator"=&gt;false|true, 
+             "default_operator"=&gt;"=|&lt;|&gt;|like|%like|like%|not like", 
+             "order"=&gt;"ASC|DESC" (optional), 
+             "type"=&gt;"textbox|dropdownlist", 
+             "case_sensitive"=&gt;false|true, 
+             "comparison_type"=&gt;"string|numeric|binary")
+);
+$dgrid-&gt;setFieldsFiltering($filtering_fields);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 6. View Mode Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=10">edit</A>]</DIV><A 
+name=Step_6._View_Mode_Settings.></A>
+<H3><B>Step 6. View Mode Settings.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+View Mode Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>Set some properties for view mode table </P><PRE><FONT color=green><B>
+##  *** set table properties</B></FONT>
+<FONT color=darkblue><B>
+$vm_table_properties = array("width"=&gt;"90%");
+$dgrid-&gt;setViewModeTableProperties($vm_table_properties);  
+</B></FONT>
+</PRE>
+<P>This method sets up columns, that will be viewable. </P>
+<P>For all types:<BR><B>"header"=&gt;"..."</B> - name of the column's 
+header<BR><B>"type"=&gt;"..."</B> - type of the column. <BR>Possible values: 
+label, image, linktoview, linktoedit, link (<A class="external free" 
+title=http:// href="http:///" rel=nofollow>http://</A>, <A class="external free" 
+title=mailto href="http://phpbuilder.awardspace.com/dgwiki/mailto" 
+rel=nofollow>mailto</A>:, ftp:// ...), password or 
+barchart<BR><B>"align"=&gt;"..."</B> - horizontal alignment of the column's 
+content (left, center or right)<BR><B>"width"=&gt;"..."</B> - width of the 
+column in pixels or in percents<BR><B>"wrap"=&gt;"..."</B> - wraping of the 
+column data (wrap or nowrap)<BR><B>"text_length"=&gt;"..."</B> - viewable length 
+of the text in characters <BR>(any integer number - truncate after this number 
+of characters, "-1" - don't truncate (view a full 
+text))<BR><B>"case"=&gt;"..."</B> - text case (normal, upper or 
+lower)<BR><B>"summarize"=&gt;...</B> - summarize values in this column (true or 
+false)<BR><B>"on_js_event"=&gt;"..."</B> - javascript code or js function on 
+some event. Example: onClick(alert('Clicked!')) <BR><BR></P>
+<P>For the "link" 
+type:<BR><B>"field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|...,</B> 
+- field for href parameter in &lt;a 
+href="...field_key_x..."&gt;<BR><B>"field_data"=&gt;"...",</B> - field for &lt;a 
+href=""&gt;field_data&lt;/a&gt;<BR><B>"href"=&gt;"..."</B> - href parameter, 
+{0}/{1}/... will be changed on "field_key_0/1/..." 
+value<BR><B>"target"=&gt;"..."</B> - target parameter<BR><BR></P>
+<P>For the "image" type:<BR><B>"target_path"=&gt;"..."</B> - relative path to 
+image<BR><B>"default"=&gt;"..."</B> - default image 
+name<BR><B>"image_width"=&gt;"..."</B> - viewing width of 
+image<BR><B>"image_height"=&gt;"..."</B> - viewing height of image<BR><BR></P>
+<P>For the "barchart" type:<BR><B>"field"=&gt;"..."</B> - filed 
+name<BR><B>"maximum_value"=&gt;"..."</B> maximal value for the chart. Number 
+rormat in SELECT SQL must be equal with number format in max_value.<BR></P><PRE><FONT color=green><B>
+##  *** set columns in view mode
+##  *** Ex.: "on_js_event"=&gt;"onclick='alert(\"Yes!!!\");'"
+</B></FONT>
+<FONT color=darkblue><B>
+$vm_colimns = array(
+   "FieldName_1"=&gt;array("header"=&gt;"Name_A", "type"=&gt;"label",      "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;""),
+   "FieldName_2"=&gt;array("header"=&gt;"Name_B", "type"=&gt;"image",      "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;"", "target_path"=&gt;"uploads/", "default"=&gt;"default_image.ext", "image_width"=&gt;"50px", "image_height"=&gt;"30px"),
+   "FieldName_3"=&gt;array("header"=&gt;"Name_C", "type"=&gt;"linktoview", "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;""),
+   "FieldName_3"=&gt;array("header"=&gt;"Name_C", "type"=&gt;"linktoedit", "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;""),
+   "FieldName_4"=&gt;array("header"=&gt;"Name_D", "type"=&gt;"link",       "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;"", "field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|..., "field_data"=&gt;"field_name_2", "target"=&gt;"_new", "href"=&gt;"{0}"),
+   "FieldName_5"=&gt;array("header"=&gt;"Name_E", "type"=&gt;"link",       "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;"", "field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|..., "field_data"=&gt;"field_name_2", "target"=&gt;"_new", "href"=&gt;"<A class="external free" title=mailto:{0} href="mailto:{0}" rel=nofollow>mailto:{0}</A>"),
+   "FieldName_6"=&gt;array("header"=&gt;"Name_F", "type"=&gt;"link",       "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;"", "field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|..., "field_data"=&gt;"field_name_2", "target"=&gt;"_new", "href"=&gt;"<A class="external free" title=http://mydomain.com?act={0}&amp;act={1}&amp;code=ABC href="http://mydomain.com/?act={0}&amp;act={1}&amp;code=ABC" rel=nofollow>http://mydomain.com/?act={0}&amp;act={1}&amp;code=ABC</A>"),
+   "FieldName_7"=&gt;array("header"=&gt;"Name_G", "type"=&gt;"password",   "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;""),
+   "FieldName_8"=&gt;array("header"=&gt;"Name_H", "type"=&gt;"barchart",   "align"=&gt;"left", "width"=&gt;"X%|Xpx", "wrap"=&gt;"wrap|nowrap", "text_length"=&gt;"-1", "case"=&gt;"normal|upper|lower", "summarize"=&gt;true|false, "on_js_event"=&gt;"", "field"=&gt;"field_name", "maximum_value"=&gt;"value")
+);
+$dgrid-&gt;setColumnsInViewMode($vm_colimns);
+</B></FONT>
+</PRE>
+<P><BR>If you want to get auto-genereted columns - set 
+<B>$auto_column_in_view_mode</B> as true. </P><PRE><FONT color=green><B>
+##  *** set auto-genereted columns in view mode
+</B></FONT><FONT color=darkblue><B>
+$auto_column_in_view_mode = false;
+$dgrid-&gt;setAutoColumnsInViewMode($auto_column_in_view_mode);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 7. Add/Edit/Details Mode Settings." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=11">edit</A>]</DIV><A 
+name=Step_7._Add.2FEdit.2FDetails_Mode_Settings.></A>
+<H3><B>Step 7. Add/Edit/Details Mode Settings. </B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+Add/Edit/Details Mode Settings: 
+<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>Set properties for edit mode table. </P><PRE><FONT color=green><B>
+##  *** set add/edit mode table properties
+</B></FONT><FONT color=darkblue><B>
+$em_table_properties = array("width"=&gt;"70%");
+$dgrid-&gt;setEditModeTableProperties($em_table_properties);
+</B></FONT>
+</PRE>
+<P>Set properties for details mode table. </P><PRE><FONT color=green><B>
+##  *** set details mode table properties
+</B></FONT><FONT color=darkblue><B>
+$dm_table_properties = array("width"=&gt;"70%");
+$dgrid-&gt;setDetailsModeTableProperties($dm_table_properties);
+</B></FONT>
+</PRE>
+<P>Set settings for add/edit/details modes </P><PRE><FONT color=green><B>
+##  ***  set settings for add/edit/details modes
+
+// Table for adding and editing</B></FONT><FONT color=darkblue><B>
+$table_name  = "table_name";</B></FONT>
+<FONT color=green><B>
+// Primary key for this table</B></FONT><FONT color=darkblue><B>
+$primary_key = "primary_key";</B></FONT> 
+<FONT color=green><B>
+// Condition. Ex.: table_name.field = 'xxx'</B></FONT><FONT color=darkblue><B>
+$condition = "";<BR>
+$dgrid-&gt;setTableEdit($table_name, $primary_key, $condition);
+</B></FONT>
+</PRE>
+<P><BR>This method sets up columns, that will be viewable. </P>
+<P>For all types:<BR><B>"header"=&gt;"..."</B> - name of the column's 
+header<BR><B>"type"=&gt;"..."</B> - type of the column. <BR></P><PRE>Possible values: 
+    textbox,          textarea, 
+    label,            password,  
+    print,            date(yyyy-mm-dd), 
+    enum,             datedmy(dd-mm-yyyy), 
+    image,            datetime(yyyy-mm-dd hh:mm:ss), 
+    checkbox,         datetimedmy(dd-mm-yyyy hh:mm:ss),                  
+    file,             link (<A class="external free" title=http:// href="http:///" rel=nofollow>http://</A>, <A class="external free" title=mailto href="http://phpbuilder.awardspace.com/dgwiki/mailto" rel=nofollow>mailto</A>:, ftp:// ...) 
+    hidden,           delimiter            
+
+</PRE>
+<P><B>"req_type"=&gt;"..."</B> - field parameters:<BR></P><PRE>first letter: 
+    r - required,      s - simple (not required)
+second letter: 
+    t - text(including datetime), 
+    n - numeric,       a - alphanumeric, 
+    e - email,         f - float, 
+    y - any,           l - login name, 
+    z - zipcode,       p - password, 
+    i - integer,       v - verified, 
+    z - zip code
+third letter (optional): 
+    for numbers: s - signed, u - unsigned, p - positive, n - negative
+    for strings: u - upper,  l - lower,    n - normal,   y - any
+</PRE>
+<P><B>"align"=&gt;"..."</B> - field horizontal align<BR></P><PRE>Possible values: 
+    left, center, right
+</PRE>
+<P><B>"width"=&gt;"..."</B> - width of the field in 
+pixels<BR><B>"title"=&gt;"..."</B> - title (tooltip) of the 
+field<BR><B>"readonly"=&gt;"..."</B> - if the filed is readonly 
+(false|true)<BR><B>"maxlength"=&gt;"..."</B> - maximal size in characters of the 
+field value<BR><B>"default"=&gt;...</B> - default value for the field (for add 
+mode only)<BR><B>"unique"=&gt;...</B> - make or not (true|false) validation for 
+unique values for this field<BR><B>"unique_condition"=&gt;...</B> - validation 
+for unique values for this field by the condition (ex.: field_1 &gt; 1 OR 
+field_2 = 99)<BR><B>"on_js_event"=&gt;"..."</B> - javascript code or js function 
+on some event. Example: onClick(alert('Clicked!')) <BR><BR></P>
+<P>For the "link" 
+type:<BR><B>"field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|...,</B> 
+- field for href parameter in &lt;a 
+href="...field_key_x..."&gt;<BR><B>"field_data"=&gt;"...",</B> - field for &lt;a 
+href=""&gt;field_data&lt;/a&gt;<BR><B>"href"=&gt;"..."</B> - href parameter, 
+{0}/{1}/... will be changed on "field_key_0/1/..." 
+value<BR><B>"target"=&gt;"..."</B> - target parameter<BR><BR></P>
+<P>For the "image" type:<BR>Make sure, that target_path directory has 777 
+permissions<BR><B>"target_path"=&gt;"..."</B> - relative (or full) path to 
+image<BR><B>"file_name"=&gt;"..."</B> - set new name for image or use an 
+original file name<BR><B>"max_file_size"=&gt;"..."</B> - maximal image size 
+allowed. Ex.: 1000, 10K, 1.2M or 1G<BR><B>"image_width"=&gt;"..."</B> - viewing 
+width of image<BR><B>"image_height"=&gt;"..."</B> - viewing height of 
+image<BR><BR></P>
+<P>For the "file" type:<BR>Make sure, that target_path directory has 777 
+permissions<BR><B>"target_path"=&gt;"..."</B> - relative (or full) path to 
+file<BR><B>"file_name"=&gt;"..."</B> - set new name for file use an original 
+file name<BR><B>"max_file_size"=&gt;"..."</B> - maximal image size allowed. Ex.: 
+1000, 10K, 1.2M or 1G<BR></P>
+<P>For the "checkbox" type:<BR><B>"true_value"=&gt;"..."</B> - set value for 
+checked checkbox<BR><B>"false_value"=&gt;"..."</B> - set value for unchecked 
+checkbox<BR></P>
+<P>For the "enum" type:<BR><B>"source"=&gt;"..."</B> - source for enum type. 
+Possible values: "self" or from customized array<BR><B>"view_type"=&gt;"..."</B> 
+- view type of the field: dropdownlist (default) or radiobutton<BR></P><PRE><FONT color=green><B>
+// Fill enum type from the array (optional)</B></FONT><FONT color=darkblue><B>
+$fill_from_array = array("0"=&gt;"No", "1"=&gt;"Yes", "2"=&gt;"Don't know", "3"=&gt;"My be"); </B></FONT> 
+</PRE>
+<P>For the "textarea" type:<BR><B>"edit_type"=&gt;"..."</B> - simple view - 
+"simple" or advanced wysiwyg editor - "wysiwyg"<BR><B>"resizable"=&gt;"..."</B> 
+- if the textarea can be resized by mouse<BR><B>"rows"=&gt;"..."</B> - number of 
+rows (default 7)<BR><B>"cols"=&gt;"..."</B> - number of columns (default - 
+50)<BR><BR></P>
+<P>For the "delimiter" type:<BR><B>"inner_html"=&gt;"..."</B> - html for 
+delimiter row<BR><BR></P><PRE><FONT color=darkblue><B>
+$em_columns = array(
+    "FieldName_1" =&gt;array("header"=&gt;"Name_A", "type"=&gt;"textbox",  "req_type"=&gt;"rt", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_2" =&gt;array("header"=&gt;"Name_B", "type"=&gt;"textarea", "req_type"=&gt;"rt", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;"", "edit_type"=&gt;"simple|wysiwyg", "resizable"=&gt;"false", "rows"=&gt;"7", "cols"=&gt;"50"),
+    "FieldName_3" =&gt;array("header"=&gt;"Name_C", "type"=&gt;"label",    "req_type"=&gt;"rt", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_4" =&gt;array("header"=&gt;"Name_D", "type"=&gt;"date",     "req_type"=&gt;"rt", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_5" =&gt;array("header"=&gt;"Name_E", "type"=&gt;"datetime", "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_6" =&gt;array("header"=&gt;"Name_F", "type"=&gt;"image",    "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_image.ext", "unique"=&gt;false|true, "on_js_event"=&gt;"", "target_path"=&gt;"uploads/", "max_file_size"=&gt;"100000|100K|10M|1G", "image_width"=&gt;"Xpx", "image_height"=&gt;"Ypx", "image_name"=&gt;"Image_Name", "host"=&gt;"local|remote"),
+    "FieldName_7" =&gt;array("header"=&gt;"Name_G", "type"=&gt;"password", "req_type"=&gt;"rp", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_8" =&gt;array("header"=&gt;"Name_H", "type"=&gt;"enum",     "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;"", "source"=&gt;"self"|$fill_from_array, "view_type"=&gt;"dropdownlist(default)|radiobutton"),
+    "FieldName_9" =&gt;array("header"=&gt;"Name_I", "type"=&gt;"print",    "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;""),
+    "FieldName_10"=&gt;array("header"=&gt;"Name_J", "type"=&gt;"checkbox", "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;"", "true_value"=&gt;1, "false_value"=&gt;0),
+    "FieldName_11"=&gt;array("header"=&gt;"Name_K", "type"=&gt;"file",     "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;"", "target_path"=&gt;"uploads/", "max_file_size"=&gt;"100000|100K|10M|1G", "file_name"=&gt;"File_Name", "host"=&gt;"local|remote"),
+    "FieldName_12"=&gt;array("header"=&gt;"Name_L", "type"=&gt;"link",     "req_type"=&gt;"st", "width"=&gt;"210px", "title"=&gt;"Short Description", "readonly"=&gt;false|true, "maxlength"=&gt;"-1", "default"=&gt;"default_value", "unique"=&gt;false|true, "on_js_event"=&gt;"", "field_key"=&gt;"field_name_0"|"field_key_1"=&gt;"field_name_1"|..., "field_data"=&gt;"field_name_2", "target"=&gt;"_new", "href"=&gt;"<A class="external free" title=http://mydomain.com?act={0}&amp;act={1}&amp;code=ABC href="http://mydomain.com/?act={0}&amp;act={1}&amp;code=ABC" rel=nofollow>http://mydomain.com/?act={0}&amp;act={1}&amp;code=ABC</A>"),
+    "FieldName_13"=&gt;array("header"=&gt;"", "type"=&gt;"hidden",   "req_type"=&gt;"st", "default"=&gt;"default_value", "unique"=&gt;false|true),
+    "delimiter"   =&gt;array("inner_html"=&gt;"&lt;br /&gt;")
+);<BR>
+$dgrid-&gt;setColumnsInEditMode($em_columns);
+</B></FONT>
+</PRE>
+<P>If you want to get auto-genereted columns - set 
+<B>$auto_column_in_edit_mode</B> as true. </P><PRE><FONT color=green><B>
+##  *** set auto-genereted columns in edit mode
+</B></FONT><FONT color=darkblue><B>
+$auto_column_in_edit_mode = false;
+$dgrid-&gt;setAutoColumnsInEditMode($auto_column_in_edit_mode);
+</B></FONT>
+</PRE>
+<P>then uncomment and set right values for the next rows: </P><PRE><FONT color=green><B>
+##  ***  set settings for add/edit/details modes
+</B></FONT><FONT color=darkblue><B>
+$table_name  = "table_name";
+$primary_key = "primary_key";
+$condition   = "";
+$dgrid-&gt;setTableEdit($table_name, $primary_key, $condition);
+</B></FONT>
+</PRE>
+<P>Settings for the foreign keys. </P>
+<P><B>"ForeignKey_1/2/3.../n"=&gt;"..."</B> - foreign key from "Edit" 
+table<BR></P>
+<P><B>"table"=&gt;"..."</B> - foreign table name<BR><B>"field_key"=&gt;"..."</B> 
+- key in foreign table<BR><B>"field_name"=&gt;"..."</B> - filed, that will be 
+viewed<BR><B>"view_type"=&gt;"..."</B> - view type. Possible values: 
+dropdownlist(default), radiobutton or texbox<BR><B>"condition"=&gt;"..."</B> - 
+some condition. Ex.: TableName_1.FieldName &gt; 'a' AND TableName_1.FieldName 
+&lt; 'c'<BR><B>"order_by_field"=&gt;"..."</B> - sorting order by the 
+filed<BR><B>"order_type"=&gt;"..."</B> - sorting 
+type<BR><B>"on_js_event"=&gt;"..."</B> - javascript code or js function on some 
+event. Example: onClick(alert('Clicked!'))<BR></P><PRE><FONT color=green><B>
+##  *** set foreign keys for add/edit/details modes (if there are linked tables)
+##  *** Ex.: "condition"=&gt;"TableName_1.FieldName &gt; 'a' AND TableName_1.FieldName &lt; 'c'"
+##  *** Ex.: "on_js_event"=&gt;"onclick='alert(\"Yes!!!\");'"
+</B></FONT><FONT color=darkblue><B>
+$foreign_keys = array(
+    "ForeignKey_1"=&gt;array("table"=&gt;"TableName_1", "field_key"=&gt;"FieldKey_1", "field_name"=&gt;"FieldName_1", "view_type"=&gt;"dropdownlist(default)|radiobutton|textbox", "condition"=&gt;"", "order_by_field"=&gt;"Field_Name", "order_type"=&gt;"ASC|DESC", "on_js_event"=&gt;""),
+    "ForeignKey_2"=&gt;array("table"=&gt;"TableName_2", "field_key"=&gt;"FieldKey_2", "field_name"=&gt;"FieldName_2", "view_type"=&gt;"dropdownlist(default)|radiobutton|textbox", "condition"=&gt;"", "order_by_field"=&gt;"Field_Name", "order_type"=&gt;"ASC|DESC", "on_js_event"=&gt;"")
+);<BR> 
+$dgrid-&gt;setForeignKeysEdit($foreign_keys);
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Step 8. Bind the DataGrid." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=12">edit</A>]</DIV><A 
+name=Step_8._Bind_the_DataGrid.></A>
+<H3><B>Step 8. Bind the DataGrid.</B></H3>
+<P>+---------------------------------------------------------------------------+<BR>| 
+8. Bind the DataGrid: 
+|<BR>+---------------------------------------------------------------------------+<BR></P>
+<P>Now we need to bind our DataDrid and draw it on the screen. </P><PRE><FONT color=green>*** bind the DataGrid and draw it on the screen</FONT>
+<FONT color=darkblue><B>
+// $dgrid-&gt;bind();        
+// ob_end_flush();
+</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Not documented features and functions." 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=13">edit</A>]</DIV><A 
+name=Not_documented_features_and_functions.></A>
+<H2><B>Not documented features and functions.</B></H2>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Properties" 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=14">edit</A>]</DIV><A 
+name=Properties></A>
+<H3><B>Properties </B></H3>
+<HR>
+
+<P>Allows automatical getting focus on the first displayed field in edit mode 
+(default - false) </P><PRE><FONT color=darkblue><B>first_field_focus_allowed = true|false;</B></FONT>
+</PRE>
+<P>Allows floating tool tips (default - false) </P><PRE><FONT color=darkblue><B>floating_tool_tips_allowed = true|false;</B></FONT>
+</PRE>
+<P>Hides DataGrid before searching and shows DataGrid after the search is 
+completed (default - false) </P><PRE><FONT color=darkblue><B>hide_grid_before_serach = true|false;</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Methods" 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=15">edit</A>]</DIV><A 
+name=Methods></A>
+<H3><B>Methods</B></H3>
+<HR>
+
+<P>Executes SQL query - use it after dataSource() method only (after the using 
+dataSource() need to be recalled) </P><PRE><FONT color=darkblue><B>executeSql()</B></FONT>
+<FONT color=green>
+// Example:
+// $sql = "SELECT * FROM tblPresidents WHERE tblPresidents.CountryID = ".$_GET['f_rid'];
+// $dSet = $dgrid-&gt;executeSql($sql);
+// while($row = $dSet-&gt;fetchRow()){
+//  for($c = 0; ($c &lt; $dSet-&gt;numCols()); $c++){ echo $row[$c]." "; }
+//  echo "&lt;br&gt;";
+// }
+</FONT>
+</PRE>
+<P>Retuns first column data from SELECT SQL - use it after dataSource() method 
+only (after the using dataSource() need to be recalled) </P><PRE><FONT color=darkblue><B>selectSqlItem()</B></FONT>
+<FONT color=green>
+// Example:
+// $sql = "SELECT COUNT(presidentID) FROM tblPresidents WHERE CountryID = ".$_GET['f_rid'];
+// $presidents = $dgrid-&gt;selectSqlItem($sql);
+</FONT>
+</PRE>
+<P>Allows rows highlighting (default - true) </P><PRE><FONT color=darkblue><B>allowHighlighting(true|false)</B></FONT>
+</PRE>
+<P>Display validation error all together or separately </P><PRE><FONT color=darkblue><B>setJsErrorsDisplayStyle("all"|"each")</B></FONT>
+</PRE>
+<P>Returns next id of edit table </P><PRE><FONT color=darkblue><B>getNextId()</B></FONT>
+</PRE>
+<DIV class=editsection style="FLOAT: right; MARGIN-LEFT: 5px">[<A 
+title="Edit section: Features" 
+href="getting_started.htm?title=Getting_Started&amp;action=edit&amp;section=16">edit</A>]</DIV><A 
+name=Features></A>
+<H3><B>Features</B></H3>
+<HR>
+
+<P>Allows using user's javascript function for extra checkings on form submition 
+in edit mode </P><PRE><FONT color=darkblue><B>&lt;script&gt;onSubmitMyCheck()&lt;/script&gt;</B></FONT>
+<FONT color=green>
+// Example: 
+// unique_prefix_ - an unique prefix for the datagrid
+// &lt;script type='text/javascript'&gt;
+// function unique_prefix_onSubmitMyCheck(){
+//   alert("Thanks for adding/updating your data!");
+//   return true;
+// }	
+// &lt;/script&gt;
+</FONT>
+</PRE><!-- Saved in parser cache with key phpbuilder_dgrid:pcache:idhash:1370-0!1!0!0!!en!2 and timestamp 20070927140324 -->
+<DIV class=printfooter>Retrieved from "<A 
+href="getting_started.htm?title=Getting_Started">getting_started.htm?title=Getting_Started</A>"</DIV><!-- end content -->
+<DIV class=visualClear></DIV></DIV></DIV></DIV>
+<DIV id=column-one>
+<DIV class=portlet id=p-cactions>
+<H5>Views</H5>
+<UL>
+  <LI class=selected id=ca-nstab-main><A 
+  href="getting_started.htm?title=Getting_Started">Article</A> 
+
+  </UL></DIV>
+<DIV class=portlet id=p-personal>
+<H5>Personal tools</H5>
+<DIV class=pBody>
+
+</DIV></DIV>
+<DIV class=portlet id=p-logo><A title="Main Page" 
+style="BACKGROUND-IMAGE: url(/dgwiki/skins/common/images/wiki.png)" 
+href="getting_started.htm?title=Main_Page"></A></DIV>
+<SCRIPT type=text/javascript> if (window.isMSIE55) fixalpha(); </SCRIPT>
+
+<DIV class=portlet id=p-navigation>
+<H5>Navigation</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-mainpage><A 
+  href="getting_started.htm?title=Main_Page">Main 
+  Page</A> 
+  <LI id=n-portal><A 
+  href="getting_started.htm?title=DataGrid_Wiki:Community_Portal">Community 
+  portal</A> 
+  <LI id=n-currentevents><A 
+  href="getting_started.htm?title=Current_events">Current 
+  events</A> 
+  <LI id=n-recentchanges><A 
+  href="getting_started.htm?title=Special:Recentchanges">Recent 
+  changes</A> 
+  <LI id=n-randompage><A 
+  href="getting_started.htm?title=Special:Random">Random 
+  page</A> 
+  <LI id=n-help><A 
+  href="getting_started.htm?title=Help:Contents">Help</A> 
+
+  <LI id=n-sitesupport><A 
+  href="getting_started.htm?title=DataGrid_Wiki:Site_support">Donations</A> 
+  </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-search>
+<H5><LABEL for=searchInput>Search</LABEL></H5>
+<DIV class=pBody id=searchBody>
+<FORM id=searchform action="getting_started.htm?title=Special:Search">
+<DIV><INPUT id=searchInput accessKey=f name=search> <INPUT class=searchButton id=searchGoButton type=submit value=Go name=go>&nbsp; <INPUT class=searchButton type=submit value=Search name=fulltext> 
+</DIV></FORM></DIV></DIV>
+<DIV class=portlet id=p-tb>
+<H5>Toolbox</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=t-whatlinkshere><A 
+  href="getting_started.htm?title=Special:Whatlinkshere/Getting_Started">What 
+  links here</A> 
+  <LI id=t-recentchangeslinked><A 
+  href="getting_started.htm?title=Special:Recentchangeslinked/Getting_Started">Related 
+  changes</A> 
+  <LI id=t-specialpages><A 
+  href="getting_started.htm?title=Special:Specialpages">Special 
+  pages</A> 
+  <LI id=t-print><A 
+  href="getting_started.htm?title=Getting_Started&amp;printable=yes">Printable 
+  version</A> 
+  <LI id=t-permalink><A 
+  href="getting_started.htm?title=Getting_Started&amp;oldid=1643">Permanent 
+  link</A> </LI></UL></DIV></DIV></DIV><!-- end of the left (by default at least) column -->
+<DIV class=visualClear></DIV>
+<DIV id=footer>
+<DIV id=f-poweredbyico><A href="http://www.mediawiki.org/"><IMG alt=MediaWiki 
+src="inc/poweredby_mediawiki_88x31.png"></A></DIV>
+<DIV id=f-copyrightico><A href="http://www.gnu.org/copyleft/fdl.html"><IMG 
+alt="GNU Free Documentation License 1.2" 
+src="inc/gnu-fdl.png"></A></DIV>
+<UL id=f-list>
+  <LI id=lastmod>This page was last modified 16:12, 21 September 2007. 
+  <LI id=viewcount>This page has been accessed 1,508 times. 
+  <LI id=copyright>Content is available under <A class="external " 
+  title=http://www.gnu.org/copyleft/fdl.html 
+  href="http://www.gnu.org/copyleft/fdl.html" rel=nofollow>GNU Free 
+  Documentation License 1.2</A>. 
+  <LI id=privacy><A title="DataGrid Wiki:Privacy policy" 
+  href="getting_started.htm?title=DataGrid_Wiki:Privacy_policy">Privacy 
+  policy</A> 
+  <LI id=about><A title="DataGrid Wiki:About" 
+  href="getting_started.htm?title=DataGrid_Wiki:About">About 
+  DataGrid Wiki</A> 
+  <LI id=disclaimer><A title="DataGrid Wiki:General disclaimer" 
+  href="getting_started.htm?title=DataGrid_Wiki:General_disclaimer">Disclaimers</A> 
+  </LI></UL></DIV>
+<SCRIPT 
+type=text/javascript> if (window.runOnloadHook) runOnloadHook();</SCRIPT>
+</DIV><!-- Served by evolution.awardspace.com in 0.68 secs. --></BODY></HTML>

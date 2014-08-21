@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="oildirectory.php"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="700"
+ height="500"
+ bkcolor="0x339966"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0xFF0000"
+ themecolor="0xFFFF99"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="true"
+ verifymessage="The e-mail address you entered does not match!"
+ reqmessage="One or more fields are required."
+ invalidemailmsg="does not appear to be a valid e-mail address. Would you like to change it?"
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="true"
+disableclicktoactiveprompt="false"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx"
+>
+
+<hidden
+ name="thankyoupage"
+ value="http://www.oildirectory.com/thankyou"
+></hidden>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<textinput
+ name="Company Name"
+ x="125"
+ y="76"
+ w="533"
+ h="22"
+ initvalue=""
+ maxchars="60"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Contact Person"
+ x="125"
+ y="101"
+ w="532"
+ h="22"
+ initvalue=""
+ maxchars="60"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Address 1"
+ x="125"
+ y="126"
+ w="532"
+ h="22"
+ initvalue=""
+ maxchars="60"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Address 2"
+ x="125"
+ y="151"
+ w="532"
+ h="22"
+ initvalue=""
+ maxchars="60"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Web address"
+ x="125"
+ y="201"
+ w="532"
+ h="22"
+ initvalue=""
+ maxchars="75"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Phone Number"
+ x="125"
+ y="176"
+ w="252"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Email address"
+ x="125"
+ y="226"
+ w="532"
+ h="22"
+ initvalue=""
+ maxchars="75"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<combobox
+ name="Category for banner"
+ x="162"
+ y="300"
+ bkcolor="0xFFFFFF"
+ fontcolor="0x000000"
+ required="true"
+ isemail="false"
+ w="323"
+ h="20">
+  <item name="Chose one category"></item>
+  <item name="Abandonment Services"></item>
+  <item name="Abrasive &amp; Water Cutting"></item>
+  <item name="Acidizing"></item>
+  <item name="Advertising Agencies / Corporate Branding"></item>
+  <item name="Air Charter Services"></item>
+  <item name="Air Drilling Services"></item>
+  <item name="Air Freight / Couriers"></item>
+  <item name="Aircraft - Sales &amp; Maintenance"></item>
+  <item name="All-terrain Equipment"></item>
+  <item name="Ambulance / First Aid"></item>
+  <item name="Anchors - Temporary &amp; Permanent"></item>
+  <item name="Appraisers &amp; Appraisals"></item>
+  <item name="Asbestos Removal"></item>
+  <item name="Auctions - Appraisers"></item>
+  <item name="Automatic Drillers &amp; Weight Indicators"></item>
+  <item name="Automotive - Recreation Vehicles"></item>
+  <item name="Automotive - Rental &amp; Leasing"></item>
+  <item name="Automotive Sales - Cars / Trucks"></item>
+  <item name="Automotives - Parts / Service / Repair"></item>
+  <item name="B O P - Formation Testing"></item>
+  <item name="B O P - Rentals / Repair / Sales / Service"></item>
+  <item name="Backhoe Services"></item>
+  <item name="Batteries / Solar Energy"></item>
+  <item name="Bearing Supply"></item>
+  <item name="Blasting Services"></item>
+  <item name="Bobcat Services"></item>
+  <item name="Boilers - Sales / Rentals / Repair"></item>
+  <item name="Bolts / Nuts / Studs"></item>
+  <item name="Books &amp; Publications"></item>
+  <item name="Bridges - Rentals / Construction"></item>
+  <item name="Bulk Storage Bin Manufacturing &amp; Rentals"></item>
+  <item name="Burners / Burner Control Systems"></item>
+  <item name="Bus Transportation Services"></item>
+  <item name="Cable - Communications &amp; Electrical"></item>
+  <item name="Calibration Services"></item>
+  <item name="Camps - Manufacturing / Maintenance"></item>
+  <item name="Camps / Catering"></item>
+  <item name="Casing - Sales &amp; Handling"></item>
+  <item name="Casing Attachments"></item>
+  <item name="Catwalks &amp; Work Platforms"></item>
+  <item name="Cement Plug Logging"></item>
+  <item name="Cementing"></item>
+  <item name="Centrifuges"></item>
+  <item name="Chemicals - Oilfield"></item>
+  <item name="Chemicals - Packaging"></item>
+  <item name="Chokes - Adjustable &amp; Fixed"></item>
+  <item name="Cleaning - Equipment &amp; Supplies"></item>
+  <item name="Cleaning - Safety &amp; Sports Equipment"></item>
+  <item name="Cleaning - Uniforms &amp; Bedding"></item>
+  <item name="Closed Chamber Testers"></item>
+  <item name="Clutches &amp; Drive Systems"></item>
+  <item name="Coal Bed Methane Services"></item>
+  <item name="Coating &amp; Adhesives"></item>
+  <item name="Coiled Tubing"></item>
+  <item name="Communications - Answering Services"></item>
+  <item name="Communications - Cellular / Satellite / Internet"></item>
+  <item name="Communications - Intercom / Landline / Two-way"></item>
+  <item name="Completion / Gaswell Testing &amp; Production Testing"></item>
+  <item name="Completion Fluids"></item>
+  <item name="Completion Tools &amp; Services"></item>
+  <item name="Compressors - Air"></item>
+  <item name="Compressors - Gas"></item>
+  <item name="Computer - Hardware / Software / Training"></item>
+  <item name="Computer Software - Business To Business"></item>
+  <item name="Computer Software - Oilfield Software"></item>
+  <item name="Concrete - Cutting - Coring &amp; Repair"></item>
+  <item name="Concrete - Placing &amp; Grouting Service &amp; Supply"></item>
+  <item name="Concrete - Precast Products"></item>
+  <item name="Confined Space Services"></item>
+  <item name="Construction - Equipment - Sales &amp; Rentals &amp; Repair"></item>
+  <item name="Construction - Culverts &amp; Texas Gates"></item>
+  <item name="Construction - Facilities &amp; Buildings"></item>
+  <item name="Construction - General Oilfield"></item>
+  <item name="Construction - Lease &amp; Road Maintenance"></item>
+  <item name="Construction - Lease &amp; Road Preparation"></item>
+  <item name="Construction - Railroad"></item>
+  <item name="Construction - Residential &amp; Light Commercial"></item>
+  <item name="Construction - Structural Steel"></item>
+  <item name="Construction - Water &amp; Sewer"></item>
+  <item name="Consultants - Construction / Drilling / Completions / Workover"></item>
+  <item name="Containment"></item>
+  <item name="Control Panels"></item>
+  <item name="Control Systems / Regulators"></item>
+  <item name="Core Vans"></item>
+  <item name="Coring"></item>
+  <item name="Corrosion Control"></item>
+  <item name="Courier &amp; Deliveries Local Or Long Distance"></item>
+  <item name="Crane &amp; Picker Services"></item>
+  <item name="Crane &amp; Rigging Service"></item>
+  <item name="Crane Mats"></item>
+  <item name="Crating"></item>
+  <item name="Customs Brokers"></item>
+  <item name="Dehydrators"></item>
+  <item name="Dewatering and Environmental Cleanup"></item>
+  <item name="Dewaxing"></item>
+  <item name="Directional Drilling"></item>
+  <item name="Directories &amp; Publications"></item>
+  <item name="Dockyards / Marinas"></item>
+  <item name="Downhole Pumps"></item>
+  <item name="Downhole Recorders"></item>
+  <item name="Downhole Tools / Equipment"></item>
+  <item name="Drill Bits / Hole Openers / Reamers"></item>
+  <item name="Drill Pipe, Drill Collars Handling Tools"></item>
+  <item name="Drilling - Sonic"></item>
+  <item name="Drilling Contractors"></item>
+  <item name="Drilling Fluid Consultants"></item>
+  <item name="Drilling Fluids &amp; Additives"></item>
+  <item name="Drilling Licenses &amp; Permits"></item>
+  <item name="Drilling Motors &amp; Tools"></item>
+  <item name="Drilling Rig Components"></item>
+  <item name="Drilling Rigs - Truck Mounted"></item>
+  <item name="Drilling Waste Management"></item>
+  <item name="Drillstem Testing"></item>
+  <item name="Dry Ice Blasting"></item>
+  <item name="Dust Control"></item>
+  <item name="Dynamometer and Fluid Level Measurement"></item>
+  <item name="Electric Motor - Rewind, Sales &amp; Service"></item>
+  <item name="Electrical - Power Protection / Quality"></item>
+  <item name="Electrical Installation &amp; Service"></item>
+  <item name="Electrical Supplies"></item>
+  <item name="Electronic Equipment"></item>
+  <item name="Emergency Response Planning / Public Consultation"></item>
+  <item name="Emission Testing"></item>
+  <item name="Employees - Backhoe operators needed"></item>
+  <item name="Employees - Bus Drivers needed"></item>
+  <item name="Employees - Camp &amp; Catering staff needed"></item>
+  <item name="Employees - Carpenters needed"></item>
+  <item name="Employees - Coiled Tubing Staff needed"></item>
+  <item name="Employees - Concrete Placers needed"></item>
+  <item name="Employees - Construction Supervisors needed"></item>
+  <item name="Employees - Construction Trades needed"></item>
+  <item name="Employees - Crane &amp; Picker Operators needed"></item>
+  <item name="Employees - Dispatchers needed"></item>
+  <item name="Employees - Drilling Rig Personel needed"></item>
+  <item name="Employees - Drilling, Construction &amp; Completion Supervisors needed"></item>
+  <item name="Employees - Electricians needed"></item>
+  <item name="Employees - Engineering &amp; Professional needed"></item>
+  <item name="Employees - Environmental Services needed"></item>
+  <item name="Employees - General Labour needed"></item>
+  <item name="Employees - Grader Operators needed"></item>
+  <item name="Employees - H-Vac needed"></item>
+  <item name="Employees - Heavy Equipment Operators needed"></item>
+  <item name="Employees - HR Professionals needed"></item>
+  <item name="Employees - Hydraulics Technicians needed"></item>
+  <item name="Employees - Inspection Technicians needed"></item>
+  <item name="Employees - Instrumentation &amp; Controls Techs needed"></item>
+  <item name="Employees - Insulators needed"></item>
+  <item name="Employees - Iron Workers needed"></item>
+  <item name="Employees - IT Professionals needed"></item>
+  <item name="Employees - Job Training Centers"></item>
+  <item name="Employees - Machinists needed"></item>
+  <item name="Employees - Management Professionals needed"></item>
+  <item name="Employees - Manufacturing staff needed"></item>
+  <item name="Employees - Mechanics needed"></item>
+  <item name="Employees - Medical staff needed"></item>
+  <item name="Employees - Millwright needed"></item>
+  <item name="Employees - Office Staff needed"></item>
+  <item name="Employees - Oilfield Service Personel needed"></item>
+  <item name="Employees - Owner Operators needed"></item>
+  <item name="Employees - Partsman needed"></item>
+  <item name="Employees - Pile Driving &amp; Drilling personnel needed"></item>
+  <item name="Employees - Pipe Fitters needed"></item>
+  <item name="Employees - Plumbers needed"></item>
+  <item name="Employees - Portable Rig Drillers &amp; Helpers needed"></item>
+  <item name="Employees - Production staff needed"></item>
+  <item name="Employees - Rat Hole Drillers &amp; Helpers needed"></item>
+  <item name="Employees - Safety Personel needed"></item>
+  <item name="Employees - Sales Personel needed"></item>
+  <item name="Employees - Sandblasters &amp; Painters needed"></item>
+  <item name="Employees - Service Rig Personel needed"></item>
+  <item name="Employees - Sheetmetal workers needed"></item>
+  <item name="Employees - Snubbing Staff needed"></item>
+  <item name="Employees - Technical Staff needed"></item>
+  <item name="Employees - Truck Drivers &amp; Swampers needed"></item>
+  <item name="Employees - Vacuum &amp; Hydrovac Operators needed"></item>
+  <item name="Employees - Warehouse staff needed"></item>
+  <item name="Employees - Water, sewer &amp; utilities workers needed"></item>
+  <item name="Employees - Welders needed"></item>
+  <item name="Employment - Drug and Alcohol Testing"></item>
+  <item name="Employment - Human Resources"></item>
+  <item name="Employment-Resume Services"></item>
+  <item name="Engineering - Design Drafting &amp; Cad-Cam Services"></item>
+  <item name="Engineering - Hydrogeological"></item>
+  <item name="Engineering - Petroleum / Reservoir"></item>
+  <item name="Engineering - Technical Services"></item>
+  <item name="Engineering Consulting"></item>
+  <item name="Engines - Sales / Service / Accessories"></item>
+  <item name="Entertainment / Museums / Interpretive Centres"></item>
+  <item name="Environmental - Notifications, Investigations &amp; Audits"></item>
+  <item name="Environmental - Products &amp; Services"></item>
+  <item name="Equipment - Appraisals"></item>
+  <item name="Equipment - Detailing &amp; Cleaning"></item>
+  <item name="Equipment - Sales"></item>
+  <item name="Equipment Repairs"></item>
+  <item name="Excavation Services"></item>
+  <item name="Export Development"></item>
+  <item name="Fasteners &amp; Shop Supplies"></item>
+  <item name="Fencing &amp; Gates - Supply And Installation"></item>
+  <item name="Fiberglass - Manufacturing"></item>
+  <item name="Filtration - Products &amp; Services"></item>
+  <item name="Financial Services - Accounting / Bookkeeping"></item>
+  <item name="Financial Services - Corporate &amp; Commercial Financing"></item>
+  <item name="Financial Services - Equipment Financing &amp; Factoring"></item>
+  <item name="Financial Services - Institutions &amp; Banks"></item>
+  <item name="Financial Services - Insurance &amp; Bonding"></item>
+  <item name="Financial Services - Tax Recovery &amp; Planning"></item>
+  <item name="Fire Protection Products &amp; Services"></item>
+  <item name="Firefighting &amp; Blowout Specialists"></item>
+  <item name="Fishing"></item>
+  <item name="Flame Arrestors / Detectors"></item>
+  <item name="Flanges, Bolts &amp; Studs"></item>
+  <item name="Flanges, Nipples &amp; Fittings"></item>
+  <item name="Flare Ignitors &amp; Systems"></item>
+  <item name="Flare Tanks &amp; Stacks"></item>
+  <item name="Float Equipment &amp; Casing Attachments"></item>
+  <item name="Flow Control &amp; Metering"></item>
+  <item name="Flush-by Service"></item>
+  <item name="Forklifts - Sales, Service &amp; Repair"></item>
+  <item name="Frac Sand Storage"></item>
+  <item name="Freight - Forwarding &amp; Handling"></item>
+  <item name="Frost Removal Services"></item>
+  <item name="Fuel &amp; Lubricants Products And Services"></item>
+  <item name="Garbage &amp; Recycle Bins"></item>
+  <item name="Gas &amp; Oil Distribution"></item>
+  <item name="Gas Flow Measurement"></item>
+  <item name="Gas Well Testing"></item>
+  <item name="Gaskets &amp; Seals"></item>
+  <item name="Gaskets - Ring &amp; Metal to Metal"></item>
+  <item name="Gauges"></item>
+  <item name="Gear Cutting"></item>
+  <item name="Generators Rentals &amp; Sales"></item>
+  <item name="Geochemical Analysis"></item>
+  <item name="Geological Consulting"></item>
+  <item name="Geophysical Consulting"></item>
+  <item name="Geosynthetics"></item>
+  <item name="Geotechnical Drilling"></item>
+  <item name="Geothermal Products &amp; Services"></item>
+  <item name="Gifts / Advertising / Promotions"></item>
+  <item name="Glass - Infrared, Protective, Strengthened"></item>
+  <item name="Government Agencies / Associations / Bureaus"></item>
+  <item name="Gravel - Supply &amp; Hauling"></item>
+  <item name="Ground Transportation"></item>
+  <item name="H2S Release Rate/ Volume"></item>
+  <item name="H2S Services"></item>
+  <item name="Hard Facing"></item>
+  <item name="Hazardous Waste Solutions"></item>
+  <item name="Heat Exchangers"></item>
+  <item name="Heat Treating"></item>
+  <item name="Heaters / Heating Products"></item>
+  <item name="Heavy Equipment - Sales / Service / Repair"></item>
+  <item name="Horizontal Drilling &amp; Road Boring"></item>
+  <item name="Hoses"></item>
+  <item name="Hot Oil Services"></item>
+  <item name="Hot Shot &amp; Pilot Cars"></item>
+  <item name="Hot Tapping &amp; Freezing"></item>
+  <item name="Hotels &amp; Motels"></item>
+  <item name="Hydraulics - Parts / Service / Installation"></item>
+  <item name="Hydro Geological Services"></item>
+  <item name="Hydroseeding / Landscaping"></item>
+  <item name="Hydrotesting"></item>
+  <item name="Hydrovac &amp; Daylighting Services"></item>
+  <item name="Importing / Exporting"></item>
+  <item name="Incinerators"></item>
+  <item name="Industrial Cleaning"></item>
+  <item name="Industrial Supplies"></item>
+  <item name="Industrial Tool Rentals &amp; Sales"></item>
+  <item name="Inspection - Ground Penetrating Radar"></item>
+  <item name="Inspection - NDT"></item>
+  <item name="Inspection - Pipeline / Plants"></item>
+  <item name="Inspection - Video / Infrared / X-ray"></item>
+  <item name="Inspection Services"></item>
+  <item name="Instrumentation"></item>
+  <item name="Insulation - Materials &amp; Installation"></item>
+  <item name="International Trade"></item>
+  <item name="Janitorial"></item>
+  <item name="Knockouts"></item>
+  <item name="Laboratories"></item>
+  <item name="Land Spreading"></item>
+  <item name="Lavatories, Toilets - Portable or Rentals"></item>
+  <item name="Leak Detection &amp; Sealing Services &amp; Equipment"></item>
+  <item name="Lease Reclamation"></item>
+  <item name="Leasing - Equipment"></item>
+  <item name="Leasing - Generators"></item>
+  <item name="Legal Services"></item>
+  <item name="Light Towers &amp; Portable Lighting Services"></item>
+  <item name="Line Heaters"></item>
+  <item name="Liner Hangers &amp; Packers"></item>
+  <item name="Liners &amp; Secondary Containment"></item>
+  <item name="Loaders / Mobile equipment Rentals"></item>
+  <item name="Logging - Cased Hole"></item>
+  <item name="Logging - Open Hole"></item>
+  <item name="Logistics"></item>
+  <item name="Lubrication - Hydraulic Oils, Flushing &amp; Filtration"></item>
+  <item name="Lubricators"></item>
+  <item name="Machine Shops"></item>
+  <item name="Magnets - Downhole &amp; Process"></item>
+  <item name="Maintenance Contractors"></item>
+  <item name="Management - Services &amp; Consultants"></item>
+  <item name="Manlifts &amp; Scaffolding"></item>
+  <item name="Manufacturing - CNC"></item>
+  <item name="Manufacturing - Drilling Motors &amp; Tools"></item>
+  <item name="Manufacturing - Drilling Rigs &amp; Components"></item>
+  <item name="Manufacturing - General"></item>
+  <item name="Manufacturing - Industrial Attachments"></item>
+  <item name="Manufacturing - Tubing &amp; Casing Couplings"></item>
+  <item name="Manufacturing - Well Service Equipment"></item>
+  <item name="Manufacturing / Electronics"></item>
+  <item name="Manufacturing Equipment - Sales / Service"></item>
+  <item name="Maps / Mapping Software"></item>
+  <item name="Marine Services"></item>
+  <item name="Medical - Immunization Services"></item>
+  <item name="Medical - Services / Supplies"></item>
+  <item name="Methanol &amp; Glycol"></item>
+  <item name="Millwright Services"></item>
+  <item name="Mining Equipment &amp; Supplies"></item>
+  <item name="Monitoring Services - Air and Water"></item>
+  <item name="Mud Cooling &amp; Heating Services"></item>
+  <item name="Mud Logging"></item>
+  <item name="Mud Logging - Supplies &amp; Equipment"></item>
+  <item name="Mud Pumps &amp; Parts"></item>
+  <item name="Mud Warehouses &amp; Transport"></item>
+  <item name="Mulching"></item>
+  <item name="Multi-media Services"></item>
+  <item name="MWD Services"></item>
+  <item name="News Services"></item>
+  <item name="Nitrogen / Co2 Services"></item>
+  <item name="Noise &amp; Emission Control"></item>
+  <item name="Office &amp; Storage Trailers"></item>
+  <item name="Office Equipment &amp; Services"></item>
+  <item name="Offshore &amp; Marine Supplies &amp; Services"></item>
+  <item name="Oil &amp; Gas Producers"></item>
+  <item name="Oil &amp; Gas Separators"></item>
+  <item name="Oil &amp; Glycol Recyclers"></item>
+  <item name="Oil Traders And Brokers"></item>
+  <item name="Oilfield Art &amp; Collectables"></item>
+  <item name="Oilfield Database"></item>
+  <item name="Oilfield Equipment - Repair"></item>
+  <item name="Oilfield Marketing"></item>
+  <item name="Oilfield Rental Equipment"></item>
+  <item name="Oilfield Service &amp; Supply"></item>
+  <item name="Oilfield Training Centres"></item>
+  <item name="Oilfield Training Centres - Calgary area"></item>
+  <item name="Oilfield Training Centres - Edmonton area"></item>
+  <item name="Online Training Services"></item>
+  <item name="Operating Facilities"></item>
+  <item name="Opportunities- Agents &amp; Business"></item>
+  <item name="Packaging"></item>
+  <item name="Packers - Production &amp; Service"></item>
+  <item name="Perforating Tools &amp; Suppliers"></item>
+  <item name="Permits - Road"></item>
+  <item name="Petroleum Landmen &amp; Consulting"></item>
+  <item name="Photography - Stock, Assignment &amp; Video"></item>
+  <item name="Pigs - Launchers"></item>
+  <item name="Pigs - Supplies &amp; Services"></item>
+  <item name="Pigs - Tracking &amp; Detectors"></item>
+  <item name="Pilings - Supply &amp; Installation"></item>
+  <item name="Pipe &amp; Utility Locators"></item>
+  <item name="Pipe - Fiberglass &amp; Plastic"></item>
+  <item name="Pipe - Hydraulic - Bending &amp; Fitting"></item>
+  <item name="Pipe Fitting Service"></item>
+  <item name="Pipe Racks, Tubs and Catwalks"></item>
+  <item name="Pipe Suppliers - Process &amp; Fabricating"></item>
+  <item name="Pipeline - Bending &amp; Coating"></item>
+  <item name="Pipeline Contractors"></item>
+  <item name="Pipeline Services &amp; Testing"></item>
+  <item name="Plasma Cutting Or Spraying"></item>
+  <item name="Plastics &amp; Polymers"></item>
+  <item name="Plugging &amp; Plug Logging"></item>
+  <item name="Plumbing &amp; Gas Fitting"></item>
+  <item name="Plunger Lift"></item>
+  <item name="Polish Rod products &amp; services"></item>
+  <item name="Portable Toilets &amp; Sewage Systems"></item>
+  <item name="Portables / Shelters"></item>
+  <item name="Power Swivels"></item>
+  <item name="Power Tong &amp; Pipe Handling Equipment -Sales &amp; Service"></item>
+  <item name="Power Tongs &amp; Pipe Handlers"></item>
+  <item name="Pressure Gauges And Recorders"></item>
+  <item name="Pressure Trucks / Pressure Testing"></item>
+  <item name="Pressure Vessels &amp; Tanks"></item>
+  <item name="Preventive Maintenance"></item>
+  <item name="Printing"></item>
+  <item name="Production Electronics"></item>
+  <item name="Production Equipment"></item>
+  <item name="Production Operators - Contract"></item>
+  <item name="Production Optimization"></item>
+  <item name="Production Tanks &amp; Vessels"></item>
+  <item name="Production Tools"></item>
+  <item name="Propane - Products &amp; Services"></item>
+  <item name="Pump Jack - Sales / Service"></item>
+  <item name="Pumps - Glycol -sales &amp; repair"></item>
+  <item name="Pumps - Injection - sales &amp; repair"></item>
+  <item name="Pumps- Sales, Rentals &amp; Repairs"></item>
+  <item name="Quality Control / Assurance"></item>
+  <item name="Quonset Huts"></item>
+  <item name="Rathole Drilling"></item>
+  <item name="RCMP / Hospitals / Ambulances"></item>
+  <item name="Real Estate"></item>
+  <item name="Reclamation Services"></item>
+  <item name="Recreation - Toys for boys"></item>
+  <item name="Recreation Sites &amp; Destinations"></item>
+  <item name="Recycling / Salvage / Demolition"></item>
+  <item name="Refineries"></item>
+  <item name="Refinery - Maintenance &amp; Construction"></item>
+  <item name="Refrigeration &amp; Cooling Systems"></item>
+  <item name="Remanufacturing - Light &amp; Heavy Equip"></item>
+  <item name="Rescue Services"></item>
+  <item name="Restaurants &amp; Lounges"></item>
+  <item name="Rig Jacking"></item>
+  <item name="Rig Matting"></item>
+  <item name="Rig Repair"></item>
+  <item name="Road / Access Matting"></item>
+  <item name="Rubber &amp; Elastomeric Products"></item>
+  <item name="Safety - Air Monitoring"></item>
+  <item name="Safety - Investigations &amp; Audits"></item>
+  <item name="Safety - Services &amp; Training"></item>
+  <item name="Safety - Supplies &amp; Equipment"></item>
+  <item name="Salt Caverns / Engineering &amp; Operations"></item>
+  <item name="Sand Control"></item>
+  <item name="Sandblasting &amp; Painting- Service &amp; Supply"></item>
+  <item name="Sawmills &amp; Logging Contractors"></item>
+  <item name="Scada Networks"></item>
+  <item name="Scaffolding Suppliers &amp; Services"></item>
+  <item name="SCBA - Self Contained Breathing Apparatus"></item>
+  <item name="Scouting Service"></item>
+  <item name="Security - Alarms &amp; Monitoring Systems"></item>
+  <item name="Security - General"></item>
+  <item name="Security - Intelligence"></item>
+  <item name="Security - Remote Monitoring &amp; Surveillance"></item>
+  <item name="Seismic Abandonment Services"></item>
+  <item name="Seismic Services &amp; Supplies"></item>
+  <item name="Separators"></item>
+  <item name="Service Rigs"></item>
+  <item name="Sheet Metal &amp; Ducting"></item>
+  <item name="Shower Units"></item>
+  <item name="Signs, Labels &amp; Tags"></item>
+  <item name="Slashing &amp; Line Clearing"></item>
+  <item name="Slings &amp; Rigging - Cable"></item>
+  <item name="Slings &amp; Safety Equipment - Composite"></item>
+  <item name="Slotted Casing"></item>
+  <item name="Snubbing &amp; Pressure Control Services"></item>
+  <item name="Solids Control"></item>
+  <item name="Specialized Tools / Equipment"></item>
+  <item name="Spill Containment"></item>
+  <item name="Springs/Wire Forming"></item>
+  <item name="Steaming &amp; Pressure Washing"></item>
+  <item name="Steel &amp; Alloy Suppliers"></item>
+  <item name="Steel - Manufacturing"></item>
+  <item name="Steel Buildings"></item>
+  <item name="Steel Fabricating"></item>
+  <item name="Stimulation (Acidizing / Fracturing)"></item>
+  <item name="Stimulation - Acoustic"></item>
+  <item name="Stuffing Boxes"></item>
+  <item name="Subsoiling"></item>
+  <item name="Sucker Rods &amp; Attachments"></item>
+  <item name="Surface Casing Setting"></item>
+  <item name="Survey Supplies"></item>
+  <item name="Survey Tools - Downhole"></item>
+  <item name="Surveying"></item>
+  <item name="Swabbing"></item>
+  <item name="Tank - Cleaning"></item>
+  <item name="Tank - Fiberglass"></item>
+  <item name="Tank - Gauges And Vents"></item>
+  <item name="Tank - Heaters"></item>
+  <item name="Tank - Manufacturing &amp; Repair"></item>
+  <item name="Tank - Moving &amp; Leveling"></item>
+  <item name="Tank - Rental"></item>
+  <item name="Tanks - Floc / Mud / Polymer"></item>
+  <item name="Tanks - Fuel"></item>
+  <item name="Technical &amp; Training Services"></item>
+  <item name="Temperature Control"></item>
+  <item name="Thread Cutting Services"></item>
+  <item name="Top Drives / Actuators"></item>
+  <item name="Torque Tools / Tensioners"></item>
+  <item name="Towing &amp; Snow Removal"></item>
+  <item name="Trade Shows &amp; Conferences"></item>
+  <item name="Trailers - Sales / Rentals / Manufacturing"></item>
+  <item name="Translators / Interpreters"></item>
+  <item name="Transportation - Off-road"></item>
+  <item name="Travel, Recreations &amp; Sports"></item>
+  <item name="Treaters"></item>
+  <item name="Treaters &amp; Dehydrators"></item>
+  <item name="Truck Stops"></item>
+  <item name="Trucking - Bulk Hauling"></item>
+  <item name="Trucking - Chemicals &amp; Acid"></item>
+  <item name="Trucking - Crude Oil"></item>
+  <item name="Trucking - Freight Lines"></item>
+  <item name="Trucking - Light &amp; Heavy Hauling"></item>
+  <item name="Trucking - Rig Moving"></item>
+  <item name="Trucking - Sales / Service / Manufacturing"></item>
+  <item name="Trucking - Salt Water"></item>
+  <item name="Trucking - Tank Truck Repair / Inspection"></item>
+  <item name="Trucking - Tank Truck Services"></item>
+  <item name="Trucking - Winch &amp; Tractor"></item>
+  <item name="Trucks - Accessories"></item>
+  <item name="Trucks - Heavy Truck Rentals"></item>
+  <item name="Tubular Products - Sales &amp; Handling"></item>
+  <item name="Turbines - Sales &amp; Service"></item>
+  <item name="Turnarounds and Shut Downs"></item>
+  <item name="Underbalanced Drilling"></item>
+  <item name="Uniforms - Supply, Repair &amp; Logos"></item>
+  <item name="Urethane &amp; Rubber Products"></item>
+  <item name="Utilities / Pipe Relining"></item>
+  <item name="Vacuum &amp; Wash Combo Units"></item>
+  <item name="Vacuum Truck - Septic Services"></item>
+  <item name="Vacuum Truck - Services"></item>
+  <item name="Valve Actuators"></item>
+  <item name="Valves - Manufacturer"></item>
+  <item name="Valves - Sales / Rentals / Repairs"></item>
+  <item name="Vegetation Management / Weed Control"></item>
+  <item name="Vibration &amp; Noise Monitoring"></item>
+  <item name="Video Equipment Sales &amp; Service"></item>
+  <item name="Video Production Services"></item>
+  <item name="Wash Guns &amp; Envirovacs"></item>
+  <item name="Waste - Fluid / Treating &amp; Disposal"></item>
+  <item name="Waste - Solid / Reclamation &amp; Disposal"></item>
+  <item name="Waste Water Treatment"></item>
+  <item name="Water - Fresh (Non-Potable) Water Hauling"></item>
+  <item name="Water - Potable / Supply &amp; Storage Solutions"></item>
+  <item name="Water - Pumping Service"></item>
+  <item name="Water Treatment"></item>
+  <item name="Water Well Drillers"></item>
+  <item name="Water Well Testing"></item>
+  <item name="Wax Control"></item>
+  <item name="WCB Consulting &amp; Claims Management"></item>
+  <item name="Wear Reducing Products"></item>
+  <item name="Web Design &amp; Services"></item>
+  <item name="Welding &amp; Fabricating"></item>
+  <item name="Welding - Blacksmith / Ornamental Ironworks"></item>
+  <item name="Welding - Portable"></item>
+  <item name="Welding Equipment Manufacturing"></item>
+  <item name="Wellheads - Products &amp; Services"></item>
+  <item name="Wellsite Accommodation"></item>
+  <item name="Wellsite Consulting"></item>
+  <item name="Wire Rope &amp; Cable"></item>
+  <item name="Wireline Services"></item>
+  <item name="Workovers"></item>
+  <item name=""></item>
+  <item name=""></item>
+  <item name=""></item>
+</combobox>
+
+<textarea
+ name="Comments"
+ x="125"
+ y="354"
+ w="531"
+ h="74"
+ initvalue=""
+ maxchars="600"
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<submitbutton
+ name="Submit Button"
+ x="25"
+ y="435"
+ w="116"
+ h="34"
+ label="Submit"
+ fontname="Arial"
+ fontcolor="0x000000"
+ image="submitrectangleroundmed.png"
+ fontbold="bold"
+ fontitalic="italic"
+  fontsize="12"
+></submitbutton>
+
+<label
+ name="My Text 1"
+ x="17"
+ y="77"
+ w="105"
+ h="16"
+ text="Company Name"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 2"
+ x="17"
+ y="102"
+ w="100"
+ h="16"
+ text="Contact Person"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 3"
+ x="19"
+ y="127"
+ w="54"
+ h="16"
+ text="Address"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="18"
+ y="152"
+ w="67"
+ h="16"
+ text="City &amp; P/C"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 5"
+ x="19"
+ y="177"
+ w="99"
+ h="16"
+ text="Phone Number"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 6"
+ x="19"
+ y="227"
+ w="43"
+ h="16"
+ text="E-Mail"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 7"
+ x="189"
+ y="14"
+ w="290"
+ h="36"
+ text="Banner ad order form"
+ fontbold="bold"
+ fontitalic="italic"
+  fontname="Times New Roman"
+  fontcolor="0xFFFFFF"
+  fontsize="32"
+></label>
+
+<label
+ name="My Text 8"
+ x="200"
+ y="263"
+ w="377"
+ h="22"
+ text="Select category from the drop down list below"
+ fontbold="bold"
+  fontname="Times New Roman"
+  fontcolor="0xFFFFFF"
+  fontsize="19"
+></label>
+
+<label
+ name="My Text 9"
+ x="142"
+ y="287"
+ w="9"
+ h="22"
+ text=""
+ fontbold="bold"
+  fontname="Times New Roman"
+  fontcolor="0xFF0000"
+  fontsize="19"
+></label>
+
+<label
+ name="My Text 10"
+ x="150"
+ y="325"
+ w="7"
+ h="15"
+ text=""
+ fontbold="bold"
+  fontname="Times New Roman"
+  fontcolor="0xFF0000"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 11"
+ x="24"
+ y="384"
+ w="71"
+ h="16"
+ text="Comments"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 13"
+ x="24"
+ y="303"
+ w="133"
+ h="14"
+ text="Select category wanted"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="11"
+></label>
+
+<label
+ name="My Text 19"
+ x="19"
+ y="202"
+ w="87"
+ h="16"
+ text="Web Address"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<combobox
+ name="Banner Choice"
+ x="163"
+ y="327"
+ bkcolor="0xFFFFFF"
+ fontcolor="0x000000"
+ required="true"
+ isemail="false"
+ w="192"
+ h="20">
+  <item name="Chose one choice"></item>
+  <item name="I have a banner ad."></item>
+  <item name="I need a banner ad built"></item>
+</combobox>
+
+<label
+ name="My Text 12"
+ x="24"
+ y="330"
+ w="121"
+ h="14"
+ text="Chose banner choice"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="11"
+></label>
+
+</form>

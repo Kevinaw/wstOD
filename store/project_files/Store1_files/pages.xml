@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <pages>
+    <page>
+      <type>shophome</type>
+      <id>1</id>
+      <name>Shop Home</name>
+      <filename>index</filename>
+      <metadescription></metadescription>
+      <metakeywords></metakeywords>
+      <content>
+        <![CDATA[]]>
+      </content>
+      <headertext></headertext>
+    </page>
+    <page>
+      <type>category</type>
+      <id>2</id>
+      <name>Categories</name>
+      <filename>category</filename>
+      <metadescription></metadescription>
+      <metakeywords></metakeywords>
+      <content>
+        <![CDATA[]]>
+      </content>
+      <headertext></headertext>
+    </page>
+    <page>
+      <type>cart</type>
+      <id>3</id>
+      <name>View Cart</name>
+      <filename>cart</filename>
+      <metadescription></metadescription>
+      <metakeywords></metakeywords>
+      <content>
+        <![CDATA[]]>
+      </content>
+      <headertext></headertext>
+    </page>
+  </pages>
+</root>

@@ -1,0 +1,103 @@
+<?php
+//------------------------------------------------------------------------------
+//*** Español (es)
+//------------------------------------------------------------------------------
+function setLanguage(){ 
+    $lang['='] = "=";  // "equal"; 
+    $lang['>'] = ">";  // "bigger"; 
+    $lang['<'] = "<";  // "smaller";
+    $lang['add'] = "A&ntilde;adir"; 
+    $lang['add_new'] = "+ A&ntilde;adir Nuevo"; 
+    $lang['add_new_record'] = "A&ntilde;adir nuevo registro";
+    $lang['adding_operation_completed'] = "A&ntilde;adido correctamente!"; 
+    $lang['adding_operation_uncompleted'] = "Error al a&ntildeadir registro!";
+    $lang['and'] = "and";
+    $lang['any'] = "any"; 
+    $lang['ascending'] = "Ascendente"; 
+    $lang['back'] = "Volver"; 
+    $lang['cancel'] = "Cancelar";
+    $lang['cancel_creating_new_record'] = "Est&aacute; Ud. seguro de querer cancelar la creaci&oacute;n del nuevo registro ?"; 
+    $lang['check_all'] = "Seleccionar todo"; 
+    $lang['create'] = "Crear"; 
+    $lang['create_new_record'] = "Crear nuevo registro"; 
+    $lang['current'] = "actual"; 
+    $lang['delete'] = "Eliminar"; 
+    $lang['delete_record'] = "Eliminar registro";
+    $lang['delete_selected'] = "Eliminar seleccionados"; 
+    $lang['delete_selected_records'] = "Est&aacute; Ud. seguro de eliminar los registros seleccionados?"; 
+    $lang['delete_this_record'] = "Est&aacute; Ud. seguro de querer eliminar este registro ?"; 
+    $lang['deleting_operation_completed'] = "Operaci&oacute;n de borrado completada correctamente!"; 
+    $lang['deleting_operation_uncompleted'] = "Operaci&oacute;n de borrado incorrecta!";
+    $lang['descending'] = "Descendente"; 
+    $lang['details'] = "Detalles";
+    $lang['details_selected'] = "View selected";
+    $lang['edit'] = "Editar";
+    $lang['edit_selected'] = "Edit selected";
+    $lang['edit_record'] = "Editar registro";
+    $lang['edit_selected_records'] = "Are you sure you want to edit the selected records?";   
+    $lang['errors'] = "Errors";
+    $lang['export_to_excel'] = "Exportar a Excel";
+    $lang['export_to_xml'] = "Exportar a XML";
+    $lang['export_message'] = "<label class=\"class_label\">The file _FILE_ is ready. After you finish downloading,</label> <a class=\"class_error_message\" href=\"javascript: window.close();\">close this window</a>.";
+    $lang['field'] = "Campo"; 
+    $lang['field_value'] = "Valor del campo";
+    $lang['file_find_error'] = "Cannot find file: <b>_FILE_</b>. <br>Check if this file exists and you use a correct path!";
+    $lang['file_opening_error'] = "No se puede abrir el archivo. Comprueba tus permisos!";
+    $lang['file_writing_error'] = "No se puede guardar el archivo. Comprueba tus permisos!"; 
+    $lang['file_invalid file_size'] = "Tamaño de archivo incorrecto"; 
+    $lang['file_uploading_error'] = "Hubo un error mientras actualizaba, por favor int&eacute;ntenlo de nuevo!"; 
+    $lang['file_deleting_error'] = "There was an error while deleting!";
+    $lang['first'] = "primero";
+    $lang['handle_selected_records'] = "Are you sure you want to handle the selected records?";
+    $lang['hide_search'] = "Ocultar Buscar"; 
+    $lang['last'] = "&uacute;ltimo";
+    $lang['like'] = "like";
+    $lang['like%'] = "like%";  // "begins with"; 
+    $lang['%like'] = "%like";  // "ends with";
+    $lang['loading_data'] = "loading data...";
+    $lang['max'] = "max";        
+    $lang['next'] = "siguiente";
+    $lang['no'] = "No"; 
+    $lang['no_data_found'] = "No se han encontrado datos"; 
+    $lang['no_data_found_error'] = "No se han encontrado datos! Por favor, comprueba atentamente la sintaxis de tu c&oacute;digo!<br>Puede ser debido al uso incorrecto de May&uacute;sculas/min&uacute;sculas o a s&iacute;mbolos inesperados."; 
+    $lang['no_image'] = "No Image";
+    $lang['not_like'] = "not like";
+    $lang['of'] = "of";
+    $lang['or'] = "or";        
+    $lang['pages'] = "P&aacute;ginas"; 
+    $lang['page_size'] = "Registros por p&aacute;gina"; 
+    $lang['previous'] = "Anterior"; 
+    $lang['printable_view'] = "Vista imprimible";
+    $lang['print_now'] = "Imprimir";    
+    $lang['print_now_title'] = "Pulse aqu&iacute; para imprimir esta p&aacute;gina"; 
+    $lang['record_n'] = "Registro #";
+    $lang['remove'] = "Remove";
+    $lang['reset'] = "Reset";
+    $lang['results'] = "Resultados"; 
+    $lang['required_fields_msg'] = "Registros marcados con un <font color='#cd0000'>*</font> son requeridos";    
+    $lang['search'] = "Buscar"; 
+    $lang['search_d'] = "Buscar"; // (description) 
+    $lang['search_type'] = "Tipo de b&uacute;squeda"; 
+    $lang['select'] = "seleccionar"; 
+    $lang['set_date'] = "Set date";
+    $lang['total'] = "Total";
+    $lang['turn_on_debug_mode'] = "For more information, turn on debug mode.";
+    $lang['uncheck_all'] = "Uncheck All";
+    $lang['unhide_search'] = "Unhide Search";
+    $lang['unique_field_error'] = "The field _FIELD_ allows only unique values - please reenter!";
+    $lang['update'] = "Actualizar"; 
+    $lang['update_record'] = "Actualizar registro";
+    $lang['updating_operation_completed'] = "Operaci&oacute;n de actualizar completada correctamente!"; 
+    $lang['updating_operation_uncompleted'] = "Operaci&oacute;n de actualizar incorrecta!";
+    $lang['upload'] = "Actualizar";    
+    $lang['view'] = "Vista"; 
+    $lang['view_details'] = "Detalles de la vista";
+    $lang['warnings'] = "Warnings";
+    $lang['with_selected'] = "With selected";
+    $lang['wrong_field_name'] = "nombre de campo incorrecto";
+    $lang['wrong_parameter_error'] = "Wrong parameter in <b>_FIELD_</b>: _VALUE_";
+    $lang['yes'] = "S&iacute;";    
+        
+    return $lang; 
+}
+?>
