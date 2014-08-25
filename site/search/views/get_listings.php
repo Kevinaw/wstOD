@@ -115,7 +115,7 @@ $db->set_data("SET group_concat_max_len = 10000;",array());
              case when premium.id is not null and premium.expires>current_timestamp then 1 else 0 end as premium,
              group_concat(distinct businesstypes.name SEPARATOR ', ') as categories,
              group_concat(distinct businesstypes.id SEPARATOR ', ') as category_ids,
-             group_concat(distinct concat('<b>',city,', ',prov_state.name,', ',countries.name,'</b><br>&nbsp;&nbsp;&nbsp;',case when length(phone)>0 then concat('Phone: ',phone) else '' end,case when length(fax)>0 then concat(', Fax: ',fax) else '' end,case when length(tollfree)>0 then concat(', TollFree: ',tollfree) else '' end,case when length(email)>0 then concat(', Email: ',email) else '' end,case when length(website)>0 then concat('<br>&nbsp;&nbsp;&nbsp;Website: <a href="',website,'">',website,'</a>') else '' end) SEPARATOR '<hr>') as premium_locations,    
+             group_concat(distinct concat('<b>',city,', ',prov_state.name,', ',countries.name,'</b><br>&nbsp;&nbsp;&nbsp;',case when length(phone)>0 then concat('Phone: ',phone) else '' end,case when length(fax)>0 then concat(', Fax: ',fax) else '' end,case when length(tollfree)>0 then concat(', TollFree: ',tollfree) else '' end,case when length(website)>0 then concat('<br>&nbsp;&nbsp;&nbsp;Website: <a href="',website,'">',website,'</a>') else '' end) SEPARATOR '<hr>') as premium_locations,    
              group_concat(distinct concat(countries.name,', ',prov_state.name,', ',listing_locations.city) SEPARATOR '<br>') as locations 
       from listings 
           left join listing_business_types on listings.id=listing_business_types.listing_id 

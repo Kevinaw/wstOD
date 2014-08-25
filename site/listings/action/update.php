@@ -93,13 +93,18 @@ EOD;
       $db=new Database();
 
       $sql=array();
+//----kevin----20140824:delete      
+//      $sql[]=<<<EOD
+//          update listings 
+//          set active=0 
+//          where update_confirmation_id='[uuid]';
+//          
+//EOD;
       $sql[]=<<<EOD
-          update listings 
-          set active=0 
+          delete from listings 
           where update_confirmation_id='[uuid]';
-          
 EOD;
-    
+      
       $return=$db->set_data_multi($sql,array("uuid"=>$uuid));    
       
       if($return){
@@ -112,6 +117,21 @@ EOD;
   
   
   function print_page($message){
+//----kevin----new code 08-24: admin user header to admin/index.php
+        if((isset($_POST['is_admin']) && $_POST['is_admin'] == true) ||
+                (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true))
+                 print <<<EOD
+        <html>
+        <body>
+        <br>
+        <div style='border:1px solid silver; margin:15px; padding:15px;'>{$message}</div>
+        Click <a href="/admin/index.php">here</a> to return to Oildirectory.com/admin/
+        </body>
+        </html>
+      
+EOD;
+        else
+//end
       print <<<EOD
         <html>
         <body>

@@ -2,6 +2,18 @@
 
 session_start();
 
+//----kevin----new code 08-24: for admin add listing
+if (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true) {
+    print "<div style='float:right;'><a href='/admin/index.php'>back</a></div><img src='/images/logo_small.jpg' align=left><br><b>Welcome {$_SESSION["admin_user"]["name"]}</b><br clear=all><hr>";
+
+    $name = ucwords(str_replace(array(".php", "_", "/site/listings/"), array("", " ", ""), $_SERVER["PHP_SELF"]));
+    if (!isset($_SESSION["admin_user"]["access"]) || !in_array($name, array_values($_SESSION["admin_user"]["access"]))) {
+        print "Access Denied";
+        exit;
+    }
+}
+//end
+
 ?>
 <!--Force IE6 into quirks mode with this comment tag-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -25,9 +37,15 @@ if(!isset($_SESSION["admin_user"])) print '<script type="text/javascript" src=".
 
 <body>
 <div id='right-column'>
-<?php      
-    $limit=3;
-    include $_SERVER['DOCUMENT_ROOT']."/includes/affiliates.inc";
+<?php
+//----kevin----new code 08-24: for admin add listing
+if (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true)
+    ;
+else {
+    $limit = 3;
+    include $_SERVER['DOCUMENT_ROOT'] . "/includes/affiliates.inc";
+}
+//end
 ?>
 </div>
 
@@ -88,11 +106,17 @@ EOD;
 
           foreach($listings as $rownumber=>$info){
               if($rownumber==0) continue;
+               //----kevin----new code 08-24: admin edit listing
+                  $action_href = "<input type='submit' name='action[" . $info["id"] . "]' value='Edit Listing'>";
+                  if (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true) {
+                      $action_href = "<a href='/site/listings/add.php?action=Edit Listing&id=" . $info["id"] . "&is_admin=true' target=_blank>edit listing</a>";
+                  }
+//end  
               $items[]=<<<EOD
                   <table style='width:100%;'>
                   <tr>
                   <td align=left>
-                      <input type='submit' name='action[{$info["id"]}]' value='Edit Listing'>
+              {$action_href}
                   </td>
                   <td align=left width=100%>
                     <b>{$info["name"]}</b><br>

@@ -25,11 +25,22 @@ EOD;
       }
   
   }
+
   $d->close();
+  
+  //----kevin----delete listings_requests, and add it to the end
+  unset($output['Listings Requests']);
+  unset($output['Listings']);
+  //end
   
   ksort($output);
   print join("",$output);
-
+//----kevin----20140824: add new functions
+  print "<a href='/site/listings/add.php?is_admin=true'>Add Listing</a><br>";
+  print "<a href='/site/listings/edit.php?is_admin=true'>Edit Listing</a><br>";
+  print "<a href='functions/listings_requests.php'>Listings Requests</a><br>";
+  print "<a href='functions/listings.php'>All Listings</a><br>";
+  //end
 
   print "<br><form action='#' method='post'><input type='submit' name='logout' value='Logout'></form>";
 
@@ -70,6 +81,7 @@ function login($val){
           $_SESSION["admin_user"]=array("name"=>$name,"access"=>$access,"id"=>$id);
       }
   }
+
 }
 
 ?>
