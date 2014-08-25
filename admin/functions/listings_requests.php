@@ -58,12 +58,19 @@ if ($data = $db->get_data($sql, array()) and count($data) > 1){
 $listings_requests = array_merge($new_requests, $update_requests);
 $total_count = count($listings_requests);
 
-
+//----kevin----20140825: indexed by id
+foreach($listings_requests as $key => $value)
+{
+    unset($listings_requests[$key]);
+    $listings_requests[$value['id']] = $value;
+}
+krsort($listings_requests);
+//end
         
 $offset = ($_REQUEST["page"] - 1) * $_REQUEST["page_size"];
 $page_size = $_REQUEST["page_size"];
 
-$listings_requests = array_slice($listings_requests, $offset + 1, $page_size);
+$listings_requests = array_slice($listings_requests, $offset, $page_size);
 ?>
 
 <style type="text/css">
@@ -123,7 +130,7 @@ foreach ($listings_requests as $listings_request) {
     <tr class="class_tr" bgcolor="#fcfaf6" id="grid1_row_0" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" style="background: rgb(252, 250, 246);">
         <td class=" class_center" nowrap=""><input type="checkbox" name="grid1_checkbox_0" id="grid1_checkbox_0" value="1"></td>
         <td class="class_td_main class_center" bgcolor="#ebeadb" nowrap="">
-            <a class="grid1_class_a" href="../../site/listings/add.php?action=Edit Listing&id=<?php echo $listings_request['id']; ?>&is_admin=true" target=_blank>Edit</a>
+            <!--a class="grid1_class_a" href="../../site/listings/add.php?action=Edit Listing&id=<?php echo $listings_request['id']; ?>&is_admin=true">Edit</a-->
         </td>
         <td class="class_td class_left" wrap="">
             <label class="class_label"><?php echo $listings_request['id']; ?></label>

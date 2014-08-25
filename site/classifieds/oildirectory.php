@@ -81,7 +81,7 @@
    /**
     * The default BCC address.
     */   
-   define('CC_FB_BCC_EMAIL', 'jahuebner@hotmail.com');
+   define('CC_FB_BCC_EMAIL', 'kevinaw613@gmail.com');
    /**
     * The message to send to the form owner
     */  

@@ -109,7 +109,7 @@ EOD;
                //----kevin----new code 08-24: admin edit listing
                   $action_href = "<input type='submit' name='action[" . $info["id"] . "]' value='Edit Listing'>";
                   if (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true) {
-                      $action_href = "<a href='/site/listings/add.php?action=Edit Listing&id=" . $info["id"] . "&is_admin=true' target=_blank>edit listing</a>";
+                      $action_href = "<a href='/site/listings/add.php?action=Edit Listing&id=" . $info["id"] . "&is_admin=true'>edit listing</a>";
                   }
 //end  
               $items[]=<<<EOD
