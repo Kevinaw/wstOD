@@ -110,8 +110,7 @@ EOD;
     $title="Edit Listing";
     $buttons=<<<EOD
       <input type='submit' name='action' value='Save Changes'> 
-      <input type='submit' name='action' value='Cancel Changes'> 
-      <input type='submit' name='action' value='Delete Listing'>
+      <input type='submit' name='action' value='Cancel Changes'>
 EOD;
 }
 
