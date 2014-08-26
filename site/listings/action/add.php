@@ -212,7 +212,7 @@ EOD;
         include "update.php";
         exit;
     } else {
-        mail($_POST["listing"]["new"]["info"]["update_email"], "Oildirectory.com Update Confirmation", $message, $headers);
+        //mail($_POST["listing"]["new"]["info"]["update_email"], "Oildirectory.com Update Confirmation", $message, $headers);
     }
 
 
@@ -339,7 +339,7 @@ EOD;
             include "update.php";
             exit;
         } else {
-            mail($listing["update_email"], "Oildirectory.com Deletion Confirmation", $message, $headers);
+           // mail($listing["update_email"], "Oildirectory.com Deletion Confirmation", $message, $headers);
         }
     }
     return $errors;
