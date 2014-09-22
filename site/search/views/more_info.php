@@ -138,24 +138,42 @@
 <?php
 
     require_once $_SERVER['DOCUMENT_ROOT']."/includes/dbi.inc";
+    
+    //  if admin view listing details, go to table request_listings
+    //  if customer view listing details, go to table listings..
+    $listings_tbl  =   "";
+    $listing_business_types_tbl  =   "";
+    $listing_locations_tbl  =   "";
+    if (isset($_REQUEST['is_admin']) && $_REQUEST['is_admin'] == true)
+    {
+        $_REQUEST['listings_tbl'] = "request_listings";
+        $_REQUEST['listing_business_types_tbl'] = "request_listing_business_types";
+        $_REQUEST['listing_locations_tbl'] = "request_listing_locations";
+    }
+    else
+    {
+        $_REQUEST['listings_tbl'] = "listings";
+        $_REQUEST['listing_business_types_tbl'] = "listing_business_types";
+        $_REQUEST['listing_locations_tbl'] = "listing_locations";
+    }
         
     $db=new Database();
 
     $sqls=array();
-    $sqls["listing"]="select * from listings where id=[id]";
+    $sqls["listing"]="select * from [listings_tbl] where id=[id]";
     $sqls["locations"]=<<<EOD
-        select listing_locations.*, 
+        select [listing_locations_tbl].*, 
             prov_state.name as province_name,
             countries.name as country_name   
-        from listing_locations 
+        from [listing_locations_tbl] 
             left join prov_state on prov_state.id=province_id 
             left join countries on countries.id=country_id 
         where listing_id=[id]
 EOD;
     $sqls["business_types"]=<<<EOD
         select businesstypes.*   
-        from businesstypes 
-        join listing_business_types on business_type_id=businesstypes.id and listing_id=[id]
+        from  businesstypes
+        join [listing_business_types_tbl] on business_type_id=businesstypes.id and listing_id=[id]
 EOD;
     $sqls["premium"]="select *,case when expires<current_timestamp then 1 else 0 end as expired from premium where listing_id=[id] order by expires desc limit 1";
 

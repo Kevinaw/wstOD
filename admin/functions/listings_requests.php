@@ -16,57 +16,75 @@ if (!isset($_REQUEST["page_size"]))
     $_REQUEST["page_size"] = 10;
 // get count of unhandled listing request
 $db = new Database();
+//$sql = <<<EOD
+//        SELECT a.*, "EDIT" as request_type 
+//        FROM listings a
+//        INNER JOIN listings b ON a.update_to_id = b.id
+//        AND a.active =0
+//        AND b.active =1
+//EOD;
+//$update_requests = array();
+//if ($data = $db->get_data($sql, array()) and count($data) > 1){
+//    array_shift ($data);
+//    $update_requests = $data;
+////    foreach($update_requests as $key => $data)
+////    {
+////        $update_requests[$key]['request_type'] = "EDIT";
+////    }
+//}
+//
+//$sql = <<<EOD
+//        SELECT a.*, "NEW" as request_type
+//        FROM listings a
+//        WHERE a.active =0
+//        AND a.update_to_id = -1
+//        AND NOT 
+//        EXISTS (
+//            SELECT * 
+//            FROM listings b
+//            WHERE b.id > a.id
+//            AND b.update_to_id = a.id
+//        )
+//EOD;
+//$new_requests = array();
+//if ($data = $db->get_data($sql, array()) and count($data) > 1){
+//    array_shift ($data);
+//    $new_requests = $data;
+////    foreach($new_requests as $key => $data)
+////        $new_requests[$key]['request_type'] = "NEW";
+//}
+//
+//
+//$listings_requests = array_merge($new_requests, $update_requests);
+//$total_count = count($listings_requests);
+//
+////----kevin----20140825: indexed by id
+//foreach($listings_requests as $key => $value)
+//{
+//    unset($listings_requests[$key]);
+//    $listings_requests[$value['id']] = $value;
+//}
+//krsort($listings_requests);
+////end
+ 
 $sql = <<<EOD
-        SELECT a.*, "EDIT" as request_type 
-        FROM listings a
-        INNER JOIN listings b ON a.update_to_id = b.id
-        AND a.active =0
-        AND b.active =1
+        SELECT *
+        FROM request_listings 
+        ORDER BY id DESC
 EOD;
-$update_requests = array();
+$listings_requests = array();
 if ($data = $db->get_data($sql, array()) and count($data) > 1){
     array_shift ($data);
-    $update_requests = $data;
-//    foreach($update_requests as $key => $data)
-//    {
-//        $update_requests[$key]['request_type'] = "EDIT";
-//    }
+    $listings_requests = $data;
+    foreach($listings_requests as $key => $data)
+    {
+        if($data['update_to_id'] == -1)
+            $listings_requests[$key]['request_type'] = "NEW";
+        else
+            $listings_requests[$key]['request_type'] = "EDIT";
+    }
 }
 
-$sql = <<<EOD
-        SELECT a.*, "NEW" as request_type
-        FROM listings a
-        WHERE a.active =0
-        AND a.update_to_id = -1
-        AND NOT 
-        EXISTS (
-            SELECT * 
-            FROM listings b
-            WHERE b.id > a.id
-            AND b.update_to_id = a.id
-        )
-EOD;
-$new_requests = array();
-if ($data = $db->get_data($sql, array()) and count($data) > 1){
-    array_shift ($data);
-    $new_requests = $data;
-//    foreach($new_requests as $key => $data)
-//        $new_requests[$key]['request_type'] = "NEW";
-}
-
-
-$listings_requests = array_merge($new_requests, $update_requests);
-$total_count = count($listings_requests);
-
-//----kevin----20140825: indexed by id
-foreach($listings_requests as $key => $value)
-{
-    unset($listings_requests[$key]);
-    $listings_requests[$value['id']] = $value;
-}
-krsort($listings_requests);
-//end
-        
 $offset = ($_REQUEST["page"] - 1) * $_REQUEST["page_size"];
 $page_size = $_REQUEST["page_size"];
 
@@ -108,21 +126,19 @@ $listings_requests = array_slice($listings_requests, $offset, $page_size);
     <tbody>
         <tr class="class_tr" bgcolor="" id="grid1_row_" onmouseover="" onmouseout="">
             <td class="class_td class_center" bgcolor="#fcfaf6" width="26px" nowrap=""></td>
-            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="1%" nowrap=""><a class="grid1_class_a" title="Add new record"></a></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Id </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Name </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Description </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Notes </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Next_contact </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Salesperson_id </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Active </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_to_id </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_confirmation_id </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_email </a></b></nobr></th>
-            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="210px" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Request_Type </a></b></nobr></th>
-            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" nowrap="">View</th>
-            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" nowrap="">Delete</th>
-            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" nowrap="">Accept</th>
+            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="1%" nowrap=""><a class="grid1_class_a" title="Add new record">View</a></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Id </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Name </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Description </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Notes </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Next_contact </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Salesperson_id </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Active </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_to_id </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_confirmation_id </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Update_email </a></b></nobr></th>
+            <th class="class_th class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="5%" wrap=""><nobr><b><a class="grid1_class_a" title="Sort">Request_Type </a></b></nobr></th>
+            <th class="class_th_normal class_center" bgcolor="#e2e0cb" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" width="10%" nowrap="">Operations</th>
         </tr>
 <?php
 foreach ($listings_requests as $listings_request) {
@@ -130,7 +146,7 @@ foreach ($listings_requests as $listings_request) {
     <tr class="class_tr" bgcolor="#fcfaf6" id="grid1_row_0" onmouseover="bgColor = '#ebeadb';" onmouseout="bgColor = '#e2e0cb';" style="background: rgb(252, 250, 246);">
         <td class=" class_center" nowrap=""><input type="checkbox" name="grid1_checkbox_0" id="grid1_checkbox_0" value="1"></td>
         <td class="class_td_main class_center" bgcolor="#ebeadb" nowrap="">
-            <!--a class="grid1_class_a" href="../../site/listings/add.php?action=Edit Listing&id=<?php echo $listings_request['id']; ?>&is_admin=true">Edit</a-->
+            <a class="grid1_class_a" href="/site/search/views/more_info.php?is_admin=true&id=<?php echo $listings_request['id']; ?>" target="_blank" title="View details">Details</a>
         </td>
         <td class="class_td class_left" wrap="">
             <label class="class_label"><?php echo $listings_request['id']; ?></label>
@@ -165,9 +181,11 @@ foreach ($listings_requests as $listings_request) {
         <td class="class_td class_left" wrap="" >
             <label class="class_label" style="color: #D54E21;"><?php echo $listings_request['request_type']; ?></label>
         </td>
-        <td class="class_td class_center" nowrap=""><a class="grid1_class_a" href="/site/search/views/more_info.php?id=<?php echo $listings_request['id']; ?>" target="_blank" title="View details">Details</a></td>
-        <td class="class_td class_center" nowrap=""><a class="grid1_class_a" href="/site/listings/action/update.php?action=delete&id=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true" title="Delete record">Delete</a></td>
-        <td class="class_td class_center" nowrap=""><a class="grid1_class_a" href="/site/listings/action/update.php?action=update&id=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true" title="Accept record">Accept</a></td>
+        <td class="class_td class_center" nowrap="">
+            <a class="grid1_class_a" href="/site/listings/action/update.php?action=delete&uuid=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true" title="Delete record">Delete</a> | 
+            <a class="grid1_class_a" href="/site/listings/action/update.php?action=accept&uuid=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true&update_to_id=<?php echo $listings_request['update_to_id']; ?>" title="Accept record">Accept</a> | 
+            <a class="grid1_class_a" href='/site/listings/add.php?action=Edit Request Listing&id=<?php echo $listings_request['id']; ?>&is_admin=true' title="Edit record">Edit</a>
+        </td>
     </tr>
 
     <?php

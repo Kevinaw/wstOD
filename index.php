@@ -186,7 +186,7 @@
           <li onclick="update_tabs(this);"><a href="site/downloads/" target="content">Web Design Services</a></li>
 <!--          <li onclick="update_tabs(this);"><a href="site/search/test_affiliate_search.php" target="content">Remote Search</a></li> -->
           <li onclick="update_tabs(this);"><a href="site/ourstaff/" target="content">Contact</a></li>
-<!--          <li onclick="update_tabs(this);"><a href="site/links.php" target="content">Links</a></li> -->
+          <!--li onclick="update_tabs(this);"><a href="site/links.php" target="content">Links</a></li-->
         </ul>
       </div>
     </div>

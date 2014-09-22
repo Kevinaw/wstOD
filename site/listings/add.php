@@ -68,8 +68,9 @@ if(!isset($_SESSION["admin_user"])) print '<script type="text/javascript" src=".
 ?>
   <link rel="stylesheet" type="text/css" href="subModal.css" />
   <script type="text/javascript" src="subModal.js"></script>
+
   <script>
-      function show_location(i){
+        function show_location(i){
           var m = document.getElementsByTagName("DIV");
           for(j in m){
               if(m[j].id){
@@ -90,11 +91,48 @@ if(!isset($_SESSION["admin_user"])) print '<script type="text/javascript" src=".
 <div id='right-column'>
 <?php      
     $limit=3;
-    if($_REQUEST["is_admin"]!="true") include $_SERVER['DOCUMENT_ROOT']."/includes/affiliates.inc";
+    if($_REQUEST["is_admin"]!="true") 
+        include $_SERVER['DOCUMENT_ROOT']."/includes/affiliates.inc";
+    else
+    {
+        print<<<EOD
+        <form action = "/site/search/index.php" method = "get" target = "_blank">
+            <table style = 'border:1px solid silver;background:#fff; margin:0 auto; width:200px; height:150px;'>
+            <tr>
+            <th style = 'background: url(/images/left2_red.gif); color:white; font-weight:bold; height:21px;'>
+            Search Oildirectory
+            </th>
+            </tr>
+            <tr valign = top>
+            <td>
+            <input type = 'radio' name = "type" checked onclick = "if(this.checked) show_name();"> Business Name
+
+            <table id = 'business_name' style = 'display:;'>
+            <tr id = 'search_name'>
+            <td>Name:</td>
+            <td><input type = 'text' name = "company"></td>
+            </tr>
+            <tr id = 'search_keyword'>
+            <td>Keyword:</td>
+            <td>
+            <input type = 'text' name = "keyword">
+            </td>
+            </tr>
+            <tr>
+                <td><input type = 'submit' value = 'Find'></td>
+            </tr>
+            </table>
+            </td>
+
+            </table>
+        </form>
+EOD;
+    }
+    
 ?>
 </div>
 
-<div style='margin-right:160px; '>       
+<div style='margin-right:160px; width:80%'>       
     <form method="post" action="add.php" style='width:100%;'>
 
 <?php
@@ -191,17 +229,21 @@ print <<<EOD
 EOD;
 
     get_categories($sqls["business_types"],$_POST["listing"]["new"]["categories"],$all_categories,$include_categories);
+    
+    $new_cat_btn = "";
+    if($_REQUEST["is_admin"]=="true")
+        $new_cat_btn = "<input type='button' id='new_cat' value='New'>";
 
     print <<<EOD
           <table width="100%">
             <tr>
-              <td>All Categories</td>
+              <td>All Categories    {$new_cat_btn} </td>
               <td></td>
               <td><span style='color:red;'>*</span>Include in Categories</td>
             </tr>
             <tr>
               <td width="50%">
-                  <select name='new_categories[]' size=15 multiple style='width:100%;'>
+                  <select name='new_categories[]' id="all_cats" size=15 multiple style='width:100%;'>
                   {$all_categories}
                   </select>
               </td>
@@ -238,14 +280,19 @@ EOD;
       <td>
 
 EOD;
-
-    //print location list
+          
+    $hidden_atr = "";
+    if (!isset($_REQUEST['is_admin']) || $_REQUEST['is_admin'] != true) {
+        $hidden_atr = "hidden";
+    }
+//print location list
     $location_divs=array();
     if(isset($_POST["listing"]["new"]["locations"])){
       foreach($_POST["listing"]["new"]["locations"] as $locnum=>$info){
  
           $province_options=get_options($info["province_id"],$sqls["provinces"]);
           $country_options=get_options($info["country_id"],$sqls["countries"]);
+      
           $location_divs[]=<<<EOD
               <div id="location_div_{$locnum}" style='display:; width:100%;'>
                   <table style='width:100%; font-size:10pt; border:1px solid silver;'>
@@ -256,9 +303,9 @@ EOD;
                           <td style='width:40%;'>
                           <input type='hidden' name='listing[new][locations][{$locnum}][id]' value="{$info["id"]}">
                             <table style='font-size:10pt; width:100%:'>
-                                <tr>
+                                <tr {$hidden_atr}>
                                     <td align=left nowrap>Contact Name:</td>
-                                    <td><input type='text' style='width:100%;' name='listing[new][locations][{$locnum}][contact_name]' value="{$info["contact_name"]}"></td>
+                                    <td><input type='text' style='width:100%;' {$hidden_atr} name='listing[new][locations][{$locnum}][contact_name]' value="{$info["contact_name"]}"></td>
                                 </tr>
                                 <tr>
                                     <td align=left nowrap valign=top>Address:</td>
@@ -353,6 +400,7 @@ print <<<EOD
 </table>      
         <input type='hidden' name='listing[premium]' value="{$_POST["listing"]["premium"]}">
         <input type='hidden' name='listing[expires]' value="{$_POST["listing"]["expires"]}">
+        <input type='hidden' name='is_request_listings_operations' value="{$_POST["is_request_listings_operations"]}">
 EOD;
 
 
@@ -587,6 +635,70 @@ function get_province($id){
 <?php
 include "../../google_analytics.php";
 ?>    
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    var dialog, form;
+  
+    function addCat() {
+      var valid = true;        
+        $.post( "/admin/functions/create_business_category.php",
+            {name: $("#cat_name").val()}, 
+            function(data) {
+                $("#all_cats").html(data);
+                alert("success") ;
+          }, "html");
+
+          
+          dialog.dialog( "close" );
+
+
+
+      return valid;
+    }
+ 
+    dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 200,
+      width: 250,
+      modal: true,
+      buttons: {
+        "Create": addCat,
+        Cancel: function() {
+          dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+//        form[ 0 ].reset();
+//        allFields.removeClass( "ui-state-error" );
+      }
+    });
+ 
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+ 
+    $( "#new_cat" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+  </script>
+ 
+<div id="dialog-form" title="Create New Category">
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" name="cat_name" id="cat_name" value="" class="text ui-widget-content ui-corner-all">
+    </fieldset>
+  </form>
+</div>
+      
+      <div id="idtttt"></div>
 
 </body>
 </html>

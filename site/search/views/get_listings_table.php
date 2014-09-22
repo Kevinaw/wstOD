@@ -69,7 +69,7 @@ EOD;
 				 $phone = substr($row["premium_locations"], strpos($row["premium_locations"],"Phone:")); // added by Lee
 				  
                  $more=<<<EOD
-                             <a href='../listings/add.php?action=Edit Listing&id={$row["id"]}'>Upgrade</a>
+                                <a href='../listings/add.php?action=Edit Listing&id={$row["id"]}'>Upgrade</a>
 EOD;
                  $more2=<<<EOD
                              <input type='button' value='More Information' onclick="showmore('/site/search/views/more_info.php?id={$row["id"]}');">
@@ -180,7 +180,7 @@ EOD;
                      </td>
                    </tr>
                    <tr class="{$row_type} {$ad_type} left right">
-                   <td colspan=2>
+                   <td colspan=2 style="padding-bottom:30px;">
                        {$more}
                    </td>
                    </tr>

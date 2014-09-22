@@ -210,68 +210,67 @@ onclick="window.open('../chat/chat.html','chat_win','location=0,toolbar=0,status
 </table>
         
         </td><td width=250px valign=top>
+            <a href="/site/new_links.php" target="_blank">links</a>
 
 <?php
-//get the links
-  require_once $_SERVER['DOCUMENT_ROOT']."/includes/dbi.inc";
-  $db=new Database();
-
-  $types=array();
-  if($data=$db->get_data("select * from links order by type",array())){
-      foreach($data as $rownumber=>$row){
-          if($rownumber==0) continue;
-          
-          if(!isset($types[$row["type"]])) $types[$row["type"]]=array();
-          $types[$row["type"]][]=$row;
-      }
-  }
-
-
-
-  foreach($types as $type=>$rows){
-      $content=array();
-      foreach($rows as $rownumber=>$row){
-          $content[]=<<<EOD
-              <div style='clear:both; width:100%;'>
-                  <a href="{$row["url"]}" target=_blank>{$row["name"]}</a>
-              </div>
-              <div style='clear:both;width:100%;'>
-                  {$row["description"]}
-              </div>
-EOD;
-      }
-      $content=join("",$content);
-      
-/*
-
-      print <<<EOD
-          <div style="width:95%; overflow:hidden; clear:both; margin:5px;">
-            <div id="tab-container">
-                <ul>
-                    <li>
-                      <a style='font-size:8pt;'>{$type}</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="tab-content" style='position:relative; top:-2px; clear:both; height:175px; overflow:auto;'>
-              {$content}
-            </div>
-          </div>
-EOD;
-      
-*/
-    print <<<EOD
-
-        <div style="width:100%;">
-        {$content}
-        </div>
-EOD;
-     
-
-
-  }
-
-
+////get the links
+//  require_once $_SERVER['DOCUMENT_ROOT']."/includes/dbi.inc";
+//  $db=new Database();
+//
+//  $types=array();
+//  if($data=$db->get_data("select * from links order by type",array())){
+//      foreach($data as $rownumber=>$row){
+//          if($rownumber==0) continue;
+//          
+//          if(!isset($types[$row["type"]])) $types[$row["type"]]=array();
+//          $types[$row["type"]][]=$row;
+//      }
+//  }
+//
+//
+//
+//  foreach($types as $type=>$rows){
+//      $content=array();
+//      foreach($rows as $rownumber=>$row){
+//          $content[]=<<<EOD
+//              <div style='clear:both; width:100%;'>
+//                  <a href="{$row["url"]}" target=_blank>{$row["name"]}</a>
+//              </div>
+//              <div style='clear:both;width:100%;'>
+//                  {$row["description"]}
+//              </div>
+//EOD;
+//      }
+//      $content=join("",$content);
+//      
+///*
+//
+//      print <<<EOD
+//          <div style="width:95%; overflow:hidden; clear:both; margin:5px;">
+//            <div id="tab-container">
+//                <ul>
+//                    <li>
+//                      <a style='font-size:8pt;'>{$type}</a>
+//                    </li>
+//                </ul>
+//            </div>
+//            <div id="tab-content" style='position:relative; top:-2px; clear:both; height:175px; overflow:auto;'>
+//              {$content}
+//            </div>
+//          </div>
+//EOD;
+//      
+//*/
+//    print <<<EOD
+//
+//        <div style="width:100%;">
+//        {$content}
+//        </div>
+//EOD;
+//     
+//
+//
+//  }
 ?>
       </td></tr></table>
       

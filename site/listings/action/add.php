@@ -34,7 +34,10 @@ if (is_array($action)) {
 
 switch ($action) {
     case "Edit Listing":
-        setup_post($id);
+        setup_post($id, false);
+        break;
+    case "Edit Request Listing":
+        setup_post($id, true);
         break;
     case "Add Location":
 
@@ -80,7 +83,6 @@ switch ($action) {
         }
 
         break;
-        break;
     case "Cancel Changes":
 //----kevin----new code 08-24: admin user header to admin/index.php
         if (isset($_POST['is_admin']) && $_POST['is_admin'] == true)
@@ -108,11 +110,21 @@ switch ($action) {
 
         break;
     case "Save Changes":
-        $errors = save_listing();
+        if($_POST['is_request_listings_operations'] == true)
+        {
+            $errors = save_listing1();
+        }
+        else{
+            $errors = save_listing();
+        }
+
         if (!count($errors)) {
 //----kevin----new code 08-24: admin user header to admin/index.php
             if (isset($_POST['is_admin']) && $_POST['is_admin'] == true)
-                header("location:/admin/index.php");
+                if($_POST['is_request_listings_operations'] == true)
+                    header("location:/admin/functions/listings_requests.php");
+                else                        
+                    header("location:/admin/index.php");
             else
                 header("location:../main.php");
 //end
@@ -150,72 +162,160 @@ function save_listing() {
     if (count($errors) > 0)
         return $errors;
 
+    //  if admin add new listing, data goes to table listings
+    //  if customer add new listings, data goes to table request_listings..
+    $listings_tbl  =   "";
+    $listing_business_types_tbl  =   "";
+    $listing_locations_tbl  =   "";
+    if (isset($_POST['is_admin']) && $_POST['is_admin'] == true)
+    {
+        $listings_tbl = "listings";
+        $listing_business_types_tbl = "listing_business_types";
+        $listing_locations_tbl = "listing_locations";
+    }
+    else
+    {
+        $listings_tbl = "request_listings";
+        $listing_business_types_tbl = "request_listing_business_types";
+        $listing_locations_tbl = "request_listing_locations";
+    }
+    
     //$id=$_POST["listing"]["current"]["info"]["id"];
     $uuid = md5(uniqid());
     $_POST["listing"]["new"]["info"]["uuid"] = $uuid;
-    $sql = "insert into listings (name,description,update_to_id,update_confirmation_id,update_email) values ('[name]','[description]','[id]','[uuid]','[update_email]')";
+    $sql = "insert into " . $listings_tbl . " (name,description,update_to_id,update_confirmation_id,update_email) values ('[name]','[description]','[id]','[uuid]','[update_email]')";
     if (!$id = $db->set_data_return_id($sql, $_POST["listing"]["new"]["info"])) {
         $errors[] = "Unable to update/add listing. " . $db->lasterror;
         return $errors;
     }
-
+    
+    $update_to_id = $_POST["listing"]["new"]["info"]["id"];
+    
     $_POST["listing"]["new"]["info"]["id"] = $id;
     $_POST["listing"]["current"]["info"] = $_POST["listing"]["new"]["info"];
 
     if (isset($_POST["listing"]["new"]["locations"])) {
-        $errors = array_merge($errors, save_locations($id, $db));
+        $errors = array_merge($errors, save_locations($id, $db, $listing_locations_tbl));
     }
 
     if (isset($_POST["listing"]["new"]["categories"])) {
-        $errors = array_merge($errors, save_categories($id, $db));
+        $errors = array_merge($errors, save_categories($id, $db, $listing_business_types_tbl));
     }
 
     if (count($errors)) {
         $errors[] = "Unable to update listing.";
-        $sql = <<<EOD
-              delete from listings where id=[id];
-              delete from listing_locations where listing_id=[id];
-              delete from listing_business_types where listing_id=[id];
-EOD;
+        $sql = "
+              delete from " . $listings_tbl . " where id=[id];
+              delete from " . $listing_locations_tbl . " where listing_id=[id];
+              delete from " . $listing_business_types_tbl . " where listing_id=[id];
+";
         $db->set_data_multi($sql, array("id" => $id));
 
         return $errors;
     }
-
-    $_SESSION["error"] = <<<EOD
-              An email has been sent to {$_POST["listing"]["new"]["info"]["update_email"]} to confirm 
-              this update.  To complete the update, please click on the link in 
-              the confirmation email.  If the email address in the listing is not valid, 
-              please email <a href="mailto:service@oildirectory.com">service@oildirectory.com</a> 
-              to update the email address and try again. 
-EOD;
-
-    $message = <<<EOD
-              A request has been made to update your listing on Oildirectory.com.  If this request 
-              has been made in error, please disregard this email message.<br>
-              <br>
-              To confirm this update and have your listing updated at Oildirectory.com, please 
-              click <a href="http://www.oildirectory.com/site/listings/action/update.php?action=update&id={$uuid}">here</a>.
-EOD;
-
-    // To send HTML mail, the Content-type header must be set
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-    // Additional headers
-    $headers .= 'To: ' . $_POST["listing"]["new"]["info"]["update_email"] . "\r\n";
-    $headers .= 'From: Oildirectory.com <service@oildirectory.com>' . "\r\n";
-
+    
     if ($_POST["is_admin"] == "true") {
         $_REQUEST["action"] = "update";
-        $_REQUEST["id"] = $uuid;
+        $_REQUEST["uuid"] = $uuid;
+        $_REQUEST["update_to_id"] = $update_to_id;
         include "update.php";
         exit;
     } else {
         //mail($_POST["listing"]["new"]["info"]["update_email"], "Oildirectory.com Update Confirmation", $message, $headers);
     }
+    return $errors;
+}
+
+function save_listing1() {
+    global $_POST, $_SESSION;
+
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/dbi.inc";
+    $db = new Database();
+
+    $errors = array();
+    if (strlen($_POST["listing"]["new"]["info"]["name"]) < 5)
+        $errors[] = "The name must be greater than 4 characters.";
+    if (strlen($_POST["listing"]["new"]["info"]["name"]) > 500)
+        $errors[] = "The name must be less than 500 characters.";
+    if (strlen($_POST["listing"]["new"]["info"]["description"]) < 5)
+        $errors[] = "The description must be greater than 4 characters.";
+    if (!validEmail($_POST["listing"]["new"]["info"]["update_email"]))
+        $errors[] = "You must enter a valid administrator email address, this will be used to confirm changes to the listing but will not be displayed in the listing";
+    if (count($_POST["listing"]["new"]["locations"]) == 0)
+        $errors[] = "You must include at least one location.";
+    else
+        $errors = array_merge($errors, check_locations());
+    if (count($_POST["listing"]["new"]["categories"]) == 0)
+        $errors[] = "You must select at least one category.";
 
 
+    if (count($errors) > 0)
+        return $errors;
+
+    //$id=$_POST["listing"]["current"]["info"]["id"];
+    $sql = "update request_listings set name='[name]',description='[description]',update_email='[update_email]' where id = '[id]'";
+    $db->set_data($sql, $_POST["listing"]["new"]["info"]);
+
+    $_POST["listing"]["current"]["info"] = $_POST["listing"]["new"]["info"];
+
+    if (isset($_POST["listing"]["new"]["locations"])) {
+            // save locations, delete first, then add
+            $sql = "delete from request_listing_locations where listing_id = '[id]'";
+            $db->set_data($sql, $_POST["listing"]["new"]["info"]);
+            
+            $locations = $_POST["listing"]["new"]["locations"];
+            $errors1 = array();
+
+            //check for errors in updated or added locations
+            foreach ($locations as $locnum => $info) {
+                //add new location
+                $sql = array();
+                $sql = <<<EOD
+                       insert into request_listing_locations (
+                           listing_id,contact_name,phone,fax,cell,tollfree,address1,address2,
+                           city,province_id,country_id,pcode,email,email2,website  
+                       ) values (
+                           [listing_id],'[contact_name]','[phone]','[fax]','[cell]','[tollfree]',
+                           '[address1]','[address2]','[city]','[province_id]',
+                           '[country_id]','[pcode]','[email]','[email2]','[website]') 
+EOD;
+
+                $info["listing_id"] = $_POST["listing"]["current"]["info"]["id"];
+                if (!$id = $db->set_data_return_id($sql, $info)) {
+                    $errors1[] = "Unable to add location #{$locnum}. " . $db->lasterror;
+                }
+            }
+            
+        $errors = array_merge($errors, $errors1);
+    }
+
+    if (isset($_POST["listing"]["new"]["categories"])) {
+        // save categories, delete first, then add
+        $sql = "delete from request_listing_business_types where listing_id = '[id]'";
+        $db->set_data($sql, $_POST["listing"]["new"]["info"]);
+
+        $errors1 = array();
+        //check for new categories
+        $sql = array();
+        $listing_id = $_POST["listing"]["new"]["info"]['id'];
+        foreach ($_POST["listing"]["new"]["categories"] as $rownum => $id) {
+            //add category
+            $sql[] = "insert into request_listing_business_types (listing_id,business_type_id) values ([listing_id],{$id});";
+        }
+
+        if ($db->set_data_multi($sql, array("listing_id" => $listing_id))) {
+            //$_POST["listing"]["current"]["categories"][] = $id;
+        } else {
+            $errors1[] = "Category add failed";
+        }
+        $errors = array_merge($errors, $errors1);
+    }
+
+    if (count($errors)) {
+        $errors[] = "Unable to update request listings.";
+        return $errors;
+    }
+    
     return $errors;
 }
 
@@ -241,7 +341,7 @@ function check_locations() {
     return $errors;
 }
 
-function save_locations($listing_id, &$db) {
+function save_locations($listing_id, &$db, $tbl) {
     global $_POST;
 
     $locations = $_POST["listing"]["new"]["locations"];
@@ -253,15 +353,15 @@ function save_locations($listing_id, &$db) {
 
         //add new location
         $sql = array();
-        $sql = <<<EOD
-               insert into listing_locations (
+        $sql = "
+               insert into " . $tbl . " (
                    listing_id,contact_name,phone,fax,cell,tollfree,address1,address2,
                    city,province_id,country_id,pcode,email,email2,website  
                ) values (
                    [listing_id],'[contact_name]','[phone]','[fax]','[cell]','[tollfree]',
                    '[address1]','[address2]','[city]','[province_id]',
                    '[country_id]','[pcode]','[email]','[email2]','[website]') 
-EOD;
+";
 
         $info["listing_id"] = $_POST["listing"]["current"]["info"]["id"];
         if (!$id = $db->set_data_return_id($sql, $info)) {
@@ -272,7 +372,7 @@ EOD;
     return $errors;
 }
 
-function save_categories($listing_id, &$db) {
+function save_categories($listing_id, &$db, $tbl) {
     global $_POST;
 
     $errors = array();
@@ -280,7 +380,7 @@ function save_categories($listing_id, &$db) {
     $sql = array();
     foreach ($_POST["listing"]["new"]["categories"] as $rownum => $id) {
         //add category
-        $sql[] = "insert into listing_business_types (listing_id,business_type_id) values ([listing_id],{$id});";
+        $sql[] = "insert into " . $tbl . " (listing_id,business_type_id) values ([listing_id],{$id});";
     }
 
     if ($db->set_data_multi($sql, array("listing_id" => $listing_id))) {
@@ -347,7 +447,7 @@ EOD;
 
 //following added
 
-function setup_post($listing_id) {
+function setup_post($listing_id, $is_request_tbl) {
     global $_POST, $_SESSION;
 
     $_POST["listing"] = array(
@@ -359,29 +459,49 @@ function setup_post($listing_id) {
         "premium" => false,
         "expires" => "Not Available"
     );
+    
+    $_POST["is_request_listings_operations"] = $is_request_tbl;
 
-
-
+    // if $is_request_tbl == false, retrieve data from listings table
+    // else if $is_request_tbl == true, retrieve data from request_listings table
+    
+    $listings_tbl  =   "";
+    $listing_business_types_tbl  =   "";
+    $listing_locations_tbl  =   "";
+    if ($is_request_tbl == false)
+    {
+        $listings_tbl = "listings";
+        $listing_business_types_tbl = "listing_business_types";
+        $listing_locations_tbl = "listing_locations";
+    }
+    else
+    {
+        $listings_tbl = "request_listings";
+        $listing_business_types_tbl = "request_listing_business_types";
+        $listing_locations_tbl = "request_listing_locations";
+    }
 
     //get the data from the db
     require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/dbi.inc";
     $db = new Database();
     //get the listing
-    $sql = "select id,name,description,update_email from listings where id=[id]";
-    if (!$data = $db->get_data($sql, array("id" => $listing_id)) or count($data) != 2) {
+    $sql = "select id,name,description,update_email from [listings_tbl] where id=[id]";
+    if (!$data = $db->get_data($sql, array("listings_tbl" => $listings_tbl,"id" => $listing_id)) or count($data) != 2) {
         $_SESSION["error"] = "Unable to retrieve listing, please try again.";
         return false;
     } else {
         $_POST["listing"]["current"]["info"] = $data[1];
     }
 
+    $update_to_id = $data[1]['update_to_id'];
+    
     //get the locations
     $sql = <<<EOD
                  select id,contact_name,address1,address2,city,province_id,
                         country_id,phone,fax,cell,tollfree,email,email2,website,pcode  
-                 from listing_locations where listing_id=[id]
+                 from [listing_locations_tbl] where listing_id=[id]
 EOD;
-    if (!$data = $db->get_data($sql, array("id" => $listing_id))) {
+    if (!$data = $db->get_data($sql, array("listing_locations_tbl" => $listing_locations_tbl, "id" => $listing_id))) {
         $_SESSION["error"] = "Unable to retrieve listing, please try again.";
         return false;
     } else {
@@ -390,8 +510,8 @@ EOD;
     }
 
     //get the locations
-    $sql = "select * from listing_business_types where listing_id=[id]";
-    if (!$data = $db->get_data($sql, array("id" => $listing_id))) {
+    $sql = "select * from [listing_business_types_tbl] where listing_id=[id]";
+    if (!$data = $db->get_data($sql, array("listing_business_types_tbl" => $listing_business_types_tbl, "id" => $listing_id))) {
         $_SESSION["error"] = "Unable to retrieve listing, please try again.";
         return false;
     } else {
@@ -401,6 +521,10 @@ EOD;
         }
     }
 
+    
+    if ($is_request_tbl == true)
+        $listing_id = $update_to_id;
+    
     //see if they are already premium
     $_POST["listing"]["premium"] = false;
     $_POST["listing"]["expires"] = "Not Available";
