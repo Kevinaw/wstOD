@@ -650,7 +650,6 @@ include "../../google_analytics.php";
             {name: $("#cat_name").val()}, 
             function(data) {
                 $("#all_cats").html(data);
-                alert("success") ;
           }, "html");
 
           

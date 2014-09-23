@@ -85,6 +85,7 @@ if ($data = $db->get_data($sql, array()) and count($data) > 1){
     }
 }
 
+$total_count = count($listings_requests);
 $offset = ($_REQUEST["page"] - 1) * $_REQUEST["page_size"];
 $page_size = $_REQUEST["page_size"];
 
@@ -182,7 +183,7 @@ foreach ($listings_requests as $listings_request) {
             <label class="class_label" style="color: #D54E21;"><?php echo $listings_request['request_type']; ?></label>
         </td>
         <td class="class_td class_center" nowrap="">
-            <a class="grid1_class_a" href="/site/listings/action/update.php?action=delete&uuid=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true" title="Delete record">Delete</a> | 
+            <a class="grid1_class_a" href="/site/listings/action/update.php?action=delete&uuid=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true&id=<?php echo $listings_request['id']; ?>" title="Delete record">Delete</a> | 
             <a class="grid1_class_a" href="/site/listings/action/update.php?action=accept&uuid=<?php echo $listings_request['update_confirmation_id']; ?>&is_admin=true&update_to_id=<?php echo $listings_request['update_to_id']; ?>" title="Accept record">Accept</a> | 
             <a class="grid1_class_a" href='/site/listings/add.php?action=Edit Request Listing&id=<?php echo $listings_request['id']; ?>&is_admin=true' title="Edit record">Edit</a>
         </td>
@@ -211,7 +212,7 @@ EOD;
 ?> >Previous Page,</a>&nbsp;&nbsp;
                     <a class="grid1_class_a" style="text-decoration: underline;" title="current" ><b><u><?php echo $_REQUEST['page']; ?></u></b></a>,&nbsp;&nbsp;
                     <a class="grid1_class_a" style="text-decoration: none;" title="next" <?php
-                    if ($_REQUEST['page'] < floor($total_count / $page_size)) {
+                    if ($_REQUEST['page'] < floor($total_count / $page_size) + 1) {
                         $next_page = $_REQUEST['page'] + 1;
                         print <<<EOD
                         href="?page={$next_page}&page_size={$page_size}"

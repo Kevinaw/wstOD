@@ -6,6 +6,7 @@
 $action = $_REQUEST["action"];
 $uuid = $_REQUEST["uuid"];
 $update_to_id = $_REQUEST["update_to_id"];
+$id = $_REQUEST["id"];
 
 switch ($action) {
     case "update":
@@ -13,7 +14,7 @@ switch ($action) {
         break;
         break;
     case "delete":
-        delete($uuid);
+        delete($uuid, $id);
         break;
     case "accept":    //move data out of request_ tables
         accept($uuid, $update_to_id);
@@ -96,7 +97,7 @@ EOD;
     }
 }
 
-function delete($uuid) {
+function delete($uuid, $id) {
 
 
     require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/dbi.inc";
@@ -114,13 +115,24 @@ function delete($uuid) {
           delete from request_listings 
           where update_confirmation_id='[uuid]';
 EOD;
+    $sql[] = <<<EOD
+          delete from request_listing_locations 
+          where listing_id='[id]';
+EOD;
+    
+    $sql[] = <<<EOD
+          delete from request_listing_business_types 
+          where listing_id='[id]';
+EOD;
 
-    $return = $db->set_data_multi($sql, array("uuid" => $uuid));
+    $return = $db->set_data_multi($sql, array("uuid" => $uuid, "id"=>$id));
 
     if ($return) {
-        print_page("Your listing has been removed from Oildirectory.com");
+        echo "Your listing has been removed from Oildirectory.com";
+        echo "<br/><a href='/admin/functions/listings_requests.php'>return</a>";
     } else {
-        print_page("Sorry but we were unable to remove your listing from Oildirectory.com, please try again.  If this problem persists, please email <a href='mailto:service@oildirectory.com'>service@oildirectory.com</a>.");
+        echo "Sorry but we were unable to remove your listing from Oildirectory.com, please try again.  If this problem persists, please email <a href='mailto:service@oildirectory.com'>service@oildirectory.com</a>.";
+        echo "<br/><a href='/admin/functions/listings_requests.php'>return</a>";       
     }
 }
 
@@ -268,9 +280,11 @@ EOD;
     $return = $db->set_data_multi($sql, array("uuid" => $uuid, "update_to_id" => $update_to_id, "id" => $id));
 
     if ($return) {
-        print_page("Your listing has been updated on Oildirectory.com");
+        echo "Your listing has been updated on Oildirectory.com";
+        echo "<br/><a href='/admin/functions/listings_requests.php'>return</a>";
     } else {
-        print_page($db->lasterror . "Sorry but we were unable to update your listing from Oildirectory.com, please try again.  If this problem persists, please email <a href='mailto:service@oildirectory.com'>service@oildirectory.com</a>.");
+        echo $db->lasterror . "Sorry but we were unable to update your listing from Oildirectory.com, please try again.  If this problem persists, please email <a href='mailto:service@oildirectory.com'>service@oildirectory.com</a>.";
+        echo "<br/><a href='/admin/functions/listings_requests.php'>return</a>";
     }
 }
 

@@ -210,7 +210,7 @@ onclick="window.open('../chat/chat.html','chat_win','location=0,toolbar=0,status
 </table>
         
         </td><td width=250px valign=top>
-            <a href="/site/new_links.php" target="_blank">links</a>
+            <a href="/site/new_links.php" target="content">Related Links</a>
 
 <?php
 ////get the links
